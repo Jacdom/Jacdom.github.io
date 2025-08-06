@@ -14,3 +14,7 @@
 
 // import custom variables and mixins to extend BS4
 @import "lone-wolf-theme";
+.custom-navbar {
+  background-color: #ffffff !important; // 白色背景
+  border-bottom: 1px solid #e5e5e5; // 可选：添加底部细线
+}
