@@ -12,8 +12,8 @@ bootswatch_theme: "united" # cerulean, spacelab, united
 
 # site settings, follows the order used in jekyll-seo-tag plugin
 lang: "en_US"
-title: "Lone Wolf Theme"
-description: "A simple bootstrap based jekyll theme."
+title: "DTDT Studio"
+description: "A Design Studio Born to Explore"
 url: # site url e.g. "https://manid2.github.io"
 baseurl: "" # the subpath of your site, e.g. "/blog"
 author: mani_d2
