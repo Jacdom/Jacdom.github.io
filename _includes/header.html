@@ -9,7 +9,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav">
         <!-- TODO add theme version dropdown here -->
         {%- for link in site.data.nav.header -%}
           {%- if link.url contains '://' -%}
@@ -23,6 +23,12 @@
         </li>
         {%- endfor -%}
       </ul>
+       <!-- 右边单独的菜单项 -->
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="/new-menu">新菜单</a>
+    </li>
+  </ul>
       {% if site.search == true %}
         {%- include search-providers/search_form.html -%}
       {% endif %}
