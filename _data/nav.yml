@@ -1,13 +1,13 @@
 # header links
 header:
-  - title: "Features"
-    url: "/features/"
+  - title: "Home"
+    url: /
     description: "List of features in the theme"
-  - title: "Source"
-    url: "/source/"
+  - title: "Price"
+    url: "/price/"
     description: "Theme source code"
-  - title: "About"
-    url: "/about/"
+  - title: "Case"
+    url: "/case/"
     description: "A little story about the theme"
 
 # footer links

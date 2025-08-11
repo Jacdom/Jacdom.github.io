@@ -20,7 +20,7 @@ author: mani_d2
 twitter:
   username: mani_d2 # should be site's username
   card: summary
-logo: assets/images/DTDT-800x800.png # PNG is SEO friendly
+logo: assets/images/DTDT-800x400.png # PNG is SEO friendly
 # use below when there are social links for site
 #social:
 #  name: Mani Kumar
@@ -174,5 +174,5 @@ defaults:
       path: ""
     values:
       # for SEO and social sharing
-      image: assets/images/DTDT-800x800.png.png
+      image: assets/images/DTDT-800x400.png
       image_alt: Lone Wolf Theme logo version 2
