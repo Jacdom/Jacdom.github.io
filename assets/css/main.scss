@@ -18,3 +18,8 @@
   background-color: #ffffff !important; // 白色背景
   border-bottom: 1px solid #e5e5e5; // 可选：添加底部细线
 }
+/* 导航菜单文字向下对齐 */
+.navbar-nav {
+  align-items: flex-end !important; /* 底部对齐 */
+}
+
