@@ -176,5 +176,3 @@ defaults:
       # for SEO and social sharing
       image: assets/images/DTDT-800x263.png
       image_alt: Lone Wolf Theme logo version 2
-includes:
-  - assets/css/custom.scss
