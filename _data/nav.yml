@@ -16,7 +16,7 @@ footer:
     url: "https://jacdom.github.io"
     description: "A Design Studio Born to Explore"
     bio: "Explore Forever" # short bio
-    address: # location
+    address: "China"
   - social:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
