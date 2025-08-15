@@ -12,10 +12,10 @@ header:
 
 # footer links
 footer:
-  - owner: "Your Name"
-    url: # link if any
-    description: # tool tip for your url
-    bio: "I am awesome" # short bio
+  - owner: "DTDT Studio"
+    url: "https://jacdom.github.io"
+    description: "A Design Studio Born to Explore"
+    bio: "Explore Forever" # short bio
     address: # location
   - social:
     - label: "GitHub"
