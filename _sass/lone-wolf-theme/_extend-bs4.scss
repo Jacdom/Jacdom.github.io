@@ -220,12 +220,12 @@ blockquote {
     @extend .text-white;
 
     &-owner {
-        @extend .py-5;
+        @extend .py-3;
         background: $gray-800;
     }
 
     &-copyright {
-        @extend .py-3;
+        @extend .py-2;
         background: $gray-900;
     }
 }
