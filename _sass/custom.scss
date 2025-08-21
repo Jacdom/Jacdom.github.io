@@ -9,13 +9,18 @@
   padding: 0 8%; /* 整体左右留白，避免贴边 */
 }
 
+/* 第一板块与菜单栏留空 */
+.case-block:first-child {
+  margin-top: 8vh;
+}
+
 /* =========================
    文字样式
 ========================= */
 .case-text {
   font-size: 1.8rem;
   font-weight: bold;
-  margin-left: 20%; /* 文字右移更多 */
+  margin-left: 25%; /* 再往右移一点 */
 }
 
 /* =========================
@@ -50,7 +55,7 @@
 ========================= */
 @media (max-width: 1200px) {
   .case-text {
-    margin-left: 12%; /* 中屏幕减少右移 */
+    margin-left: 15%; /* 中屏幕减少右移 */
   }
 }
 
