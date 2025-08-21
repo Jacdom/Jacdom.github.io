@@ -1,7 +1,9 @@
 ---
 layout: default
 title: Case
+permalink: /case/
 ---
+
 
 <section class="case-section">
 
