@@ -1,55 +1,20 @@
-/* 只针对 case 页面 */
-.page-case {
-  .case-module {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2em;
-  }
-
-  .case-module .case-title {
-    width: 30%;
-    font-weight: bold;
-  }
-
-  .case-module .case-image {
-    width: 70%;
-  }
-
-  /* 不同模块文字颜色 */
-  .case-module:nth-child(1) .case-title,
-  .case-module:nth-child(2) .case-title {
-    color: #ffa81c;
-  }
-  .case-module:nth-child(3) .case-title {
-    color: #f26b46;
-  }
-  .case-module:nth-child(4) .case-title,
-  .case-module:nth-child(5) .case-title {
-    color: #9f43d1;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-/* 只针对 case 页面 */
+/* case 页面专用样式 */
 .case-section {
   display: flex;
-  flex-direction: column; /* 保持模块竖排 */
-  gap: 2em; /* 模块之间间距 */
+  flex-direction: column; /* 模块竖排 */
+  gap: 2em;               /* 模块间距 */
 }
 
 .case-block {
   display: flex;
-  flex-wrap: wrap; /* 移动端可换行 */
+  flex-wrap: wrap;        /* 移动端可换行 */
   align-items: center;
   gap: 1em;
 }
 
 /* 左边文字 */
 .case-text {
-  flex: 1 1 200px; /* 最小宽度200px */
+  flex: 1 1 200px;        /* 最小宽度200px */
   font-size: 1.5em;
   font-weight: bold;
   text-align: left;
@@ -57,11 +22,43 @@
 
 /* 右边图片 */
 .case-img {
-  flex: 2 1 300px; /* 最小宽度300px，优先占比2倍 */
+  flex: 2 1 300px;        /* 最小宽度300px，优先占比2倍 */
 }
 
 .case-img img {
-  width: 100%; /* 自适应 */
+  width: 100%;            /* 图片自适应 */
   height: auto;
   border-radius: 8px;
+}
+
+/* 模块文字颜色区分 */
+.case-block:nth-child(1) .case-text,
+.case-block:nth-child(2) .case-text {
+  color: #ffa81c;
+}
+
+.case-block:nth-child(3) .case-text {
+  color: #f26b46;
+}
+
+.case-block:nth-child(4) .case-text,
+.case-block:nth-child(5) .case-text {
+  color: #9f43d1;
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+  .case-block {
+    flex-direction: column; /* 小屏幕竖排显示 */
+    text-align: center;
+  }
+
+  .case-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .case-img {
+    width: 100%;
+  }
 }
