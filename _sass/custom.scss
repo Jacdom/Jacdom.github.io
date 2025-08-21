@@ -26,7 +26,7 @@
 }
 
 .case-img img {
-  width: 100%; /* 自适应 */
+  max-width: 100%; /* 自适应 */
   height: auto;
   border-radius: 8px;
 }
