@@ -5,7 +5,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12vh; /* 板块间距，随屏幕高度 */
+  margin-bottom: 12vh; /* 板块间距 */
+  padding: 0 8%; /* 整体左右留白，避免贴边 */
 }
 
 /* =========================
@@ -14,7 +15,7 @@
 .case-text {
   font-size: 1.8rem;
   font-weight: bold;
-  margin-left: 15%; /* 大屏幕右移文字 */
+  margin-left: 20%; /* 文字右移更多 */
 }
 
 /* =========================
@@ -49,7 +50,7 @@
 ========================= */
 @media (max-width: 1200px) {
   .case-text {
-    margin-left: 8%; /* 中屏幕减少右移 */
+    margin-left: 12%; /* 中屏幕减少右移 */
   }
 }
 
@@ -57,10 +58,11 @@
   .case-block {
     flex-direction: column;
     margin-bottom: 6vh;
+    padding: 0 4%; /* 移动端边距更小 */
   }
 
   .case-text {
-    margin-left: 0; /* 移动端不再右移 */
+    margin-left: 0; /* 移动端恢复居中 */
     text-align: center;
   }
 }
