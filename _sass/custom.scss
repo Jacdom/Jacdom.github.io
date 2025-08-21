@@ -1,37 +1,30 @@
 /* =========================
-   全局基础设置
+   每个板块容器
 ========================= */
 .case-block {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  gap: 2rem; /* 图片和文字之间的间距 */
-  margin-bottom: 10vh; /* 板块间距，随屏幕高度变化 */
+  margin-bottom: 12vh; /* 板块间距，随屏幕高度 */
 }
 
 /* =========================
    文字样式
 ========================= */
 .case-text {
-  flex: 1 1 30%;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  text-align: left;
-  margin-left: 20%; /* 相对右移，屏幕越大右移越多 */
+  margin-left: 15%; /* 大屏幕右移文字 */
 }
 
 /* =========================
    图片样式
 ========================= */
-.case-img {
-  flex: 2 1 60%;
-}
-
 .case-img img {
   max-width: 100%;
   height: auto;
   border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15); /* 浅阴影 */
+  box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.15); /* 浅阴影 */
 }
 
 /* =========================
@@ -52,27 +45,22 @@
 }
 
 /* =========================
-   响应式适配
+   响应式
 ========================= */
 @media (max-width: 1200px) {
   .case-text {
-    margin-left: 10%; /* 中屏幕减少右移 */
+    margin-left: 8%; /* 中屏幕减少右移 */
   }
 }
 
 @media (max-width: 1024px) {
   .case-block {
     flex-direction: column;
-    align-items: center;
-    margin-bottom: 6vh; /* 板块间距缩小 */
+    margin-bottom: 6vh;
   }
 
   .case-text {
-    margin-left: 0; /* 移动端取消右移 */
+    margin-left: 0; /* 移动端不再右移 */
     text-align: center;
-  }
-
-  .case-img {
-    flex: unset;
   }
 }
