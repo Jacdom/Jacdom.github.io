@@ -1,37 +1,42 @@
-/* 只针对 case 页面 */
-.case-section {
-  display: flex;
-  flex-direction: column; /* 模块竖排 */
-  gap: 2em; /* 模块间距 */
-}
-
+/* =========================
+   全局基础设置
+========================= */
 .case-block {
   display: flex;
-  flex-wrap: wrap; /* 移动端换行 */
+  flex-wrap: wrap;
   align-items: center;
-  gap: 1em;
+  gap: 2rem; /* 图片和文字之间的间距 */
+  margin-bottom: 10vh; /* 板块间距，随屏幕高度变化 */
 }
 
-/* 左边文字 */
+/* =========================
+   文字样式
+========================= */
 .case-text {
-  flex: 1 1 200px; /* 最小宽度200px，优先占比1 */
-  font-size: 1.5em;
+  flex: 1 1 30%;
+  font-size: 1.5rem;
   font-weight: bold;
   text-align: left;
+  margin-left: 20%; /* 相对右移，屏幕越大右移越多 */
 }
 
-/* 右边图片 */
+/* =========================
+   图片样式
+========================= */
 .case-img {
-  flex: 2 1 300px; /* 最小宽度300px，优先占比2 */
+  flex: 2 1 60%;
 }
 
 .case-img img {
-  max-width: 100%; /* 自适应 */
+  max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15); /* 浅阴影 */
 }
 
-/* 不同模块文字颜色 */
+/* =========================
+   不同模块文字颜色
+========================= */
 .case-block:nth-child(1) .case-text,
 .case-block:nth-child(2) .case-text {
   color: #ffa81c;
@@ -44,4 +49,30 @@
 .case-block:nth-child(4) .case-text,
 .case-block:nth-child(5) .case-text {
   color: #9f43d1;
+}
+
+/* =========================
+   响应式适配
+========================= */
+@media (max-width: 1200px) {
+  .case-text {
+    margin-left: 10%; /* 中屏幕减少右移 */
+  }
+}
+
+@media (max-width: 1024px) {
+  .case-block {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 6vh; /* 板块间距缩小 */
+  }
+
+  .case-text {
+    margin-left: 0; /* 移动端取消右移 */
+    text-align: center;
+  }
+
+  .case-img {
+    flex: unset;
+  }
 }
