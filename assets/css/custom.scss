@@ -1,0 +1,35 @@
+/* 只针对 case 页面 */
+.page-case {
+  .case-module {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+  }
+
+  .case-module .case-title {
+    width: 30%;
+    font-weight: bold;
+  }
+
+  .case-module .case-image {
+    width: 70%;
+  }
+
+  /* 不同模块文字颜色 */
+  .case-module:nth-child(1) .case-title,
+  .case-module:nth-child(2) .case-title {
+    color: #ffa81c;
+  }
+  .case-module:nth-child(3) .case-title {
+    color: #f26b46;
+  }
+  .case-module:nth-child(4) .case-title,
+  .case-module:nth-child(5) .case-title {
+    color: #9f43d1;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
