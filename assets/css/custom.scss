@@ -33,3 +33,35 @@
     height: auto;
   }
 }
+/* 只针对 case 页面 */
+.case-section {
+  display: flex;
+  flex-direction: column; /* 保持模块竖排 */
+  gap: 2em; /* 模块之间间距 */
+}
+
+.case-block {
+  display: flex;
+  flex-wrap: wrap; /* 移动端可换行 */
+  align-items: center;
+  gap: 1em;
+}
+
+/* 左边文字 */
+.case-text {
+  flex: 1 1 200px; /* 最小宽度200px */
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* 右边图片 */
+.case-img {
+  flex: 2 1 300px; /* 最小宽度300px，优先占比2倍 */
+}
+
+.case-img img {
+  width: 100%; /* 自适应 */
+  height: auto;
+  border-radius: 8px;
+}
