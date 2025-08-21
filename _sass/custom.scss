@@ -1,0 +1,47 @@
+/* 只针对 case 页面 */
+.case-section {
+  display: flex;
+  flex-direction: column; /* 模块竖排 */
+  gap: 2em; /* 模块间距 */
+}
+
+.case-block {
+  display: flex;
+  flex-wrap: wrap; /* 移动端换行 */
+  align-items: center;
+  gap: 1em;
+}
+
+/* 左边文字 */
+.case-text {
+  flex: 1 1 200px; /* 最小宽度200px，优先占比1 */
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* 右边图片 */
+.case-img {
+  flex: 2 1 300px; /* 最小宽度300px，优先占比2 */
+}
+
+.case-img img {
+  width: 100%; /* 自适应 */
+  height: auto;
+  border-radius: 8px;
+}
+
+/* 不同模块文字颜色 */
+.case-block:nth-child(1) .case-text,
+.case-block:nth-child(2) .case-text {
+  color: #ffa81c;
+}
+
+.case-block:nth-child(3) .case-text {
+  color: #f26b46;
+}
+
+.case-block:nth-child(4) .case-text,
+.case-block:nth-child(5) .case-text {
+  color: #9f43d1;
+}
