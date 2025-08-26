@@ -18,7 +18,7 @@ permalink: /case/
   <div class="case-block">
     <div class="case-text">包装设计</div>
     <div class="case-img">
-      <img src="https://s21.ax1x.com/2025/08/21/pVDisVU.jpg" alt="包装设计" width="1280" height="720">
+      <img src="https://s21.ax1x.com/2025/08/26/pVyDo90.jpg" alt="包装设计" width="1280" height="720">
     </div>
   </div>
 
