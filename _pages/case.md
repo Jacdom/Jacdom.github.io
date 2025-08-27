@@ -39,14 +39,16 @@ permalink: /case/
   </div>
 
 <!-- 产品动画 -->
-<div class="case-block">
-  <div class="case-text">产品动画</div>
-  <div class="case-img video-wrapper">
-    <iframe src="//player.bilibili.com/player.html?bvid=BV1VdekzyE52&page=1&autoplay=0"
+<div class="case-img">
+  <div class="video-wrapper">
+    <iframe src="//player.bilibili.com/player.html?bvid=BV1VdekzyE52&page=1"
+            scrolling="no"
+            border="0"
             frameborder="no"
             allowfullscreen="true">
     </iframe>
   </div>
 </div>
+
 
 
