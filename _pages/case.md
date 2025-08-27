@@ -42,8 +42,14 @@ permalink: /case/
   <div class="case-block">
     <div class="case-text">产品动画</div>
     <div class="case-img">
-      <img src="https://s21.ax1x.com/2025/08/21/pVDisVU.jpg" alt="产品动画" width="1280" height="720">
+      <iframe src="//player.bilibili.com/player.html?bvid=BV1VdekzyE52&page=1" 
+              scrolling="no" 
+              border="0" 
+              frameborder="no" 
+              allowfullscreen="true"
+              width="1280" 
+              height="720">
+      </iframe>
     </div>
   </div>
 
-</section>
