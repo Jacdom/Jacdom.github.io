@@ -26,7 +26,7 @@ permalink: /case/
   <div class="case-block">
     <div class="case-text">品牌VI</div>
     <div class="case-img">
-      <img src="https://s21.ax1x.com/2025/08/21/pVDisVU.jpg" alt="品牌VI" width="1280" height="720">
+      <img src="https://s21.ax1x.com/2025/08/28/pV6aJYV.jpg" alt="品牌VI" width="1280" height="720">
     </div>
   </div>
 
@@ -34,7 +34,7 @@ permalink: /case/
   <div class="case-block">
     <div class="case-text">3D渲染</div>
     <div class="case-img">
-      <img src="https://s21.ax1x.com/2025/08/21/pVDisVU.jpg" alt="3D渲染" width="1280" height="720">
+      <img src="https://s21.ax1x.com/2025/08/28/pV6aYWT.jpg" alt="3D渲染" width="1280" height="720">
     </div>
   </div>
 
