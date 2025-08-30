@@ -1,12 +1,12 @@
 # header links
 header:
-  - title: "Home"
+  - title: "Home首页"
     url: /
     description: "List of features in the theme"
-  - title: "Price"
+  - title: "Price价格"
     url: "/price/"
     description: "Theme source code"
-  - title: "Case"
+  - title: "Case案例"
     url: "/case/"
     description: "A little story about the theme"
 
