@@ -71,4 +71,24 @@
     text-align: center;
   }
 }
+/* =========================
+   首页图片在移动端的间距优化
+========================= */
+@media (max-width: 768px) {
+  .img-gap-120 {
+    margin-bottom: 60px !important; /* 从120减半 */
+  }
+
+  .img-gap-60 {
+    margin-bottom: 30px !important;
+  }
+
+  .img-gap-30 {
+    margin-bottom: 20px !important;
+  }
+
+  .img-gap-18 {
+    margin-bottom: 12px !important;
+  }
+}
 
