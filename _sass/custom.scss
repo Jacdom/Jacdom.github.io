@@ -96,10 +96,18 @@
 ========================= */
 .case-img iframe {
   width: 100%;             /* 占满父容器宽度 */
-  max-width: 1280px;       /* 最大宽度不超过原视频 */
-  aspect-ratio: 16 / 9;    /* 保持 16:9 高宽比 */
+  max-width: 1920px;       /* PC端最大宽度 */
+  aspect-ratio: 16 / 9;    /* 保持16:9高宽比 */
   height: auto;            /* 自适应高度 */
   border-radius: 0.5rem;
-  display: block;          /* 防止 inline 元素带来的空白 */
+  display: block;
+  margin: 0 auto;          /* 居中显示 */
+}
+
+/* 大屏幕增强显示 */
+@media (min-width: 1400px) {
+  .case-img iframe {
+    max-width: 1280px; /* 可以根据实际情况调大或调小 */
+  }
 }
 
