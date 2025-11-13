@@ -17,13 +17,13 @@ footer:
     description: "A Design Studio Born to Explore"
     bio: "Explore Forever" # short bio
   - social:
-    - label: "GitHub"
+    - label: "微信"
       icon: "fab fa-fw fa-github"
       url: # github link
-    - label: "LinkedIn"
+    - label: "小红书"
       icon: "fab fa-fw fa-linkedin"
       url: # linkedin profile link
-    - label: "Twitter"
+    - label: "抖音"
       icon: "fab fa-fw fa-twitter-square"
       url: # twitter profile link
     - label: "Instagram"
