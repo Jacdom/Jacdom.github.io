@@ -42,13 +42,13 @@ permalink: /case/
 <div class="case-block">
   <div class="case-text">产品动画</div>
   <div class="case-img">
-    <div class="video-wrapper">
-      <iframe src="//player.bilibili.com/player.html?bvid=BV1VdekzyE52&page=1&autoplay=0"
-              scrolling="no" 
-              frameborder="no" 
-              allowfullscreen="true">
-      </iframe>
-    </div>
+    <iframe src="https://player.bilibili.com/player.html?bvid=BV1VdekzyE52&page=1&autoplay=0"
+            scrolling="no" 
+            frameborder="no" 
+            allowfullscreen="true"
+            width="1280" 
+            height="720">
+    </iframe>
   </div>
 </div>
 

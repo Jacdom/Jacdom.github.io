@@ -92,23 +92,14 @@
   }
 }
 /* =========================
-   视频自适应样式
+   iframe 视频自适应
 ========================= */
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* 16:9 高宽比 */
-  height: 0;
-  overflow: hidden;
+.case-img iframe {
+  width: 100%;             /* 占满父容器宽度 */
+  max-width: 1280px;       /* 最大宽度不超过原视频 */
+  aspect-ratio: 16 / 9;    /* 保持 16:9 高宽比 */
+  height: auto;            /* 自适应高度 */
   border-radius: 0.5rem;
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
+  display: block;          /* 防止 inline 元素带来的空白 */
 }
 
