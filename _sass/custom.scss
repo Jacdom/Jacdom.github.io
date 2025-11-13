@@ -110,4 +110,36 @@
     max-width: 1280px; /* 可以根据实际情况调大或调小 */
   }
 }
+/* =========================
+   视频容器和iframe自适应
+========================= */
+.case-img {
+  flex: 2 1 640px; /* 父容器占比 */
+  max-width: 1280px; /* PC端最大宽度 */
+  margin: 0 auto; /* 居中 */
+}
+
+.case-img iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9; /* 保持16:9比例 */
+  border-radius: 0.5rem;
+  display: block;
+}
+
+/* 响应式 - 小屏幕 */
+@media (max-width: 1024px) {
+  .case-block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .case-img {
+    max-width: 100%; /* 移动端填满父容器 */
+  }
+
+  .case-img iframe {
+    width: 100%;
+  }
+}
 
