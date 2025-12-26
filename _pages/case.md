@@ -41,7 +41,10 @@ permalink: /case/
 
   <!-- 3D渲染 -->
   <div class="case-block">
-    <div class="case-text">3D渲染</div>
+    <div class="case-text">
+  <span class="cn">三维渲染</span>
+  <span class="en">3D Rendering</span>
+</div>
     <div class="case-img">
       <img src="https://s21.ax1x.com/2025/08/28/pV6aYWT.jpg" alt="3D渲染" width="1280" height="720">
     </div>
