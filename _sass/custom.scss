@@ -1,36 +1,55 @@
 /* =========================
-   每个板块容器
+   Case 页面整体结构
 ========================= */
 .case-block {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12vh; /* 板块间距 */
-  padding: 0 8%; /* 整体左右留白，避免贴边 */
+  padding: 0 8%;
+  margin-bottom: 10vh; /* PC端：大气留白 */
 }
 
-/* 第一板块与菜单栏留空 */
+/* 第一块与导航栏的距离 */
 .case-block:first-child {
-  margin-top: 4vh;
+  margin-top: 6vh;
 }
 
 /* =========================
-   文字样式
+   左侧文字
 ========================= */
 .case-text {
+  flex: 1;
   font-size: 1.8rem;
-  font-weight: bold;
-  margin-left: 25%; /* 再往右移一点 */
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-right: 6%;
+  white-space: nowrap;
 }
 
 /* =========================
-   图片样式
+   右侧图片 / 视频容器
 ========================= */
+.case-img {
+  flex: 2;
+  max-width: 1280px;
+}
+
+/* 图片 */
 .case-img img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 0.5rem;
-  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.15); /* 浅阴影 */
+  display: block;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+
+/* 视频（iframe） */
+.case-img iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 0.5rem;
+  display: block;
 }
 
 /* =========================
@@ -51,95 +70,50 @@
 }
 
 /* =========================
-   响应式
+   中等屏幕（笔记本）
 ========================= */
 @media (max-width: 1200px) {
-  .case-text {
-    margin-left: 15%; /* 中屏幕减少右移 */
-  }
-}
-
-@media (max-width: 1024px) {
   .case-block {
-    flex-direction: column;
-    margin-bottom: 6vh;
-    padding: 0 4%; /* 移动端边距更小 */
+    padding: 0 6%;
+    margin-bottom: 8vh;
   }
 
   .case-text {
-    margin-left: 0; /* 移动端恢复居中 */
-    text-align: center;
+    font-size: 1.6rem;
   }
 }
+
 /* =========================
-   首页图片在移动端的间距优化
+   移动端 / 平板（关键）
 ========================= */
-@media (max-width: 768px) {
-  .img-gap-120 {
-    margin-bottom: 60px !important; /* 从120减半 */
-  }
-
-  .img-gap-60 {
-    margin-bottom: 30px !important;
-  }
-
-  .img-gap-30 {
-    margin-bottom: 20px !important;
-  }
-
-  .img-gap-18 {
-    margin-bottom: 12px !important;
-  }
-}
-/* =========================
-   iframe 视频自适应
-========================= */
-.case-img iframe {
-  width: 100%;             /* 占满父容器宽度 */
-  max-width: 1920px;       /* PC端最大宽度 */
-  aspect-ratio: 16 / 9;    /* 保持16:9高宽比 */
-  height: auto;            /* 自适应高度 */
-  border-radius: 0.5rem;
-  display: block;
-  margin: 0 auto;          /* 居中显示 */
-}
-
-/* 大屏幕增强显示 */
-@media (min-width: 1400px) {
-  .case-img iframe {
-    max-width: 1280px; /* 可以根据实际情况调大或调小 */
-  }
-}
-/* =========================
-   视频容器和iframe自适应
-========================= */
-.case-img {
-  flex: 2 1 640px; /* 父容器占比 */
-  max-width: 1280px; /* PC端最大宽度 */
-  margin: 0 auto; /* 居中 */
-}
-
-.case-img iframe {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9; /* 保持16:9比例 */
-  border-radius: 0.5rem;
-  display: block;
-}
-
-/* 响应式 - 小屏幕 */
 @media (max-width: 1024px) {
   .case-block {
     flex-direction: column;
     align-items: center;
+    padding: 0 5%;
+    margin-bottom: 1.8rem; /* ⬅ 关键：不用 vh */
+  }
+
+  .case-text {
+    margin: 0 0 0.6rem 0;
+    font-size: 1.4rem;
+    text-align: center;
   }
 
   .case-img {
-    max-width: 100%; /* 移动端填满父容器 */
-  }
-
-  .case-img iframe {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
+/* =========================
+   手机端（更紧凑）
+========================= */
+@media (max-width: 768px) {
+  .case-block {
+    margin-bottom: 1.2rem;
+  }
+
+  .case-text {
+    font-size: 1.2rem;
+  }
+}
