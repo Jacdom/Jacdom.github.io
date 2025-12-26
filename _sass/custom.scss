@@ -117,3 +117,46 @@
     font-size: 1.2rem;
   }
 }
+
+/* =========================
+   Case 标题 · 极简副标题风
+========================= */
+.case-text {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.case-text .cn {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.case-text .en {
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase; /* Awwwards常见 */
+  letter-spacing: 0.12em;
+  opacity: 0.45;
+}
+
+/* =========================
+   移动端：中英文上下结构
+========================= */
+@media (max-width: 1024px) {
+  .case-text {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .case-text .cn {
+    font-size: 1.6rem;
+  }
+
+  .case-text .en {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+  }
+}
