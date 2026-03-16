@@ -33,6 +33,4 @@ footer:
     - label: "Sitemap"
       icon: "fas fa-sitemap"
       url: "/sitemap.xml"
-    - label: "RSS"
-      icon: "fas fa-fw fa-rss-square"
-      url: "/feed.xml"
+
