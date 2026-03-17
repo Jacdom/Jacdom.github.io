@@ -13,7 +13,7 @@ permalink: /case/
   <span class="en">E-commerce Design</span>
 </div>
     <div class="case-img">
-      <img src="https://s21.ax1x.com/2025/08/21/pVDisVU.jpg" alt="电商设计" width="1280" height="720">
+      <img src="https://cdn.jsdelivr.net/gh/Jacdom/jacdom.github.io@main/assets/images/case-e-commerce-1280-1.jpg" alt="电商设计" width="1280" height="720">
     </div>
   </div>
 
@@ -24,7 +24,7 @@ permalink: /case/
      <span class="en">Packaging Design</span>
     </div>
     <div class="case-img">
-      <img src="https://s21.ax1x.com/2025/08/26/pVyDo90.jpg" alt="包装设计" width="1280" height="720">
+      <img src="https://cdn.jsdelivr.net/gh/Jacdom/jacdom.github.io@main/assets/images/case-Package-1280-2.jpg" alt="包装设计" width="1280" height="720">
     </div>
   </div>
 
@@ -35,7 +35,7 @@ permalink: /case/
   <span class="en">Brand Identity</span>
 </div>
     <div class="case-img">
-      <img src="https://s21.ax1x.com/2025/08/28/pV6B8uF.jpg" alt="品牌VI" width="1280" height="720">
+      <img src="https://cdn.jsdelivr.net/gh/Jacdom/jacdom.github.io@main/assets/images/case-VI-1280-3.jpg" alt="品牌VI" width="1280" height="720">
     </div>
   </div>
 
@@ -46,7 +46,7 @@ permalink: /case/
   <span class="en">3D Rendering</span>
 </div>
     <div class="case-img">
-      <img src="https://s21.ax1x.com/2025/08/28/pV6aYWT.jpg" alt="3D渲染" width="1280" height="720">
+      <img src="https://cdn.jsdelivr.net/gh/Jacdom/jacdom.github.io@main/assets/images/case-rendering-1280-4.jpg" alt="3D渲染" width="1280" height="720">
     </div>
   </div>
 
