@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">DTC ecommerce website mockup</title>
+  <desc id="desc">A complete ecommerce website interface with product hero, benefits, reviews, and purchase path.</desc>
+  <rect width="1200" height="760" fill="#f8f5f0"/>
+  <rect x="88" y="70" width="1024" height="620" rx="30" fill="#fff" stroke="#ded8cf"/>
+  <rect x="128" y="114" width="944" height="48" rx="24" fill="#fff7e4" stroke="#ead7a2"/>
+  <rect x="150" y="218" width="410" height="360" rx="28" fill="#f1e6f8"/>
+  <rect x="620" y="230" width="340" height="42" rx="8" fill="#111"/>
+  <rect x="620" y="294" width="260" height="16" rx="8" fill="#777"/>
+  <rect x="620" y="328" width="310" height="16" rx="8" fill="#c3beb6"/>
+  <rect x="620" y="394" width="170" height="52" rx="26" fill="#f26b46"/>
+  <rect x="810" y="394" width="130" height="52" rx="26" fill="none" stroke="#111"/>
+  <g fill="#fff" stroke="#ded8cf">
+    <rect x="620" y="508" width="120" height="86" rx="14"/>
+    <rect x="760" y="508" width="120" height="86" rx="14"/>
+    <rect x="900" y="508" width="120" height="86" rx="14"/>
+  </g>
+  <circle cx="354" cy="374" r="116" fill="#ffa81c" opacity=".9"/>
+  <path d="M262 424c72-142 170-142 240 0" fill="none" stroke="#9f43d1" stroke-width="34" stroke-linecap="round"/>
+  <rect x="150" y="618" width="870" height="24" rx="12" fill="#111" opacity=".1"/>
+</svg>

@@ -3,15 +3,23 @@ header:
   - title: "Home"
     url: /
     description: "DTDT Studio home page"
+    i18n_key: "nav.home"
   - title: "Price"
     url: "/price/"
     description: "Service pricing"
+    i18n_key: "nav.price"
   - title: "Case"
     url: "/case/"
     description: "Selected design cases"
+    i18n_key: "nav.case"
+  - title: "Web Design"
+    url: "/web-design/"
+    description: "Website and digital experience design"
+    i18n_key: "nav.web"
   - title: "AI"
     url: "/ai/"
     description: "AI design practice"
+    i18n_key: "nav.ai"
 
 # Footer links
 footer:

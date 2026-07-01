@@ -29,12 +29,12 @@ capabilities:
 <section class="studio-hero" aria-labelledby="home-hero-title">
   <div class="studio-shell studio-hero__grid">
     <div class="studio-hero__content">
-      <p class="studio-eyebrow">DTDT Studio / Design Team Dream Team</p>
-      <h1 id="home-hero-title">Design systems for brands moving through visual culture and AI.</h1>
-      <p class="studio-lead">We shape brand identity, product imagery, e-commerce visuals, and AI-assisted workflows with a calm, strategic design process built for commercial clarity.</p>
+      <p class="studio-eyebrow" data-i18n="home.hero_eyebrow">DTDT Studio / Design Team Dream Team</p>
+      <h1 id="home-hero-title" data-i18n="home.hero_title">Design systems for brands moving through visual culture and AI.</h1>
+      <p class="studio-lead" data-i18n="home.hero_lead">We shape brand identity, product imagery, e-commerce visuals, and AI-assisted workflows with a calm, strategic design process built for commercial clarity.</p>
       <div class="studio-actions" aria-label="Primary actions">
-        <a class="studio-button studio-button--dark" href="{{ '/case/' | relative_url }}">View Work</a>
-        <a class="studio-button studio-button--light" href="{{ '/ai/' | relative_url }}">Explore AI</a>
+        <a class="studio-button studio-button--dark" href="{{ '/case/' | relative_url }}" data-i18n="home.view_work">View Work</a>
+        <a class="studio-button studio-button--light" href="{{ '/ai/' | relative_url }}" data-i18n="home.explore_ai">Explore AI</a>
       </div>
     </div>
     <div class="studio-hero__media" aria-label="Selected DTDT Studio visual work">
@@ -46,9 +46,9 @@ capabilities:
 <section class="studio-section studio-section--works" aria-labelledby="selected-work-title">
   <div class="studio-shell">
     <div class="studio-section__header">
-      <p class="studio-eyebrow">Selected Work</p>
-      <h2 id="selected-work-title">Visual direction with enough structure to scale.</h2>
-      <a class="studio-text-link" href="{{ '/case/' | relative_url }}">All cases</a>
+      <p class="studio-eyebrow" data-i18n="home.selected_work">Selected Work</p>
+      <h2 id="selected-work-title" data-i18n="home.selected_title">Visual direction with enough structure to scale.</h2>
+      <a class="studio-text-link" href="{{ '/case/' | relative_url }}" data-i18n="home.all_cases">All cases</a>
     </div>
 
     <div class="project-grid">
@@ -71,11 +71,11 @@ capabilities:
 <section class="studio-section studio-section--ai" aria-labelledby="ai-design-title">
   <div class="studio-shell studio-split">
     <div>
-      <p class="studio-eyebrow">AI Design Practice</p>
-      <h2 id="ai-design-title">AI as a creative operating layer, not a visual shortcut.</h2>
+      <p class="studio-eyebrow" data-i18n="home.ai_eyebrow">AI Design Practice</p>
+      <h2 id="ai-design-title" data-i18n="home.ai_title">AI as a creative operating layer, not a visual shortcut.</h2>
     </div>
     <div class="studio-split__body">
-      <p>Our AI work connects visual exploration, prompt systems, product rendering, and repeatable production workflows. The goal is faster iteration with stronger art direction and a clearer design system.</p>
+      <p data-i18n="home.ai_text">Our AI work connects visual exploration, prompt systems, product rendering, and repeatable production workflows. The goal is faster iteration with stronger art direction and a clearer design system.</p>
       <div class="ai-pill-list" aria-label="AI design directions">
         <a href="{{ '/ai/' | relative_url }}">AI Design</a>
         <a href="{{ '/ai/' | relative_url }}">AI Workflow</a>
@@ -86,11 +86,24 @@ capabilities:
   </div>
 </section>
 
+<section class="studio-section studio-section--web" aria-labelledby="web-design-title">
+  <div class="studio-shell studio-split">
+    <div>
+      <p class="studio-eyebrow" data-i18n="home.web_eyebrow">Digital Experience</p>
+      <h2 id="web-design-title" data-i18n="home.web_title">Web design that turns brand systems into clear commercial journeys.</h2>
+    </div>
+    <div class="studio-split__body">
+      <p data-i18n="home.web_text">From premium brand websites to DTC stores and Amazon storefronts, we design responsive pages with strong hierarchy, complete visual frames, and conversion-aware interaction.</p>
+      <a class="studio-button studio-button--dark" href="{{ '/web-design/' | relative_url }}" data-i18n="home.web_cta">Explore Web Design</a>
+    </div>
+  </div>
+</section>
+
 <section class="studio-section" aria-labelledby="capability-title">
   <div class="studio-shell">
     <div class="studio-section__header">
-      <p class="studio-eyebrow">Capabilities</p>
-      <h2 id="capability-title">From identity to production, every output belongs to a system.</h2>
+      <p class="studio-eyebrow" data-i18n="home.capabilities">Capabilities</p>
+      <h2 id="capability-title" data-i18n="home.capabilities_title">From identity to production, every output belongs to a system.</h2>
     </div>
     <div class="capability-grid">
       {% for capability in page.capabilities %}
@@ -106,23 +119,23 @@ capabilities:
 <section class="studio-section studio-section--philosophy" aria-labelledby="philosophy-title">
   <div class="studio-shell studio-split">
     <div>
-      <p class="studio-eyebrow">Philosophy</p>
-      <h2 id="philosophy-title">Design judgment first. AI acceleration second.</h2>
+      <p class="studio-eyebrow" data-i18n="home.philosophy">Philosophy</p>
+      <h2 id="philosophy-title" data-i18n="home.philosophy_title">Design judgment first. AI acceleration second.</h2>
     </div>
     <div class="studio-split__body">
-      <p>DTDT Studio builds visual systems that help products look considered, trustworthy, and ready for market. We combine brand strategy, commercial awareness, image craft, and AI-enhanced production so teams can move quickly without losing taste.</p>
-      <p>Explore Forever means staying curious about new tools while protecting the part of design that still matters most: precise judgment.</p>
+      <p data-i18n="home.philosophy_text_1">DTDT Studio builds visual systems that help products look considered, trustworthy, and ready for market. We combine brand strategy, commercial awareness, image craft, and AI-enhanced production so teams can move quickly without losing taste.</p>
+      <p data-i18n="home.philosophy_text_2">Explore Forever means staying curious about new tools while protecting the part of design that still matters most: precise judgment.</p>
     </div>
   </div>
 </section>
 
 <section class="studio-final-cta" aria-labelledby="final-cta-title">
   <div class="studio-shell">
-    <p class="studio-eyebrow">Start With A System</p>
-    <h2 id="final-cta-title">Build a sharper brand presence for the next launch.</h2>
+    <p class="studio-eyebrow" data-i18n="home.final_eyebrow">Start With A System</p>
+    <h2 id="final-cta-title" data-i18n="home.final_title">Build a sharper brand presence for the next launch.</h2>
     <div class="studio-actions">
-      <a class="studio-button studio-button--dark" href="{{ '/connect/' | relative_url }}">Connect</a>
-      <a class="studio-button studio-button--light" href="{{ '/ai/' | relative_url }}">Explore AI</a>
+      <a class="studio-button studio-button--dark" href="{{ '/connect/' | relative_url }}" data-i18n="nav.connect">Connect</a>
+      <a class="studio-button studio-button--light" href="{{ '/ai/' | relative_url }}" data-i18n="home.explore_ai">Explore AI</a>
     </div>
   </div>
 </section>

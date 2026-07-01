@@ -18,16 +18,21 @@
             {%- assign url = link.url | relative_url -%}
           {%- endif -%}
           <li class="nav-item">
-            <a class="nav-link" href="{{ url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+            <a class="nav-link" href="{{ url }}"{% if link.description %} title="{{ link.description }}"{% endif %}{% if link.i18n_key %} data-i18n="{{ link.i18n_key }}"{% endif %}>{{ link.title }}</a>
           </li>
         {%- endfor -%}
       </ul>
 
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="{{ '/connect/' | relative_url }}">Connect</a>
+          <a class="nav-link" href="{{ '/connect/' | relative_url }}" data-i18n="nav.connect">Connect</a>
         </li>
       </ul>
+
+      <div class="language-switcher" aria-label="Language selector">
+        <button class="language-switcher__button is-active" type="button" data-lang-option="en" aria-pressed="true">EN</button>
+        <button class="language-switcher__button" type="button" data-lang-option="zh" aria-pressed="false">中文</button>
+      </div>
 
       {% if site.search == true %}
         {%- include search-providers/search_form.html -%}
