@@ -9,6 +9,9 @@ header:
   - title: "Case"
     url: "/case/"
     description: "Selected design cases"
+  - title: "AI"
+    url: "/ai/"
+    description: "AI design practice"
 
 # Footer links
 footer:

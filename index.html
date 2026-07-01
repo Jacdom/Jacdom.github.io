@@ -1,63 +1,128 @@
 ---
 layout: default
 title: DTDT Studio
-home_showcase:
-  - href: /connect/
-    image: /assets/images/home-1920-1.jpg
-    alt: DTDT Studio design service showcase
-    gap: xl
-    priority: true
-  - image: /assets/images/home-Amazon-Logo-100-2.png
-    alt: Amazon collaboration logo
-    gap: sm
-    modifier: logo
-  - href: /price/
-    image: /assets/images/home-1920-3.jpg
-    alt: DTDT Studio price service showcase
-    gap: md
-  - href: /price/
-    image: /assets/images/home-1920-4.jpg
-    alt: DTDT Studio package showcase
-    gap: xl
-  - href: /case/
-    image: /assets/images/home-1920-5.jpg
-    alt: DTDT Studio case showcase
-    gap: none
-  - href: /case/
-    image: /assets/images/home-1920-6.jpg
-    alt: DTDT Studio case detail showcase
-    gap: sm
+featured_projects:
+  - title: E-commerce Design
+    eyebrow: Commerce visual system
+    text: Conversion-oriented storefront pages, launch assets, and product storytelling for digital retail.
+    image: /assets/images/case-e-commerce-1280-1.jpg
+    href: /case/
+  - title: Brand Identity
+    eyebrow: Identity system
+    text: Visual language, logo direction, color, typography, and guidelines built for consistent brand expression.
+    image: /assets/images/case-VI-1280-3.jpg
+    href: /case/
+  - title: Product Rendering
+    eyebrow: 3D and motion
+    text: High-detail product visualization for campaigns, e-commerce, packaging, and product launches.
+    image: /assets/images/case-rendering-1280-4.jpg
+    href: /case/
+capabilities:
+  - Brand Visual System
+  - Product Rendering
+  - E-commerce Creative
+  - AI Visual Exploration
+  - Packaging Design
+  - Workflow Automation
 ---
 
-<section class="home-showcase" aria-label="DTDT Studio showcase">
-  <div class="home-showcase__inner">
-    {% for item in page.home_showcase %}
-      {% assign item_classes = 'home-showcase__item home-showcase__item--gap-' | append: item.gap %}
-      {% if item.modifier %}
-        {% assign item_classes = item_classes | append: ' home-showcase__item--' | append: item.modifier %}
-      {% endif %}
+<section class="studio-hero" aria-labelledby="home-hero-title">
+  <div class="studio-shell studio-hero__grid">
+    <div class="studio-hero__content">
+      <p class="studio-eyebrow">DTDT Studio / Design Team Dream Team</p>
+      <h1 id="home-hero-title">Design systems for brands moving through visual culture and AI.</h1>
+      <p class="studio-lead">We shape brand identity, product imagery, e-commerce visuals, and AI-assisted workflows with a calm, strategic design process built for commercial clarity.</p>
+      <div class="studio-actions" aria-label="Primary actions">
+        <a class="studio-button studio-button--dark" href="{{ '/case/' | relative_url }}">View Work</a>
+        <a class="studio-button studio-button--light" href="{{ '/ai/' | relative_url }}">Explore AI</a>
+      </div>
+    </div>
+    <div class="studio-hero__media" aria-label="Selected DTDT Studio visual work">
+      <img src="{{ '/assets/images/home-1920-1.jpg' | relative_url }}" alt="DTDT Studio brand and product design showcase" width="1920" height="1080" loading="eager" fetchpriority="high">
+    </div>
+  </div>
+</section>
 
-      {% if item.href %}
-        <a class="{{ item_classes }}" href="{{ item.href | relative_url }}">
-      {% else %}
-        <div class="{{ item_classes }}">
-      {% endif %}
-          <img
-            class="home-showcase__image"
-            src="{{ item.image | relative_url }}"
-            alt="{{ item.alt }}"
-            {% if item.priority %}
-              loading="eager"
-              fetchpriority="high"
-            {% else %}
-              loading="lazy"
-            {% endif %}
-          >
-      {% if item.href %}
-        </a>
-      {% else %}
+<section class="studio-section studio-section--works" aria-labelledby="selected-work-title">
+  <div class="studio-shell">
+    <div class="studio-section__header">
+      <p class="studio-eyebrow">Selected Work</p>
+      <h2 id="selected-work-title">Visual direction with enough structure to scale.</h2>
+      <a class="studio-text-link" href="{{ '/case/' | relative_url }}">All cases</a>
+    </div>
+
+    <div class="project-grid">
+      {% for project in page.featured_projects %}
+        <article class="project-card">
+          <a href="{{ project.href | relative_url }}" class="project-card__media" aria-label="{{ project.title }}">
+            <img src="{{ project.image | relative_url }}" alt="{{ project.title }} case image" width="1280" height="720" loading="lazy">
+          </a>
+          <div class="project-card__body">
+            <p>{{ project.eyebrow }}</p>
+            <h3>{{ project.title }}</h3>
+            <span>{{ project.text }}</span>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="studio-section studio-section--ai" aria-labelledby="ai-design-title">
+  <div class="studio-shell studio-split">
+    <div>
+      <p class="studio-eyebrow">AI Design Practice</p>
+      <h2 id="ai-design-title">AI as a creative operating layer, not a visual shortcut.</h2>
+    </div>
+    <div class="studio-split__body">
+      <p>Our AI work connects visual exploration, prompt systems, product rendering, and repeatable production workflows. The goal is faster iteration with stronger art direction and a clearer design system.</p>
+      <div class="ai-pill-list" aria-label="AI design directions">
+        <a href="{{ '/ai/' | relative_url }}">AI Design</a>
+        <a href="{{ '/ai/' | relative_url }}">AI Workflow</a>
+        <a href="{{ '/ai/' | relative_url }}">AI Visual System</a>
+        <a href="{{ '/ai/' | relative_url }}">AI Case Study</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="studio-section" aria-labelledby="capability-title">
+  <div class="studio-shell">
+    <div class="studio-section__header">
+      <p class="studio-eyebrow">Capabilities</p>
+      <h2 id="capability-title">From identity to production, every output belongs to a system.</h2>
+    </div>
+    <div class="capability-grid">
+      {% for capability in page.capabilities %}
+        <div class="capability-item">
+          <span>0{{ forloop.index }}</span>
+          <h3>{{ capability }}</h3>
         </div>
-      {% endif %}
-    {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="studio-section studio-section--philosophy" aria-labelledby="philosophy-title">
+  <div class="studio-shell studio-split">
+    <div>
+      <p class="studio-eyebrow">Philosophy</p>
+      <h2 id="philosophy-title">Design judgment first. AI acceleration second.</h2>
+    </div>
+    <div class="studio-split__body">
+      <p>DTDT Studio builds visual systems that help products look considered, trustworthy, and ready for market. We combine brand strategy, commercial awareness, image craft, and AI-enhanced production so teams can move quickly without losing taste.</p>
+      <p>Explore Forever means staying curious about new tools while protecting the part of design that still matters most: precise judgment.</p>
+    </div>
+  </div>
+</section>
+
+<section class="studio-final-cta" aria-labelledby="final-cta-title">
+  <div class="studio-shell">
+    <p class="studio-eyebrow">Start With A System</p>
+    <h2 id="final-cta-title">Build a sharper brand presence for the next launch.</h2>
+    <div class="studio-actions">
+      <a class="studio-button studio-button--dark" href="{{ '/connect/' | relative_url }}">Connect</a>
+      <a class="studio-button studio-button--light" href="{{ '/ai/' | relative_url }}">Explore AI</a>
+    </div>
   </div>
 </section>
