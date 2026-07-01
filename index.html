@@ -1,30 +1,63 @@
 ---
 layout: default
+title: DTDT Studio
+home_showcase:
+  - href: /connect/
+    image: /assets/images/home-1920-1.jpg
+    alt: DTDT Studio design service showcase
+    gap: xl
+    priority: true
+  - image: /assets/images/home-Amazon-Logo-100-2.png
+    alt: Amazon collaboration logo
+    gap: sm
+    modifier: logo
+  - href: /price/
+    image: /assets/images/home-1920-3.jpg
+    alt: DTDT Studio price service showcase
+    gap: md
+  - href: /price/
+    image: /assets/images/home-1920-4.jpg
+    alt: DTDT Studio package showcase
+    gap: xl
+  - href: /case/
+    image: /assets/images/home-1920-5.jpg
+    alt: DTDT Studio case showcase
+    gap: none
+  - href: /case/
+    image: /assets/images/home-1920-6.jpg
+    alt: DTDT Studio case detail showcase
+    gap: sm
 ---
 
-<section>
-  <div class="container mt-4 mb-4">
-    <div class="row">
-      <div class="col text-center">
-        <a href="{{ '/connect' | relative_url }}">
-  <img src="https://cdn.jsdelivr.net/gh/Jacdom/jacdom.github.io@main/assets/images/home-1920-1.jpg" alt="show1" class="img-fluid img-gap-120">
-</a>
+<section class="home-showcase" aria-label="DTDT Studio showcase">
+  <div class="home-showcase__inner">
+    {% for item in page.home_showcase %}
+      {% assign item_classes = 'home-showcase__item home-showcase__item--gap-' | append: item.gap %}
+      {% if item.modifier %}
+        {% assign item_classes = item_classes | append: ' home-showcase__item--' | append: item.modifier %}
+      {% endif %}
 
-        <img src="{{ '/assets/images/home-Amazon-Logo-100-2.png' | relative_url }}" alt="Amazon" class="img-fluid img-gap-18">
-        <a href="{{ '/price' | relative_url }}">
-  <img src="https://cdn.jsdelivr.net/gh/Jacdom/jacdom.github.io@main/assets/images/home-1920-3.jpg" alt="show2" class="img-fluid img-gap-30">
-</a>
-
-<a href="{{ '/price' | relative_url }}">
-  <img src="https://cdn.jsdelivr.net/gh/Jacdom/jacdom.github.io@main/assets/images/home-1920-4.jpg" alt="show3" class="img-fluid img-gap-120">
-</a>
-        <a href="{{ '/case' | relative_url }}">
-        <img src="https://cdn.jsdelivr.net/gh/Jacdom/jacdom.github.io@main/assets/images/home-1920-5.jpg" alt="show4" class="img-fluid img-gap-0">
-          </a>
-          <a href="{{ '/case' | relative_url }}">
-        <img src="https://cdn.jsdelivr.net/gh/Jacdom/jacdom.github.io@main/assets/images/home-1920-6.jpg" alt="show5" class="img-fluid img-gap-18">
-            </a>
-      </div>
-    </div>
+      {% if item.href %}
+        <a class="{{ item_classes }}" href="{{ item.href | relative_url }}">
+      {% else %}
+        <div class="{{ item_classes }}">
+      {% endif %}
+          <img
+            class="home-showcase__image"
+            src="{{ item.image | relative_url }}"
+            alt="{{ item.alt }}"
+            {% if item.priority %}
+              loading="eager"
+              fetchpriority="high"
+            {% else %}
+              loading="lazy"
+            {% endif %}
+          >
+      {% if item.href %}
+        </a>
+      {% else %}
+        </div>
+      {% endif %}
+    {% endfor %}
   </div>
 </section>

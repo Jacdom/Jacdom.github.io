@@ -1,60 +1,138 @@
-/* =========================
-   Case 页面整体结构
-========================= */
+/* Site shell */
+.custom-navbar {
+  background-color: #fff !important;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.custom-navbar .navbar-brand img {
+  display: block;
+}
+
+.page-content {
+  overflow-x: hidden;
+}
+
+/* Home showcase */
+.home-showcase {
+  padding: clamp(1rem, 2.6vw, 2rem) 0 clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.home-showcase__inner {
+  width: calc(100% - 2rem);
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-showcase__item {
+  display: block;
+  width: 100%;
+  line-height: 0;
+}
+
+.home-showcase__item:focus {
+  outline: none;
+}
+
+.home-showcase__item:focus-visible {
+  outline: 3px solid #f26b46;
+  outline-offset: 4px;
+}
+
+.home-showcase__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.home-showcase__item--logo .home-showcase__image {
+  max-width: 980px;
+}
+
+.home-showcase__item--gap-none {
+  margin-bottom: 0;
+}
+
+.home-showcase__item--gap-sm {
+  margin-bottom: clamp(0.75rem, 1.6vw, 1.125rem);
+}
+
+.home-showcase__item--gap-md {
+  margin-bottom: clamp(1.25rem, 2.4vw, 1.875rem);
+}
+
+.home-showcase__item--gap-xl {
+  margin-bottom: clamp(2rem, 6vw, 7.5rem);
+}
+
+/* Case page */
+.case-section {
+  padding: clamp(2rem, 6vw, 5rem) 0 clamp(1rem, 4vw, 3rem);
+}
+
 .case-block {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 8%;
-  margin-bottom: 10vh; /* PC端：大气留白 */
+  justify-content: space-between;
+  gap: clamp(1.5rem, 5vw, 5rem);
+  width: calc(100% - 2rem);
+  max-width: 1440px;
+  margin: 0 auto clamp(2rem, 7vw, 6rem);
 }
 
-/* 第一块与导航栏的距离 */
-.case-block:first-child {
-  margin-top: 6vh;
+.case-block:last-child {
+  margin-bottom: 0;
 }
 
-/* =========================
-   左侧文字
-========================= */
 .case-text {
-  flex: 1;
-  font-size: 1.8rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  margin-right: 6%;
+  flex: 0 0 clamp(10rem, 20vw, 18rem);
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin: 0;
   white-space: nowrap;
 }
 
-/* =========================
-   右侧图片 / 视频容器
-========================= */
-.case-img {
-  flex: 2;
-  max-width: 1280px;
+.case-text .cn {
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+  font-weight: 600;
+  line-height: 1.1;
 }
 
-/* 图片 */
-.case-img img {
-  width: 100%;
-  height: auto;
-  border-radius: 0.5rem;
+.case-text .en {
+  font-size: clamp(0.68rem, 0.85vw, 0.8rem);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  opacity: 0.48;
+}
+
+.case-img {
+  flex: 1 1 auto;
+  max-width: 1280px;
+  min-width: 0;
+}
+
+.case-img img,
+.case-img iframe {
   display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.case-img img {
+  height: auto;
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.15);
 }
 
-/* 视频（iframe） */
 .case-img iframe {
-  width: 100%;
   aspect-ratio: 16 / 9;
-  border: none;
-  border-radius: 0.5rem;
-  display: block;
+  height: auto;
+  border: 0;
 }
 
-/* =========================
-   不同模块文字颜色
-========================= */
 .case-block:nth-child(1) .case-text,
 .case-block:nth-child(2) .case-text {
   color: #ffa81c;
@@ -69,94 +147,66 @@
   color: #9f43d1;
 }
 
-/* =========================
-   中等屏幕（笔记本）
-========================= */
-@media (max-width: 1200px) {
-  .case-block {
-    padding: 0 6%;
-    margin-bottom: 8vh;
+@media (max-width: 991.98px) {
+  .custom-navbar .navbar-nav {
+    padding-top: 0.5rem;
   }
 
-  .case-text {
-    font-size: 1.6rem;
+  .home-showcase__inner {
+    width: calc(100% - 1rem);
+    max-width: 960px;
   }
-}
 
-/* =========================
-   移动端 / 平板（关键）
-========================= */
-@media (max-width: 1024px) {
+  .home-showcase__item--gap-xl {
+    margin-bottom: clamp(1.75rem, 8vw, 4rem);
+  }
+
   .case-block {
     flex-direction: column;
     align-items: center;
-    padding: 0 5%;
-    margin-bottom: 1.8rem; /* ⬅ 关键：不用 vh */
+    gap: 0.75rem;
+    width: calc(100% - 1.25rem);
+    max-width: 900px;
+    margin-bottom: 2rem;
   }
 
   .case-text {
-    margin: 0 0 0.6rem 0;
-    font-size: 1.4rem;
-    text-align: center;
-  }
-
-  .case-img {
-    max-width: 100%;
-  }
-}
-
-/* =========================
-   手机端（更紧凑）
-========================= */
-@media (max-width: 768px) {
-  .case-block {
-    margin-bottom: 1.2rem;
-  }
-
-  .case-text {
-    font-size: 1.2rem;
-  }
-}
-
-/* =========================
-   Case 标题 · 极简副标题风
-========================= */
-.case-text {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-}
-
-.case-text .cn {
-  font-size: 1.8rem;
-  font-weight: 600;
-  line-height: 1.1;
-}
-
-.case-text .en {
-  font-size: 0.75rem;
-  font-weight: 400;
-  text-transform: uppercase; /* Awwwards常见 */
-  letter-spacing: 0.12em;
-  opacity: 0.45;
-}
-
-/* =========================
-   移动端：中英文上下结构
-========================= */
-@media (max-width: 1024px) {
-  .case-text {
+    flex: none;
     flex-direction: column;
     align-items: center;
     gap: 0.3rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .home-showcase {
+    padding-top: 0.75rem;
   }
 
-  .case-text .cn {
-    font-size: 1.6rem;
+  .home-showcase__inner {
+    width: 100%;
   }
 
-  .case-text .en {
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
+  .home-showcase__item--gap-sm {
+    margin-bottom: 0.75rem;
+  }
+
+  .home-showcase__item--gap-md {
+    margin-bottom: 1rem;
+  }
+
+  .home-showcase__item--gap-xl {
+    margin-bottom: 2rem;
+  }
+
+  .case-section {
+    padding-top: 1.25rem;
+  }
+
+  .case-block {
+    width: calc(100% - 1rem);
+    max-width: 560px;
+    margin-bottom: 1.35rem;
   }
 }

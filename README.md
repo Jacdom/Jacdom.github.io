@@ -1,81 +1,102 @@
-# [Lone Wolf Theme Jekyll][1]
+# DTDT Studio Jekyll Site
 
-[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/manid2/lone-wolf-theme/blob/master/LICENSE)
-[![Jekyll](https://img.shields.io/badge/jekyll-%3E%3D%203.8-blue.svg)][jekyll]
-[![Ruby gem](https://badge.fury.io/rb/lone-wolf-theme.svg)](https://rubygems.org/gems/lone-wolf-theme/)
-[![Build Status](https://travis-ci.com/manid2/lone-wolf-theme.svg?branch=master)](https://travis-ci.com/manid2/lone-wolf-theme)
+This repository is a customized Jekyll site based on the Lone Wolf Theme. The
+current website no longer follows the original theme demo exactly, so the real
+rendered pages in the repository root should be treated as the source of truth.
 
-A simple [bootstrap][bs4] based jekyll theme.
+## Current Site Structure
 
-It uses
+The active home page is `index.html`.
 
-- [github-pages compatible gems][gh-gems]
-- [bootswatch wrappers][bootswatch]
-- [animate.css][ani-css].
+```text
+index.html
+  -> _layouts/default.html
+      -> _includes/head.html
+          -> _includes/head/styles.html
+      -> _includes/header.html
+      -> page content
+      -> _includes/footer.html
+      -> _includes/scripts.html
+```
 
-## Who uses it
+`_layouts/home.html` is part of the inherited theme, but it is not used by the
+current home page.
 
-- [Lone wolf theme docs][1]
+## Home Page
 
-Support
--------
+The home page is a visual showcase. Its content is defined in the
+`home_showcase` list at the top of `index.html`.
 
-Kindly support this theme development by donating at [Buy me a
-coffee][md2_bmc_link].
+Each item can define:
 
-[![Mani Kumar Buy Me a Coffee QR code][md2_bmc_qr_img]][md2_bmc_link]
+- `href`: optional target link.
+- `image`: image path.
+- `alt`: accessible image description.
+- `gap`: spacing after the image, using `none`, `sm`, `md`, or `xl`.
+- `modifier`: optional display modifier, currently used for the logo item.
+- `priority`: marks the first visible image as high priority.
 
-## Screenshots
+To change the first screen or KV image, edit the first item in `index.html`.
 
-![Lone wolf theme screenshot][lwt_ss_all_img]
+## Layouts
 
-<!-- Images -->
-[lwt_ss_all_img]: lwt_screenshots/lwt_ss_all_in_one.png "Lone wolf theme screenshot"
+- `_layouts/default.html`: global page shell used by the current home page and
+  most content pages.
+- `_layouts/page.html`: simple content page layout.
+- `_layouts/post.html`: blog post layout.
+- `_layouts/list.html`: archive/list layout.
+- `_layouts/home.html`: inherited theme layout, currently unused.
 
-## Installation
+## Styles
 
-### Using remote theme
+The Sass entry file is `assets/css/main.scss`. It imports Bootstrap,
+Bootswatch, the inherited theme styles, and then the site-specific styles.
 
-Easiest way to use the theme if you dont want to make changes to the theme's
-code.
+Custom project styles belong in `_sass/custom.scss`.
 
-- Add `remote_theme    : "manid2/lone-wolf-theme"` to your `_config.yml` file.
+Current custom style areas:
 
-### By forking the theme repository
+- Navigation shell.
+- Home showcase layout and responsive spacing.
+- Case page layout, media blocks, typography, and responsive behavior.
 
-If you want to make changes to the code and to truly own the site.
-Follow the blog on [smashing magazine][sm-gh-pages] to learn about this method.
+## Pages And Data
 
-### As a ruby gem
+- `_data/nav.yml`: header and footer navigation data.
+- `_pages/price.md`: price page.
+- `_pages/case.md`: case page.
+- `_pages/connect.md`: contact/connect page.
+- `_pages/about.md`: about page.
+- `_config.yml`: site-wide Jekyll configuration, logo, theme name, plugins, and
+  Sass settings.
 
-When you want to host the site on any server other than the github pages
-and also to make use of plenty of jekyll plugins.
+The `docs/` directory is excluded in `_config.yml` and should be treated as
+inherited theme documentation or demo content, not as the live site source.
 
-- Add `gem "lone-wolf-theme"` to your `Gemfile`.
-- Update bundled gems by using `bundle` command.
-- Add `theme    : "lone-wolf-theme"` to your `_config.yml`.
+## Safe Editing Guide
 
-## Contribution
+For home page visual changes, edit:
 
-Use the link to learn how to [contribute][3] to LWT.
+- `index.html`
+- `_sass/custom.scss`
+- `assets/images/`
 
-## Sponsor
+For navigation or footer labels, edit:
 
-If you like this theme and want to support its development please consider
-sponsoring.
+- `_data/nav.yml`
 
-<a href="https://buymeacoffee.com/manid2" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-yellow.png" alt="Buy Me A Coffee" height="42" width="174"></a>
+For global metadata, logo path, Bootswatch theme, or Jekyll settings, edit:
 
-<!-- Links in the post -->
-[jekyll]: https://jekyllrb.com/
-[bs4]: https://getbootstrap.com/
-[bootswatch]: https://bootswatch.com/
-[gh-gems]: https://pages.github.com/versions/
-[ani-css]: https://daneden.github.io/animate.css/
-[sm-gh-pages]: https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/
+- `_config.yml`
 
-[1]: https://manid2.github.io/lone-wolf-theme/
-[3]: https://manid2.github.io/lone-wolf-theme/contribute/
+Avoid changing these unless you are intentionally modifying the theme or build
+system:
 
-[md2_bmc_link]: https://www.buymeacoffee.com/manid2
-[md2_bmc_qr_img]: https://manid2.gitlab.io/images/md2_bmc_qr.png
+- `_sass/bootstrap/`
+- `_sass/bootswatch/`
+- `_sass/lone-wolf-theme/`
+- `docs/`
+- `assets/js/main.min.js`
+- `Gemfile`
+- `package.json`
+- `lone-wolf-theme.gemspec`
