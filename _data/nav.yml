@@ -1,36 +1,35 @@
-# header links
+# Header links. Visible navigation is English by default.
 header:
-  - title: "Home首页"
+  - title: "Home"
     url: /
-    description: "List of features in the theme"
-  - title: "Price价格"
+    description: "DTDT Studio home page"
+  - title: "Price"
     url: "/price/"
-    description: "Theme source code"
-  - title: "Case案例"
+    description: "Service pricing"
+  - title: "Case"
     url: "/case/"
-    description: "A little story about the theme"
+    description: "Selected design cases"
 
-# footer links
+# Footer links
 footer:
   - owner: "DTDT Studio"
     url: "https://jacdom.github.io"
     description: "A Design Studio Born to Explore"
-    bio: "Explore Forever" # short bio
+    bio: "Explore Forever"
   - social:
-    - label: "微信"
+    - label: "WeChat"
       icon: "fab fa-fw fa-github"
-      url: # github link
-    - label: "小红书"
+      url:
+    - label: "Xiaohongshu"
       icon: "fab fa-fw fa-linkedin"
-      url: # linkedin profile link
-    - label: "抖音"
+      url:
+    - label: "Douyin"
       icon: "fab fa-fw fa-twitter-square"
-      url: # twitter profile link
+      url:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: # instagram profile link
+      url:
   - feed:
     - label: "Sitemap"
       icon: "fas fa-sitemap"
       url: "/sitemap.xml"
-

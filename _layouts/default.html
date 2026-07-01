@@ -2,21 +2,28 @@
 #layout: compress # enable only if needed
 ---
 
+{%- assign current_lang = page.lang | default: '' -%}
+{%- if current_lang == '' -%}
+  {%- assign url_parts = page.url | split: '/' -%}
+  {%- assign first_segment = url_parts[1] -%}
+  {%- if first_segment == 'zh' or first_segment == 'cn' or first_segment == 'zh-cn' -%}
+    {%- assign current_lang = 'zh' -%}
+  {%- else -%}
+    {%- assign current_lang = site.lang | slice: 0, 2 | default: 'en' -%}
+  {%- endif -%}
+{%- endif -%}
+
 <!DOCTYPE html>
-<html lang="{{ site.lang | slice: 0,2 | default: "en" }}">
+<html lang="{{ current_lang }}">
 
 {% include head.html %}
 
 <body>
-  <!-- page container -->
   <div class="page-container">
-    <!-- page header -->
-    {% include header.html %}
-    <!-- page content -->
+    {% include header.html current_lang=current_lang %}
     <main class="page-content" role="main">
       {{ content }}
     </main>
-    <!-- page footer -->
     {% include footer.html %}
   </div>
   {% include scripts.html %}
