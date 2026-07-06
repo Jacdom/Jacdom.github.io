@@ -27,12 +27,33 @@
       return saved;
     }
 
-    var browserLanguage = (navigator.language || navigator.userLanguage || "en").toLowerCase();
-    if (browserLanguage.indexOf("zh") === 0) {
-      return "zh";
+    return "en";
+  }
+
+  function languageFromCountry(countryCode) {
+    var chineseMarkets = ["CN"];
+    var normalizedCountry = String(countryCode || "").toUpperCase();
+    return chineseMarkets.indexOf(normalizedCountry) !== -1 ? "zh" : "en";
+  }
+
+  function detectLanguageByIp() {
+    if (readSavedLanguage() || !window.fetch) {
+      return;
     }
 
-    return "en";
+    fetch("https://ipapi.co/json/", { cache: "no-store" })
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error("IP language lookup failed");
+        }
+        return response.json();
+      })
+      .then(function (data) {
+        applyLanguage(languageFromCountry(data && data.country_code));
+      })
+      .catch(function () {
+        applyLanguage("en");
+      });
   }
 
   function getTranslation(dictionary, key) {
@@ -66,6 +87,7 @@
   function setupLanguageSwitcher() {
     var language = resolveLanguage();
     applyLanguage(language);
+    detectLanguageByIp();
 
     document.querySelectorAll("[data-lang-option]").forEach(function (button) {
       button.addEventListener("click", function () {
