@@ -18,9 +18,9 @@
             {%- else -%}
               {%- assign url = link.url | relative_url -%}
             {%- endif -%}
-            <li><a href="{{ url }}"{% if link.i18n_key %} data-i18n="{{ link.i18n_key }}"{% endif %}>{{ link.title }}</a></li>
+            <li><a href="{{ url }}"{% if page.url == link.url %} aria-current="page"{% endif %}{% if link.i18n_key %} data-i18n="{{ link.i18n_key }}"{% endif %}>{{ link.title }}</a></li>
           {%- endfor -%}
-          <li><a class="site-navigation__contact" href="{{ '/connect/' | relative_url }}" data-i18n="nav.connect">Connect</a></li>
+          <li><a class="site-navigation__contact" href="{{ '/connect/' | relative_url }}"{% if page.url == '/connect/' %} aria-current="page"{% endif %} data-i18n="nav.connect">Connect</a></li>
         </ul>
       </nav>
 

@@ -14,6 +14,14 @@ permalink: /about/
   </div>
 </header>
 
+<section class="brand-origin" aria-labelledby="brand-origin-title">
+  <div class="studio-shell brand-origin__grid reveal">
+    <p class="studio-eyebrow" data-i18n="about.name_label">The name</p>
+    <h2 id="brand-origin-title" data-i18n="about.name_title">DTDT began as Dota Dream Team.</h2>
+    <p data-i18n="about.name_text">A name shaped by shared ambition, coordination, and the drive to keep exploring. Design Team Dream Team carries that same idea into creative practice today.</p>
+  </div>
+</section>
+
 <section class="about-manifesto" aria-labelledby="belief-title">
   <div class="studio-shell about-manifesto__grid reveal">
     <p class="studio-eyebrow" data-i18n="about.belief_label">What we believe</p>

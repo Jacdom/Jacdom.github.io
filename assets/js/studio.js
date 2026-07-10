@@ -91,10 +91,27 @@
       return;
     }
 
+    var focusableSelector = "a[href], button:not([disabled])";
+    var menuLabel = toggle.querySelector(".site-menu-button__label");
+
     function setMenu(open) {
       toggle.setAttribute("aria-expanded", String(open));
       navigation.classList.toggle("is-open", open);
       document.body.classList.toggle("menu-open", open);
+
+      if (menuLabel) {
+        menuLabel.setAttribute("data-i18n", open ? "nav.close" : "nav.menu");
+        applyLanguage(currentLanguage);
+      }
+
+      if (open) {
+        window.setTimeout(function () {
+          var firstLink = navigation.querySelector("a[href]");
+          if (firstLink) {
+            firstLink.focus();
+          }
+        }, 180);
+      }
     }
 
     toggle.addEventListener("click", function () {
@@ -111,6 +128,23 @@
       if (event.key === "Escape") {
         setMenu(false);
         toggle.focus();
+      }
+
+      if (event.key === "Tab" && navigation.classList.contains("is-open")) {
+        var focusable = Array.prototype.slice.call(navigation.querySelectorAll(focusableSelector));
+        if (!focusable.length) {
+          return;
+        }
+
+        var first = focusable[0];
+        var last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
       }
     });
 
@@ -162,7 +196,7 @@
     var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var mobile = window.matchMedia && window.matchMedia("(max-width: 767px)").matches;
     var saveData = navigator.connection && navigator.connection.saveData;
-    if (reduceMotion || mobile || saveData) {
+    if (reduceMotion || saveData) {
       return;
     }
 
@@ -181,13 +215,20 @@
         return;
       }
 
+      var frameStep = mobile ? 2 : 1;
+      var initialCount = mobile ? 8 : 12;
+      var playbackInterval = mobile ? Math.max(settings.interval, 170) : settings.interval;
       var initialBatch = [];
       var frameNumber = settings.start;
       var previousTime = 0;
       var animationId;
 
-      for (var index = settings.start; index < settings.start + Math.min(settings.count, 12); index += 1) {
-        initialBatch.push(preloadFrame(framePath(settings, index)));
+      for (var index = 0; index < initialCount; index += 1) {
+        var initialFrame = settings.start + (index * frameStep);
+        if (initialFrame > settings.count) {
+          break;
+        }
+        initialBatch.push(preloadFrame(framePath(settings, initialFrame)));
       }
 
       Promise.all(initialBatch).then(function () {
@@ -196,8 +237,11 @@
             previousTime = time;
           }
 
-          if (document.visibilityState === "visible" && time - previousTime >= settings.interval) {
-            frameNumber = frameNumber >= settings.count ? settings.start : frameNumber + 1;
+          if (document.visibilityState === "visible" && time - previousTime >= playbackInterval) {
+            frameNumber += frameStep;
+            if (frameNumber > settings.count) {
+              frameNumber = settings.start;
+            }
             image.src = framePath(settings, frameNumber);
             previousTime = time;
           }
@@ -209,7 +253,7 @@
       });
 
       var preloadRest = function () {
-        for (var rest = settings.start + 12; rest <= settings.count; rest += 1) {
+        for (var rest = settings.start + (initialCount * frameStep); rest <= settings.count; rest += frameStep) {
           preloadFrame(framePath(settings, rest));
         }
       };
