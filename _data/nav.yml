@@ -1,13 +1,13 @@
 # Primary studio navigation. English remains the crawlable default.
 header:
+  - title: "Home"
+    url: "/"
+    description: "DTDT Studio home page"
+    i18n_key: "nav.home"
   - title: "Work"
     url: "/case/"
     description: "Selected design cases"
     i18n_key: "nav.work"
-  - title: "Web"
-    url: "/case/#web-design"
-    description: "Website and digital experience cases"
-    i18n_key: "nav.web"
   - title: "AI Lab"
     url: "/ai/"
     description: "AI design practice"

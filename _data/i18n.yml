@@ -1,5 +1,6 @@
 en:
   nav:
+    home: "Home"
     work: "Work"
     web: "Web"
     ai: "AI Lab"
@@ -169,6 +170,7 @@ en:
 
 zh:
   nav:
+    home: "首页"
     work: "作品"
     web: "网页"
     ai: "AI 实验室"

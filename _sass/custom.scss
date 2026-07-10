@@ -434,7 +434,7 @@ a {
   height: calc(100svh - 118px);
   max-height: 980px;
   overflow: hidden;
-  background: var(--color-gold);
+  background: var(--color-surface);
   color: var(--color-ink);
 }
 
@@ -449,6 +449,12 @@ a {
   height: 100%;
   object-fit: contain;
   object-position: center;
+}
+
+@media (min-width: 992px) {
+  .home-hero__visual img {
+    object-fit: cover;
+  }
 }
 
 .home-hero__content {
@@ -1577,6 +1583,7 @@ a {
     height: 52%;
   }
   .home-hero__visual img { object-position: center top; }
+  .home-hero__visual img { object-fit: contain; }
   .home-hero__content { padding-block: 24px 24px; }
   .home-hero h1 { width: 100%; margin-bottom: 24px; font-size: 48px; line-height: .96; }
   .home-hero__footer { display: block; }
