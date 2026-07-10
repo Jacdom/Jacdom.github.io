@@ -94,17 +94,16 @@
     var focusableSelector = "a[href], button:not([disabled])";
     var menuLabel = toggle.querySelector(".site-menu-button__label");
 
-    function setMenu(open) {
+    function setMenu(open, focusFirst) {
       toggle.setAttribute("aria-expanded", String(open));
       navigation.classList.toggle("is-open", open);
-      document.body.classList.toggle("menu-open", open);
 
       if (menuLabel) {
         menuLabel.setAttribute("data-i18n", open ? "nav.close" : "nav.menu");
         applyLanguage(currentLanguage);
       }
 
-      if (open) {
+      if (open && focusFirst) {
         window.setTimeout(function () {
           var firstLink = navigation.querySelector("a[href]");
           if (firstLink) {
@@ -114,19 +113,32 @@
       }
     }
 
-    toggle.addEventListener("click", function () {
-      setMenu(toggle.getAttribute("aria-expanded") !== "true");
+    toggle.addEventListener("click", function (event) {
+      var opening = toggle.getAttribute("aria-expanded") !== "true";
+      setMenu(opening, event.detail === 0);
+      if (!opening && event.detail !== 0) {
+        toggle.blur();
+      }
     });
 
     navigation.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        setMenu(false);
+      link.addEventListener("click", function (event) {
+        setMenu(false, false);
+        if (event.detail !== 0) {
+          link.blur();
+        }
       });
+    });
+
+    document.addEventListener("pointerdown", function (event) {
+      if (navigation.classList.contains("is-open") && !navigation.contains(event.target) && !toggle.contains(event.target)) {
+        setMenu(false, false);
+      }
     });
 
     document.addEventListener("keydown", function (event) {
       if (event.key === "Escape") {
-        setMenu(false);
+        setMenu(false, false);
         toggle.focus();
       }
 
@@ -150,7 +162,7 @@
 
     window.addEventListener("resize", function () {
       if (window.innerWidth >= 992) {
-        setMenu(false);
+        setMenu(false, false);
       }
     });
   }

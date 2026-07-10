@@ -93,7 +93,7 @@ image: /assets/images/case-rendering-1280-4.jpg
   </div>
 </section>
 
-<section class="motion-feature" aria-labelledby="motion-title">
+<section class="motion-feature" id="motion-design" aria-labelledby="motion-title">
   <div class="studio-shell">
     <header class="section-heading reveal">
       <p class="studio-eyebrow" data-i18n="work.legacy_label">Extended practice</p>

@@ -46,10 +46,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-body.menu-open {
-  overflow: hidden;
-}
-
 img,
 svg,
 iframe {
@@ -153,6 +149,14 @@ a {
   display: flex;
   align-items: center;
   gap: 28px;
+  margin-left: auto;
+}
+
+.site-header__utility {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: 28px;
 }
 
 .site-navigation__links {
@@ -242,6 +246,16 @@ a {
   background: transparent;
   color: var(--color-ink);
   cursor: pointer;
+}
+
+.site-menu-button:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.site-menu-button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
 }
 
 .site-menu-button__label {
@@ -1519,35 +1533,42 @@ a {
     justify-content: flex-end;
   }
 
+  .site-header__utility {
+    gap: 10px;
+    margin-left: auto;
+  }
+
   .site-navigation {
     position: absolute;
     z-index: 120;
     top: 100%;
-    right: 0;
+    right: var(--gutter);
     bottom: auto;
-    left: 0;
-    display: flex;
+    left: auto;
+    display: block;
     visibility: hidden;
-    width: 100%;
-    height: calc(100vh - var(--header-height));
-    height: calc(100dvh - var(--header-height));
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-    gap: 28px;
+    width: min(390px, calc(100% - (var(--gutter) * 2)));
+    height: auto;
+    max-height: calc(100vh - var(--header-height) - 16px);
+    max-height: calc(100dvh - var(--header-height) - 16px);
     overflow-y: auto;
     overscroll-behavior: contain;
-    padding: 22px var(--gutter) 30px;
-    transform: translateY(-16px);
+    margin-left: 0;
+    padding: 8px 18px 12px;
+    transform: translateY(-8px) scale(0.985);
+    transform-origin: top right;
     opacity: 0;
-    background: var(--color-ink);
-    color: #fff;
+    border: 1px solid var(--color-line);
+    border-top: 0;
+    border-radius: 0 0 var(--radius) var(--radius);
+    background: var(--color-surface);
+    color: var(--color-ink);
     transition: opacity 220ms ease, transform 220ms var(--ease-out), visibility 220ms;
   }
 
   .site-navigation.is-open {
     visibility: visible;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
     opacity: 1;
   }
 
@@ -1563,7 +1584,7 @@ a {
   .site-navigation__links li {
     transform: translateY(12px);
     opacity: 0;
-    border-bottom: 1px solid var(--color-line-dark);
+    border-bottom: 1px solid var(--color-line);
     transition: opacity 260ms ease, transform 320ms var(--ease-out);
   }
 
@@ -1580,12 +1601,12 @@ a {
   .site-navigation__links a,
   .site-navigation__links .site-navigation__contact {
     display: flex;
-    min-height: 62px;
+    min-height: 54px;
     padding: 0;
     border: 0;
     border-radius: 0;
-    color: #fff;
-    font-size: 32px;
+    color: var(--color-ink);
+    font-size: 24px;
     font-weight: 600;
     line-height: 1.1;
   }
@@ -1595,7 +1616,7 @@ a {
   }
 
   .site-navigation__links a[aria-current="page"] {
-    color: var(--color-gold);
+    color: var(--color-primary);
   }
 
   .site-navigation__links a[aria-current="page"]::before {
@@ -1608,29 +1629,42 @@ a {
   }
 
   .site-navigation__links .site-navigation__contact {
-    color: var(--color-secondary);
+    color: var(--color-ink);
+  }
+
+  .site-navigation__links .site-navigation__contact:hover,
+  .site-navigation__links .site-navigation__contact:focus-visible {
+    border-color: transparent;
+    background: transparent;
+    color: var(--color-primary);
+  }
+
+  .site-navigation__links a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: -2px;
+    background: var(--color-purple-soft);
   }
 
   .language-switcher {
-    width: 100%;
-    gap: 12px;
-    margin-top: auto;
-    padding-top: 22px;
-    border-top: 1px solid var(--color-line-dark);
-    color: #aaa;
-    font-size: 13px;
+    width: auto;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: var(--color-muted);
+    font-size: 12px;
   }
 
   .language-switcher__button {
-    min-width: 48px;
+    min-width: 34px;
     min-height: 40px;
-    padding: 8px 0;
-    color: #aaa;
-    font-size: 13px;
-    text-align: left;
+    padding: 7px 2px;
+    color: var(--color-muted);
+    font-size: 12px;
+    text-align: center;
   }
 
-  .language-switcher__button.is-active { color: var(--color-gold); }
+  .language-switcher__button.is-active { color: var(--color-primary); }
   .home-hero { min-height: 620px; height: calc(100svh - 104px); }
   .home-hero h1 { font-size: 68px; }
   .work-index__grid { gap: 64px 18px; }
@@ -1785,7 +1819,7 @@ a {
   }
 
   .language-switcher {
-    padding-top: 10px;
+    padding-top: 0;
   }
 }
 
