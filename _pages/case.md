@@ -1,89 +1,91 @@
 ---
 layout: default
-title: Case
+page_id: work
+title: "Selected Work — DTDT Studio"
+description: "Selected brand design, product visualization, web design, ecommerce, packaging, 3D rendering, and motion work by DTDT Studio."
 permalink: /case/
-web_cases:
-  - id: brand
-    tab_key: web.tab_brand
-    tab: Premium Brand Website
-    title_key: web.case_brand_title
-    title: Premium Brand Website
-    text_key: web.case_brand_text
-    text: Premium brand website with strong first screen, story, typography, and CTA.
-    image: /assets/images/visual-web-brand.svg
-    alt: Premium brand website mockup
-    points:
-      - Brand hero
-      - Visual system
-      - Brand story
-      - CTA structure
-  - id: ecommerce
-    tab_key: web.tab_ecommerce
-    tab: DTC Ecommerce Website
-    title_key: web.case_ecommerce_title
-    title: DTC Ecommerce Website
-    text_key: web.case_ecommerce_text
-    text: Product journey with benefit blocks, scene modules, reviews, and purchase path.
-    image: /assets/images/visual-web-ecommerce.svg
-    alt: DTC ecommerce website mockup
-    points:
-      - Product hero
-      - Benefit modules
-      - Reviews
-      - Purchase path
-  - id: amazon
-    tab_key: web.tab_amazon
-    tab: Amazon Storefront Homepage
-    title_key: web.case_amazon_title
-    title: Amazon Storefront Homepage
-    text_key: web.case_amazon_text
-    text: Storefront homepage with category navigation, hero promotion, products, and brand story.
-    image: /assets/images/visual-web-amazon.svg
-    alt: Amazon storefront homepage mockup
-    points:
-      - Storefront hero
-      - Category navigation
-      - Featured products
-      - Promotion zone
+image: /assets/images/case-rendering-1280-4.jpg
 ---
 
-<section class="case-hero" aria-labelledby="case-page-title">
+<header class="editorial-hero editorial-hero--work">
   <div class="studio-shell">
-    <p class="studio-eyebrow">Selected Work</p>
-    <h1 id="case-page-title">Case studies across web, brand, commerce, and product visuals.</h1>
+    <p class="studio-eyebrow" data-i18n="work.eyebrow">Selected work / 2024-2026</p>
+    <h1 data-i18n="work.title">Systems, images, and experiences made to perform.</h1>
+    <p class="editorial-hero__lead" data-i18n="work.lead">A cross-section of brand, commerce, product, web, and motion practice.</p>
+  </div>
+</header>
+
+<section class="project-archive" aria-labelledby="archive-title">
+  <div class="studio-shell">
+    <h2 class="sr-only" id="archive-title" data-i18n="work.archive">Work archive</h2>
+    {% for project in site.data.projects %}
+      <article class="archive-project reveal" id="{{ project.id }}">
+        <a href="{% if project.id == 'web-experience' %}#web-design{% else %}#{{ project.id }}{% endif %}">
+          <figure class="archive-project__media media-frame">
+            <img src="{{ project.image | relative_url }}" alt="{{ project.alt }}" width="1280" height="720" loading="lazy">
+          </figure>
+          <div class="archive-project__meta">
+            <span>{{ project.number }}</span>
+            <h2 data-i18n="{{ project.title_key }}">{{ project.title }}</h2>
+            <p><span data-i18n="{{ project.category_key }}">{{ project.category }}</span> / {{ project.year }}</p>
+            <small data-i18n="{{ project.description_key }}">{{ project.description }}</small>
+          </div>
+        </a>
+      </article>
+    {% endfor %}
   </div>
 </section>
 
-<section class="studio-section web-case-section" id="web-design" aria-labelledby="web-case-title">
+<section class="web-lab" id="web-design" aria-labelledby="web-design-title">
   <div class="studio-shell">
-    <div class="studio-section__header">
-      <p class="studio-eyebrow" data-i18n="web.cases">Web Design</p>
-      <h2 id="web-case-title" data-i18n="web.cases_title">Three website directions for brand and commerce.</h2>
-    </div>
+    <header class="section-heading section-heading--split reveal">
+      <div>
+        <p class="studio-eyebrow" data-i18n="work.web_label">Web design cases</p>
+        <h2 id="web-design-title" data-i18n="work.web_title">Three digital models for brand and commerce.</h2>
+      </div>
+      <p data-i18n="work.web_lead">Switch the case, compare visual views, and open the design logic behind each system.</p>
+    </header>
 
-    <div class="web-case-tabs" role="tablist" aria-label="Website design cases">
-      {% for item in page.web_cases %}
-        <button class="web-case-tab{% if forloop.first %} is-active{% endif %}" type="button" role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="case-web-panel-{{ item.id }}" id="case-web-tab-{{ item.id }}" data-case-tab="{{ item.id }}" data-i18n="{{ item.tab_key }}">
-          {{ item.tab }}
+    <div class="case-switcher" role="tablist" aria-label="Website design cases">
+      {% for item in site.data.web_cases %}
+        <button class="case-switcher__tab{% if forloop.first %} is-active{% endif %}" type="button" role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="web-panel-{{ item.id }}" id="web-tab-{{ item.id }}" data-case-tab="{{ item.id }}">
+          <span>{{ item.number }}</span><b data-i18n="{{ item.tab_key }}">{{ item.tab }}</b>
         </button>
       {% endfor %}
     </div>
 
-    <div class="web-case-panels">
-      {% for item in page.web_cases %}
-        <article class="web-case-panel{% if forloop.first %} is-active{% endif %}" id="case-web-panel-{{ item.id }}" role="tabpanel" aria-labelledby="case-web-tab-{{ item.id }}" data-case-panel="{{ item.id }}" {% unless forloop.first %}hidden{% endunless %}>
-          <div class="mockup-frame case-preview">
-            <img class="media-contain" src="{{ item.image | relative_url }}" alt="{{ item.alt }}" width="1200" height="760" loading="lazy">
+    <div class="case-panels">
+      {% for item in site.data.web_cases %}
+        <article class="case-panel{% if forloop.first %} is-active{% endif %}" id="web-panel-{{ item.id }}" role="tabpanel" aria-labelledby="web-tab-{{ item.id }}" data-case-panel="{{ item.id }}"{% unless forloop.first %} hidden{% endunless %}>
+          <div class="case-panel__visual">
+            <div class="case-preview-controls" role="group" aria-label="Preview view">
+              <button class="is-active" type="button" aria-pressed="true" data-preview-trigger="overview" data-i18n="common.overview">Overview</button>
+              <button type="button" aria-pressed="false" data-preview-trigger="system" data-i18n="common.system">System</button>
+            </div>
+            <div class="case-preview media-frame">
+              <img class="is-active" src="{{ item.overview | relative_url }}" alt="{{ item.alt }}" width="1200" height="760" loading="lazy" data-preview-image="overview">
+              <img src="{{ item.system | relative_url }}" alt="{{ item.title }} design system detail" width="1200" height="760" loading="lazy" data-preview-image="system" hidden>
+            </div>
           </div>
-          <div class="web-case-copy">
-            <p class="studio-eyebrow">Web 0{{ forloop.index }}</p>
+
+          <div class="case-panel__copy">
+            <p class="studio-eyebrow">Web / {{ item.number }}</p>
             <h3 data-i18n="{{ item.title_key }}">{{ item.title }}</h3>
-            <p data-i18n="{{ item.text_key }}">{{ item.text }}</p>
-            <ul>
-              {% for point in item.points %}
-                <li>{{ point }}</li>
-              {% endfor %}
-            </ul>
+            <p class="case-panel__subtitle" data-i18n="{{ item.subtitle_key }}">{{ item.subtitle }}</p>
+            <button class="case-details-button" type="button" aria-expanded="false" aria-controls="web-details-{{ item.id }}" data-case-details data-label-open-key="common.details" data-label-close-key="common.close_details">
+              <span data-i18n="common.details">Case details</span><i aria-hidden="true">+</i>
+            </button>
+          </div>
+
+          <div class="case-details" id="web-details-{{ item.id }}" hidden>
+            <dl>
+              <div><dt data-i18n="work.background">Background</dt><dd data-i18n="{{ item.background_key }}">{{ item.background }}</dd></div>
+              <div><dt data-i18n="work.objective">Design goal</dt><dd data-i18n="{{ item.objective_key }}">{{ item.objective }}</dd></div>
+              <div><dt data-i18n="work.strategy">Strategy</dt><dd data-i18n="{{ item.strategy_key }}">{{ item.strategy }}</dd></div>
+              <div><dt data-i18n="work.structure">Page structure</dt><dd data-i18n="{{ item.structure_key }}">{{ item.structure }}</dd></div>
+              <div><dt data-i18n="work.visual">Visual system</dt><dd data-i18n="{{ item.visual_key }}">{{ item.visual }}</dd></div>
+              <div><dt data-i18n="work.result">Outcome</dt><dd data-i18n="{{ item.result_key }}">{{ item.result }}</dd></div>
+            </dl>
           </div>
         </article>
       {% endfor %}
@@ -91,46 +93,14 @@ web_cases:
   </div>
 </section>
 
-<section class="case-section" aria-label="Selected design cases">
-  <div class="case-block">
-    <h2 class="case-title">E-commerce Design</h2>
-    <div class="case-img">
-      <img src="{{ '/assets/images/case-e-commerce-1280-1.jpg' | relative_url }}" alt="E-commerce design case" width="1280" height="720">
-    </div>
-  </div>
-
-  <div class="case-block">
-    <h2 class="case-title">Packaging Design</h2>
-    <div class="case-img">
-      <img src="{{ '/assets/images/case-Package-1280-2.jpg' | relative_url }}" alt="Packaging design case" width="1280" height="720">
-    </div>
-  </div>
-
-  <div class="case-block">
-    <h2 class="case-title">Brand Identity</h2>
-    <div class="case-img">
-      <img src="{{ '/assets/images/case-VI-1280-3.jpg' | relative_url }}" alt="Brand identity case" width="1280" height="720">
-    </div>
-  </div>
-
-  <div class="case-block">
-    <h2 class="case-title">3D Rendering</h2>
-    <div class="case-img">
-      <img src="{{ '/assets/images/case-rendering-1280-4.jpg' | relative_url }}" alt="3D rendering case" width="1280" height="720">
-    </div>
-  </div>
-
-  <div class="case-block">
-    <h2 class="case-title">Product Animation</h2>
-    <div class="case-img">
-      <iframe src="https://player.bilibili.com/player.html?bvid=BV1VdekzyE52&page=1&autoplay=0"
-        title="Product animation case"
-        scrolling="no"
-        frameborder="no"
-        allowfullscreen="true"
-        width="1280"
-        height="720">
-      </iframe>
+<section class="motion-feature" aria-labelledby="motion-title">
+  <div class="studio-shell">
+    <header class="section-heading reveal">
+      <p class="studio-eyebrow" data-i18n="work.legacy_label">Extended practice</p>
+      <h2 id="motion-title" data-i18n="work.motion">Product Animation</h2>
+    </header>
+    <div class="video-frame reveal">
+      <iframe src="https://player.bilibili.com/player.html?bvid=BV1VdekzyE52&page=1&autoplay=0" title="DTDT Studio product animation case" loading="lazy" scrolling="no" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
 </section>

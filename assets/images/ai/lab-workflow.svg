@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">AI creative lab workflow</title>
+  <desc id="desc">A four-stage workflow connecting visual hypothesis, exploration, human editing, and production systems.</desc>
+  <rect width="1200" height="900" fill="#171717"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="62" y="72" fill="#ffffff" font-size="16" font-weight="700">DTDT / AI CREATIVE OPERATING LAYER</text>
+    <text x="1008" y="72" fill="#8a8a8a" font-size="13">LAB 01</text>
+  </g>
+  <line x1="62" y1="102" x2="1138" y2="102" stroke="#3b3b3b"/>
+  <g opacity=".75" stroke="#343434">
+    <line x1="62" y1="142" x2="1138" y2="142"/><line x1="62" y1="282" x2="1138" y2="282"/>
+    <line x1="62" y1="422" x2="1138" y2="422"/><line x1="62" y1="562" x2="1138" y2="562"/>
+    <line x1="62" y1="702" x2="1138" y2="702"/><line x1="62" y1="842" x2="1138" y2="842"/>
+    <line x1="62" y1="142" x2="62" y2="842"/><line x1="331" y1="142" x2="331" y2="842"/>
+    <line x1="600" y1="142" x2="600" y2="842"/><line x1="869" y1="142" x2="869" y2="842"/>
+    <line x1="1138" y1="142" x2="1138" y2="842"/>
+  </g>
+  <path d="M196 352 C300 228 430 232 496 352 S700 486 766 352 S968 222 1004 352" fill="none" stroke="#9f43d1" stroke-width="8"/>
+  <path d="M196 492 C300 368 430 372 496 492 S700 626 766 492 S968 362 1004 492" fill="none" stroke="#f26b46" stroke-width="8"/>
+  <path d="M196 632 C300 508 430 512 496 632 S700 766 766 632 S968 502 1004 632" fill="none" stroke="#ffa81c" stroke-width="8"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <circle cx="196" cy="352" r="68" fill="#9f43d1"/><text x="196" y="345" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">01</text><text x="196" y="370" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle">HYPOTHESIS</text>
+    <circle cx="496" cy="492" r="68" fill="#f26b46"/><text x="496" y="485" fill="#171717" font-size="13" font-weight="700" text-anchor="middle">02</text><text x="496" y="510" fill="#171717" font-size="16" font-weight="700" text-anchor="middle">EXPLORE</text>
+    <circle cx="766" cy="352" r="68" fill="#ffa81c"/><text x="766" y="345" fill="#171717" font-size="13" font-weight="700" text-anchor="middle">03</text><text x="766" y="370" fill="#171717" font-size="16" font-weight="700" text-anchor="middle">EDIT</text>
+    <circle cx="1004" cy="492" r="68" fill="#ffffff"/><text x="1004" y="485" fill="#171717" font-size="13" font-weight="700" text-anchor="middle">04</text><text x="1004" y="510" fill="#171717" font-size="16" font-weight="700" text-anchor="middle">SYSTEMIZE</text>
+    <text x="62" y="814" fill="#8a8a8a" font-size="13">RANGE FROM MACHINE / RELEVANCE FROM DIRECTION / VALUE FROM SYSTEMS</text>
+  </g>
+</svg>

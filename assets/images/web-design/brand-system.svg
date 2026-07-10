@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Premium brand website design system</title>
+  <desc id="desc">An editorial grid showing typography, color, image ratios, and responsive modules.</desc>
+  <rect width="1200" height="760" fill="#f2f1ee"/>
+  <rect x="40" y="40" width="1120" height="680" fill="#ffffff" stroke="#d8d5d0"/>
+  <g fill="#171717" font-family="Arial, Helvetica, sans-serif">
+    <text x="78" y="92" font-size="16" font-weight="700">DTDT / WEB SYSTEM 01</text>
+    <text x="858" y="92" font-size="13">12 COLUMN / 1440 GRID</text>
+  </g>
+  <line x1="78" y1="116" x2="1122" y2="116" stroke="#d8d5d0"/>
+  <g opacity=".62" stroke="#d8d5d0">
+    <line x1="78" y1="134" x2="78" y2="682"/><line x1="165" y1="134" x2="165" y2="682"/>
+    <line x1="252" y1="134" x2="252" y2="682"/><line x1="339" y1="134" x2="339" y2="682"/>
+    <line x1="426" y1="134" x2="426" y2="682"/><line x1="513" y1="134" x2="513" y2="682"/>
+    <line x1="600" y1="134" x2="600" y2="682"/><line x1="687" y1="134" x2="687" y2="682"/>
+    <line x1="774" y1="134" x2="774" y2="682"/><line x1="861" y1="134" x2="861" y2="682"/>
+    <line x1="948" y1="134" x2="948" y2="682"/><line x1="1035" y1="134" x2="1035" y2="682"/>
+    <line x1="1122" y1="134" x2="1122" y2="682"/>
+  </g>
+  <text x="78" y="222" fill="#171717" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="700">Quiet confidence.</text>
+  <text x="78" y="270" fill="#67645f" font-family="Arial, Helvetica, sans-serif" font-size="18">Display / 72. Body / 18. Caption / 12.</text>
+  <rect x="78" y="316" width="522" height="250" fill="#9f43d1"/>
+  <circle cx="339" cy="441" r="92" fill="#f26b46"/>
+  <circle cx="339" cy="441" r="52" fill="#ffa81c"/>
+  <rect x="624" y="316" width="237" height="250" fill="#171717"/>
+  <rect x="885" y="316" width="237" height="250" fill="#f2f1ee" stroke="#d8d5d0"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="646" y="352" fill="#ffffff" font-size="13">TYPE SCALE</text>
+    <text x="646" y="420" fill="#ffffff" font-size="44" font-weight="700">Aa</text>
+    <text x="646" y="464" fill="#ffffff" font-size="24">Brand clarity</text>
+    <text x="646" y="504" fill="#a7a7a7" font-size="13">Neue Haas / System Sans</text>
+    <text x="907" y="352" fill="#171717" font-size="13">COLOR LOGIC</text>
+    <circle cx="925" cy="408" r="18" fill="#9f43d1"/><text x="958" y="414" fill="#171717" font-size="13">Primary</text>
+    <circle cx="925" cy="456" r="18" fill="#f26b46"/><text x="958" y="462" fill="#171717" font-size="13">Action</text>
+    <circle cx="925" cy="504" r="18" fill="#ffa81c"/><text x="958" y="510" fill="#171717" font-size="13">Highlight</text>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#67645f">
+    <text x="78" y="616">01 / HERO</text><text x="252" y="616">02 / STORY</text><text x="426" y="616">03 / PROOF</text>
+    <text x="600" y="616">04 / WORLDS</text><text x="774" y="616">05 / SYSTEM</text><text x="948" y="616">06 / CONTACT</text>
+  </g>
+  <line x1="78" y1="642" x2="1122" y2="642" stroke="#171717"/>
+  <rect x="78" y="666" width="174" height="16" fill="#9f43d1"/><rect x="252" y="666" width="174" height="16" fill="#f26b46"/>
+  <rect x="426" y="666" width="696" height="16" fill="#171717"/>
+</svg>

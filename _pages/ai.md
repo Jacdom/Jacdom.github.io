@@ -1,65 +1,49 @@
 ---
 layout: default
-title: "AI Design"
+page_id: ai
+title: "AI Creative Lab — DTDT Studio"
+description: "Applied AI visual exploration, prompt research, assisted design, creative automation, and AI design systems by DTDT Studio."
 permalink: /ai/
-ai_tracks:
-  - title: "AI Visual Exploration"
-    title_key: ai.track_visual_title
-    text: "Rapid image territories, mood systems, campaign directions, and controlled visual research before production begins."
-    text_key: ai.track_visual_text
-  - title: "AI Workflow"
-    title_key: ai.track_workflow_title
-    text: "Repeatable prompt structures, review loops, image selection standards, and production handoff for faster creative delivery."
-    text_key: ai.track_workflow_text
-  - title: "AI-assisted Product Rendering"
-    title_key: ai.track_render_title
-    text: "Concept rendering, scene variation, material direction, and product storytelling supported by human art direction."
-    text_key: ai.track_render_text
-  - title: "Creative Automation"
-    title_key: ai.track_auto_title
-    text: "Batch ideation, content variants, visual QA routines, and lightweight automation for recurring design tasks."
-    text_key: ai.track_auto_text
-  - title: "Design System + AI"
-    title_key: ai.track_system_title
-    text: "Brand rules, visual tokens, prompt libraries, and asset generation logic aligned into one coherent operating system."
-    text_key: ai.track_system_text
+image: /assets/images/visual-ai-system.svg
 ---
 
-<section class="ai-hero" aria-labelledby="ai-page-title">
-  <div class="studio-shell ai-hero__grid">
+<header class="editorial-hero ai-lab-hero">
+  <div class="studio-shell ai-lab-hero__grid">
     <div>
-      <p class="studio-eyebrow">AI Design Practice</p>
-      <h1 id="ai-page-title" data-i18n="ai.title">AI workflows for sharper visual systems and faster creative decisions.</h1>
+      <p class="studio-eyebrow" data-i18n="ai.eyebrow">AI Creative Lab / Applied research</p>
+      <h1 data-i18n="ai.title">AI expands the field. Direction defines the result.</h1>
+      <p class="editorial-hero__lead" data-i18n="ai.lead">A working practice for visual exploration, prompt research, and creative automation.</p>
+      <a class="studio-button studio-button--ink" href="{{ '/connect/' | relative_url }}" data-i18n="common.start_project">Start a project</a>
     </div>
-    <div class="ai-hero__body">
-      <p data-i18n="ai.body">DTDT Studio uses AI as a design research and production layer: exploring visual possibilities, building repeatable workflows, and helping brands create more coherent image systems across product, campaign, and commerce touchpoints.</p>
-      <a class="studio-button studio-button--dark" href="{{ '/connect/' | relative_url }}" data-i18n="ai.cta">Discuss AI Work</a>
+    <figure class="ai-lab-hero__visual media-frame reveal">
+      <img src="{{ '/assets/images/ai/lab-workflow.svg' | relative_url }}" alt="AI creative workflow from visual hypothesis to production system" width="1200" height="900" loading="eager">
+    </figure>
+  </div>
+</header>
+
+<section class="studio-section ai-framework" aria-labelledby="ai-framework-title">
+  <div class="studio-shell feature-band__grid">
+    <figure class="media-frame reveal">
+      <img src="{{ '/assets/images/visual-ai-system.svg' | relative_url }}" alt="AI visual system exploration interface" width="1200" height="760" loading="lazy">
+    </figure>
+    <div class="feature-band__copy reveal">
+      <p class="studio-eyebrow" data-i18n="ai.framework_label">Creative operating layer</p>
+      <h2 id="ai-framework-title" data-i18n="ai.framework_title">From experiment to repeatable design intelligence.</h2>
+      <p data-i18n="ai.framework_text">We define the visual hypothesis, generate controlled territories, edit against brand goals, and turn the strongest logic into reusable production tools.</p>
     </div>
   </div>
 </section>
 
-<section class="ai-showcase" aria-label="AI visual system preview">
-  <div class="studio-shell ai-showcase__grid">
-    <div class="visual-frame visual-frame--wide">
-      <img class="media-contain" src="{{ '/assets/images/visual-ai-system.svg' | relative_url }}" alt="AI visual system and design exploration preview" width="1200" height="760" loading="eager">
-    </div>
-    <div class="visual-frame visual-frame--wide">
-      <img class="media-contain" src="{{ '/assets/images/home-1920-6.jpg' | relative_url }}" alt="AI-assisted design workflow preview" width="1920" height="1080" loading="lazy">
-    </div>
-  </div>
-</section>
-
-<section class="studio-section" aria-labelledby="ai-track-title">
+<section class="studio-section ai-practice" aria-labelledby="ai-practice-title">
   <div class="studio-shell">
-    <div class="studio-section__header">
-      <p class="studio-eyebrow" data-i18n="ai.practice">Practice Areas</p>
-      <h2 id="ai-track-title" data-i18n="ai.practice_title">Five directions where AI strengthens the design process.</h2>
-    </div>
-
-    <div class="ai-track-grid">
-      {% for track in page.ai_tracks %}
-        <article class="ai-track">
-          <span>0{{ forloop.index }}</span>
+    <header class="section-heading section-heading--split reveal">
+      <p class="studio-eyebrow" data-i18n="ai.practice_label">Lab directions</p>
+      <h2 id="ai-practice-title" data-i18n="ai.practice_title">Five practical ways AI strengthens creative work.</h2>
+    </header>
+    <div class="service-list service-list--dark">
+      {% for track in site.data.ai_tracks %}
+        <article class="service-row reveal">
+          <span>{{ track.number }}</span>
           <h3 data-i18n="{{ track.title_key }}">{{ track.title }}</h3>
           <p data-i18n="{{ track.text_key }}">{{ track.text }}</p>
         </article>
@@ -68,26 +52,21 @@ ai_tracks:
   </div>
 </section>
 
-<section class="studio-section studio-section--ai-method" aria-labelledby="ai-method-title">
-  <div class="studio-shell studio-split">
+<section class="studio-section studio-belief ai-method" aria-labelledby="ai-method-title">
+  <div class="studio-shell studio-belief__grid reveal">
+    <p class="studio-eyebrow" data-i18n="ai.method_label">Method</p>
+    <h2 id="ai-method-title" data-i18n="ai.method_title">Hypothesis. Explore. Edit. Systemize.</h2>
     <div>
-      <p class="studio-eyebrow" data-i18n="ai.method">Method</p>
-      <h2 id="ai-method-title" data-i18n="ai.method_title">Exploration becomes useful when it is edited into a system.</h2>
-    </div>
-    <div class="studio-split__body">
-      <p data-i18n="ai.method_text_1">We start with a clear visual hypothesis, generate controlled directions, evaluate outputs against brand and commercial goals, then translate the strongest results into reusable prompts, art direction notes, and production-ready assets.</p>
-      <p data-i18n="ai.method_text_2">The work is intentionally selective. AI expands the field of options; design judgment decides what belongs to the brand.</p>
+      <p data-i18n="ai.method_text">AI creates range. We create relevance, consistency, and production value.</p>
+      <a class="studio-text-link" href="{{ '/connect/' | relative_url }}" data-i18n="common.start_project">Start a project</a>
     </div>
   </div>
 </section>
 
-<section class="studio-final-cta" aria-labelledby="ai-final-title">
-  <div class="studio-shell">
-    <p class="studio-eyebrow">AI Case Study</p>
-    <h2 id="ai-final-title">Create a practical AI workflow for your brand visuals.</h2>
-    <div class="studio-actions">
-      <a class="studio-button studio-button--dark" href="{{ '/connect/' | relative_url }}" data-i18n="nav.connect">Connect</a>
-      <a class="studio-button studio-button--light" href="{{ '/case/' | relative_url }}" data-i18n="home.view_work">View Work</a>
-    </div>
+<section class="closing-statement">
+  <div class="studio-shell reveal">
+    <p class="studio-eyebrow">AI / Creative / Production</p>
+    <h2 data-i18n="ai.final_title">Build an AI workflow your brand can actually use.</h2>
+    <a class="studio-button studio-button--light" href="{{ '/connect/' | relative_url }}" data-i18n="nav.connect">Connect</a>
   </div>
 </section>

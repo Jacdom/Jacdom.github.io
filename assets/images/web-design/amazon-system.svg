@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Amazon storefront modular system</title>
+  <desc id="desc">A marketplace-safe modular system for campaigns, categories, products, and brand story.</desc>
+  <rect width="1200" height="760" fill="#eceae5"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="48" y="66" fill="#171717" font-size="16" font-weight="700">MARKETPLACE MODULE KIT</text>
+    <text x="1046" y="66" fill="#67645f" font-size="13">03 / 2026</text>
+  </g>
+  <line x1="48" y1="92" x2="1152" y2="92" stroke="#c8c5bf"/>
+  <g transform="translate(48 122)">
+    <rect width="1104" height="170" fill="#9f43d1"/>
+    <text x="28" y="38" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">CAMPAIGN HERO / 3000 x 600</text>
+    <text x="28" y="104" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700">One story. Every category.</text>
+    <rect x="880" y="30" width="160" height="110" rx="55" fill="#f26b46"/>
+    <circle cx="960" cy="85" r="30" fill="#ffa81c"/>
+  </g>
+  <g transform="translate(48 316)" font-family="Arial, Helvetica, sans-serif">
+    <rect width="1104" height="72" fill="#ffffff"/>
+    <text x="24" y="28" fill="#67645f" font-size="11">CATEGORY NAVIGATION</text>
+    <g fill="#171717" font-size="15" font-weight="700"><text x="24" y="54">NEW</text><text x="196" y="54">HOME</text><text x="368" y="54">MOBILE</text><text x="540" y="54">TRAVEL</text><text x="712" y="54">STUDIO</text><text x="884" y="54">OFFERS</text></g>
+  </g>
+  <g transform="translate(48 412)" font-family="Arial, Helvetica, sans-serif">
+    <rect width="348" height="150" fill="#171717"/>
+    <text x="22" y="32" fill="#ffffff" font-size="12" font-weight="700">FEATURED PRODUCT</text>
+    <circle cx="174" cy="94" r="44" fill="#f26b46"/>
+    <rect x="372" width="348" height="150" fill="#ffa81c"/>
+    <text x="394" y="32" fill="#171717" font-size="12" font-weight="700">LIFESTYLE MODULE</text>
+    <path d="M394 126 C438 67 506 55 556 112 C598 78 658 86 698 126Z" fill="#9f43d1"/>
+    <rect x="744" width="360" height="150" fill="#ffffff"/>
+    <text x="766" y="32" fill="#171717" font-size="12" font-weight="700">PROMOTION ZONE</text>
+    <text x="766" y="88" fill="#171717" font-size="36" font-weight="700">20%</text>
+    <text x="850" y="88" fill="#67645f" font-size="16">SEASONAL OFFER</text>
+  </g>
+  <g transform="translate(48 586)" font-family="Arial, Helvetica, sans-serif">
+    <rect width="720" height="126" fill="#ffffff"/>
+    <text x="22" y="32" fill="#171717" font-size="12" font-weight="700">BRAND STORY / ORIGIN / PROOF</text>
+    <rect x="22" y="58" width="230" height="12" fill="#171717"/>
+    <rect x="22" y="82" width="486" height="7" fill="#bcb8b1"/>
+    <rect x="22" y="98" width="418" height="7" fill="#bcb8b1"/>
+    <rect x="744" width="360" height="126" fill="#f26b46"/>
+    <text x="766" y="32" fill="#171717" font-size="12" font-weight="700">REFRESH LOGIC</text>
+    <text x="766" y="76" fill="#171717" font-size="24" font-weight="700">Campaign-ready.</text>
+    <text x="766" y="102" fill="#171717" font-size="13">Replace content. Keep the system.</text>
+  </g>
+</svg>

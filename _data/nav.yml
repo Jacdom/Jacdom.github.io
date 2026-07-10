@@ -1,21 +1,21 @@
-# Header links. Visible navigation is English by default.
+# Primary studio navigation. English remains the crawlable default.
 header:
-  - title: "Home"
-    url: /
-    description: "DTDT Studio home page"
-    i18n_key: "nav.home"
-  - title: "Price"
-    url: "/price/"
-    description: "Service pricing"
-    i18n_key: "nav.price"
-  - title: "Case"
+  - title: "Work"
     url: "/case/"
     description: "Selected design cases"
-    i18n_key: "nav.case"
-  - title: "AI"
+    i18n_key: "nav.work"
+  - title: "Web"
+    url: "/case/#web-design"
+    description: "Website and digital experience cases"
+    i18n_key: "nav.web"
+  - title: "AI Lab"
     url: "/ai/"
     description: "AI design practice"
     i18n_key: "nav.ai"
+  - title: "About"
+    url: "/about/"
+    description: "About DTDT Studio"
+    i18n_key: "nav.about"
 
 # Footer links
 footer:
@@ -37,6 +37,9 @@ footer:
       icon: "fab fa-fw fa-instagram"
       url:
   - feed:
+    - label: "Pricing"
+      icon: ""
+      url: "/price/"
     - label: "Sitemap"
       icon: "fas fa-sitemap"
       url: "/sitemap.xml"

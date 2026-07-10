@@ -2,6 +2,7 @@
   "use strict";
 
   var supportedLanguages = ["en", "zh"];
+  var currentLanguage = "en";
 
   function readSavedLanguage() {
     try {
@@ -28,11 +29,7 @@
     }
 
     var browserLanguage = (navigator.language || navigator.userLanguage || "en").toLowerCase();
-    if (browserLanguage === "zh" || browserLanguage.indexOf("zh-cn") === 0) {
-      return "zh";
-    }
-
-    return "en";
+    return browserLanguage === "zh" || browserLanguage.indexOf("zh-cn") === 0 ? "zh" : "en";
   }
 
   function getTranslation(dictionary, key) {
@@ -47,12 +44,20 @@
       return;
     }
 
+    currentLanguage = language;
     document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
 
     document.querySelectorAll("[data-i18n]").forEach(function (node) {
       var value = getTranslation(dictionary, node.getAttribute("data-i18n"));
-      if (value) {
+      if (typeof value === "string") {
         node.textContent = value;
+      }
+    });
+
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (node) {
+      var value = getTranslation(dictionary, node.getAttribute("data-i18n-alt"));
+      if (typeof value === "string") {
+        node.setAttribute("alt", value);
       }
     });
 
@@ -64,8 +69,7 @@
   }
 
   function setupLanguageSwitcher() {
-    var language = resolveLanguage();
-    applyLanguage(language);
+    applyLanguage(resolveLanguage());
 
     document.querySelectorAll("[data-lang-option]").forEach(function (button) {
       button.addEventListener("click", function () {
@@ -80,12 +84,88 @@
     });
   }
 
+  function setupMenu() {
+    var toggle = document.querySelector("[data-menu-toggle]");
+    var navigation = document.querySelector("[data-site-navigation]");
+    if (!toggle || !navigation) {
+      return;
+    }
+
+    function setMenu(open) {
+      toggle.setAttribute("aria-expanded", String(open));
+      navigation.classList.toggle("is-open", open);
+      document.body.classList.toggle("menu-open", open);
+    }
+
+    toggle.addEventListener("click", function () {
+      setMenu(toggle.getAttribute("aria-expanded") !== "true");
+    });
+
+    navigation.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        setMenu(false);
+      });
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        setMenu(false);
+        toggle.focus();
+      }
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 992) {
+        setMenu(false);
+      }
+    });
+  }
+
+  function setupReveal() {
+    var items = document.querySelectorAll(".reveal");
+    if (!items.length) {
+      return;
+    }
+
+    if (!("IntersectionObserver" in window)) {
+      items.forEach(function (item) { item.classList.add("is-visible"); });
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -8%", threshold: 0.08 });
+
+    items.forEach(function (item) { observer.observe(item); });
+  }
+
   function framePath(settings, frameNumber) {
     var paddedNumber = String(frameNumber).padStart(settings.pad, "0");
     return settings.base + settings.prefix + paddedNumber + settings.ext;
   }
 
+  function preloadFrame(path) {
+    return new Promise(function (resolve) {
+      var frame = new Image();
+      frame.onload = resolve;
+      frame.onerror = resolve;
+      frame.src = path;
+    });
+  }
+
   function setupFrameAnimations() {
+    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var mobile = window.matchMedia && window.matchMedia("(max-width: 767px)").matches;
+    var saveData = navigator.connection && navigator.connection.saveData;
+    if (reduceMotion || mobile || saveData) {
+      return;
+    }
+
     document.querySelectorAll("[data-frame-animation]").forEach(function (image) {
       var settings = {
         base: image.getAttribute("data-frame-base") || "",
@@ -101,48 +181,145 @@
         return;
       }
 
+      var initialBatch = [];
       var frameNumber = settings.start;
-      var preloadLimit = Math.min(settings.count, 8);
-      for (var index = 1; index <= preloadLimit; index += 1) {
-        var preloadImage = new Image();
-        preloadImage.src = framePath(settings, index);
+      var previousTime = 0;
+      var animationId;
+
+      for (var index = settings.start; index < settings.start + Math.min(settings.count, 12); index += 1) {
+        initialBatch.push(preloadFrame(framePath(settings, index)));
       }
 
-      window.setInterval(function () {
-        frameNumber = frameNumber >= settings.count ? settings.start : frameNumber + 1;
-        image.src = framePath(settings, frameNumber);
-      }, settings.interval);
+      Promise.all(initialBatch).then(function () {
+        function animate(time) {
+          if (!previousTime) {
+            previousTime = time;
+          }
+
+          if (document.visibilityState === "visible" && time - previousTime >= settings.interval) {
+            frameNumber = frameNumber >= settings.count ? settings.start : frameNumber + 1;
+            image.src = framePath(settings, frameNumber);
+            previousTime = time;
+          }
+
+          animationId = window.requestAnimationFrame(animate);
+        }
+
+        animationId = window.requestAnimationFrame(animate);
+      });
+
+      var preloadRest = function () {
+        for (var rest = settings.start + 12; rest <= settings.count; rest += 1) {
+          preloadFrame(framePath(settings, rest));
+        }
+      };
+
+      if ("requestIdleCallback" in window) {
+        window.requestIdleCallback(preloadRest, { timeout: 2500 });
+      } else {
+        window.setTimeout(preloadRest, 1200);
+      }
+
+      window.addEventListener("pagehide", function () {
+        if (animationId) {
+          window.cancelAnimationFrame(animationId);
+        }
+      }, { once: true });
     });
   }
 
-  function setupWebCases() {
-    var tabs = document.querySelectorAll("[data-case-tab]");
-    if (!tabs.length) {
-      return;
-    }
+  function setupCasePreviews(panel) {
+    var triggers = panel.querySelectorAll("[data-preview-trigger]");
+    var images = panel.querySelectorAll("[data-preview-image]");
 
-    tabs.forEach(function (tab) {
-      tab.addEventListener("click", function () {
-        var target = tab.getAttribute("data-case-tab");
-
-        tabs.forEach(function (item) {
-          var isActive = item === tab;
-          item.classList.toggle("is-active", isActive);
-          item.setAttribute("aria-selected", String(isActive));
+    triggers.forEach(function (trigger) {
+      trigger.addEventListener("click", function () {
+        var target = trigger.getAttribute("data-preview-trigger");
+        triggers.forEach(function (item) {
+          var activeTrigger = item === trigger;
+          item.classList.toggle("is-active", activeTrigger);
+          item.setAttribute("aria-pressed", String(activeTrigger));
         });
-
-        document.querySelectorAll("[data-case-panel]").forEach(function (panel) {
-          var isActivePanel = panel.getAttribute("data-case-panel") === target;
-          panel.classList.toggle("is-active", isActivePanel);
-          panel.hidden = !isActivePanel;
+        images.forEach(function (image) {
+          var active = image.getAttribute("data-preview-image") === target;
+          image.classList.toggle("is-active", active);
+          image.hidden = !active;
         });
       });
     });
   }
 
+  function setupCaseDetails(panel) {
+    var button = panel.querySelector("[data-case-details]");
+    if (!button) {
+      return;
+    }
+
+    var details = document.getElementById(button.getAttribute("aria-controls"));
+    var label = button.querySelector("span");
+    if (!details || !label) {
+      return;
+    }
+
+    button.addEventListener("click", function () {
+      var expanded = button.getAttribute("aria-expanded") === "true";
+      var nextKey = expanded ? button.getAttribute("data-label-open-key") : button.getAttribute("data-label-close-key");
+      button.setAttribute("aria-expanded", String(!expanded));
+      details.hidden = expanded;
+      label.setAttribute("data-i18n", nextKey);
+      applyLanguage(currentLanguage);
+    });
+  }
+
+  function setupWebCases() {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll("[data-case-tab]"));
+    var panels = Array.prototype.slice.call(document.querySelectorAll("[data-case-panel]"));
+    if (!tabs.length || !panels.length) {
+      return;
+    }
+
+    function activateTab(tab) {
+      var target = tab.getAttribute("data-case-tab");
+      tabs.forEach(function (item) {
+        var active = item === tab;
+        item.classList.toggle("is-active", active);
+        item.setAttribute("aria-selected", String(active));
+        item.setAttribute("tabindex", active ? "0" : "-1");
+      });
+      panels.forEach(function (panel) {
+        var active = panel.getAttribute("data-case-panel") === target;
+        panel.classList.toggle("is-active", active);
+        panel.hidden = !active;
+      });
+    }
+
+    tabs.forEach(function (tab, index) {
+      tab.setAttribute("tabindex", tab.classList.contains("is-active") ? "0" : "-1");
+      tab.addEventListener("click", function () { activateTab(tab); });
+      tab.addEventListener("keydown", function (event) {
+        if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") {
+          return;
+        }
+        event.preventDefault();
+        var direction = event.key === "ArrowRight" ? 1 : -1;
+        var nextIndex = (index + direction + tabs.length) % tabs.length;
+        activateTab(tabs[nextIndex]);
+        tabs[nextIndex].focus();
+      });
+    });
+
+    panels.forEach(function (panel) {
+      setupCasePreviews(panel);
+      setupCaseDetails(panel);
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     setupLanguageSwitcher();
+    setupMenu();
+    setupReveal();
     setupWebCases();
     setupFrameAnimations();
+    document.documentElement.classList.add("is-ready");
   });
 })();

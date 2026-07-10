@@ -11,15 +11,15 @@
 bootswatch_theme: "united" # cerulean, spacelab, united
 
 # site settings, follows the order used in jekyll-seo-tag plugin
-lang: "en_US"
+lang: "en"
 title: "DTDT Studio"
-description: "A Design Studio Born to Explore"
-url: # site url e.g. "https://manid2.github.io"
+description: "Independent design studio for brand systems, product visualization, motion, AI creative, and digital experiences."
+url: "https://jacdom.github.io"
 baseurl: "" # the subpath of your site, e.g. "/blog"
-author: mani_d2
+author: "DTDT Studio"
 twitter:
-  username: mani_d2 # should be site's username
-  card: summary
+  username:
+  card: summary_large_image
 logo: assets/images/DTDT-800x263.png # PNG is SEO friendly
 # use below when there are social links for site
 #social:
@@ -174,5 +174,5 @@ defaults:
       path: ""
     values:
       # for SEO and social sharing
-      image: assets/images/DTDT-800x263.png
-      image_alt: Lone Wolf Theme logo version 2
+      image: assets/images/home-1920-6.jpg
+      image_alt: DTDT Studio design and visual direction work

@@ -18,10 +18,11 @@
 
 {% include head.html %}
 
-<body>
+<body class="page page-{{ page.page_id | default: page.slug | default: 'default' }}">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="page-container">
     {% include header.html current_lang=current_lang %}
-    <main class="page-content" role="main">
+    <main class="page-content" id="main-content" role="main">
       {{ content }}
     </main>
     {% include footer.html %}

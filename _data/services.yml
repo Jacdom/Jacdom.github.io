@@ -1,0 +1,36 @@
+- number: "01"
+  title: "Brand Design"
+  title_key: "services.brand_title"
+  text: "Positioning, identity, typography, and visual rules."
+  text_key: "services.brand_text"
+
+- number: "02"
+  title: "Product Visualization"
+  title_key: "services.product_title"
+  text: "Commercial imagery, rendering, and launch systems."
+  text_key: "services.product_text"
+
+- number: "03"
+  title: "3D & Motion"
+  title_key: "services.motion_title"
+  text: "Product films, motion language, and spatial storytelling."
+  text_key: "services.motion_text"
+
+- number: "04"
+  title: "AI Creative"
+  title_key: "services.ai_title"
+  text: "Visual research, prompt systems, and creative automation."
+  text_key: "services.ai_text"
+
+- number: "05"
+  title: "Web Design"
+  title_key: "services.web_title"
+  text: "Brand sites, DTC commerce, and responsive experience design."
+  text_key: "services.web_text"
+
+- number: "06"
+  title: "Digital Experience"
+  title_key: "services.digital_title"
+  text: "Interface direction, content hierarchy, and conversion journeys."
+  text_key: "services.digital_text"
+

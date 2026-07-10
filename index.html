@@ -1,139 +1,126 @@
 ---
 layout: default
-title: DTDT Studio
-featured_projects:
-  - title: Web Design
-    eyebrow: Digital experience
-    text: Premium websites, DTC stores, and Amazon storefronts.
-    image: /assets/images/visual-web-brand.svg
-    href: /case/#web-design
-  - title: E-commerce Visual
-    eyebrow: Commerce system
-    text: Product pages, launch assets, and sales visuals.
-    image: /assets/images/case-e-commerce-1280-1.jpg
-    href: /case/
-  - title: Brand Identity
-    eyebrow: Identity system
-    text: Logo, color, type, and brand rules.
-    image: /assets/images/case-VI-1280-3.jpg
-    href: /case/
-capabilities:
-  - Brand Visual System
-  - Web Design
-  - Product Rendering
-  - E-commerce Creative
-  - Packaging Design
-  - Motion Visual
+page_id: home
+title: "DTDT Studio — Brand, Product & Digital Design"
+description: "DTDT Studio creates brand systems, product visualization, motion, AI creative, web design, and digital experiences."
+image: /assets/images/6/r0001.jpg
 ---
 
-<section class="studio-hero" aria-labelledby="home-hero-title">
-  <div class="studio-shell studio-hero__grid">
-    <div class="studio-hero__content">
-      <p class="studio-eyebrow" data-i18n="home.hero_eyebrow">DTDT Studio / Design Team Dream Team</p>
-      <h1 id="home-hero-title" data-i18n="home.hero_title">Design for brands that need clarity, taste, and conversion.</h1>
-      <p class="studio-lead" data-i18n="home.hero_lead">Brand visuals, web design, and product imagery for modern commerce.</p>
-      <div class="studio-actions" aria-label="Primary actions">
-        <a class="studio-button studio-button--dark" href="{{ '/case/' | relative_url }}" data-i18n="home.view_work">View Work</a>
-        <a class="studio-button studio-button--light" href="{{ '/connect/' | relative_url }}" data-i18n="nav.connect">Connect</a>
+<section class="home-hero" aria-labelledby="home-title">
+  <div class="home-hero__visual" aria-hidden="true">
+    <img
+      src="{{ '/assets/images/6/r0001.jpg' | relative_url }}"
+      alt=""
+      width="3840"
+      height="2160"
+      loading="eager"
+      fetchpriority="high"
+      data-frame-animation
+      data-frame-base="{{ '/assets/images/6/' | relative_url }}"
+      data-frame-prefix="r"
+      data-frame-ext=".jpg"
+      data-frame-start="1"
+      data-frame-count="39"
+      data-frame-pad="4"
+      data-frame-interval="120"
+    >
+  </div>
+  <div class="studio-shell home-hero__content">
+    <p class="studio-eyebrow" data-i18n="home.eyebrow">DTDT Studio / China + Worldwide</p>
+    <h1 id="home-title" data-i18n="home.title">Design makes value visible.</h1>
+    <div class="home-hero__footer">
+      <p data-i18n="home.lead">Brand, product, motion, and digital experiences for ambitious commerce.</p>
+      <div class="studio-actions">
+        <a class="studio-button studio-button--ink" href="{{ '/case/' | relative_url }}" data-i18n="common.view_work">View work</a>
+        <a class="studio-button studio-button--ghost" href="{{ '/connect/' | relative_url }}" data-i18n="common.start_project">Start a project</a>
       </div>
-    </div>
-    <div class="studio-hero__media" aria-label="Selected DTDT Studio visual work">
-      <img
-        class="studio-hero__frame"
-        src="{{ '/assets/images/6/r0001.jpg' | relative_url }}"
-        alt="DTDT Studio animated brand visual showcase"
-        width="1920"
-        height="1080"
-        loading="eager"
-        fetchpriority="high"
-        data-frame-animation
-        data-frame-base="{{ '/assets/images/6/' | relative_url }}"
-        data-frame-prefix="r"
-        data-frame-ext=".jpg"
-        data-frame-start="1"
-        data-frame-count="39"
-        data-frame-pad="4"
-        data-frame-interval="120"
-      >
     </div>
   </div>
 </section>
 
-<section class="studio-section studio-section--works" aria-labelledby="selected-work-title">
+<section class="studio-section work-index" aria-labelledby="selected-title">
   <div class="studio-shell">
-    <div class="studio-section__header">
-      <p class="studio-eyebrow" data-i18n="home.selected_work">Selected Work</p>
-      <h2 id="selected-work-title" data-i18n="home.selected_title">Visual direction with enough structure to scale.</h2>
-      <a class="studio-text-link" href="{{ '/case/' | relative_url }}" data-i18n="home.all_cases">All cases</a>
-    </div>
+    <header class="section-heading reveal">
+      <p class="studio-eyebrow" data-i18n="home.selected">Selected works</p>
+      <h2 id="selected-title" data-i18n="home.selected_title">Ideas built to work in the real world.</h2>
+    </header>
 
-    <div class="project-grid">
-      {% for project in page.featured_projects %}
-        <article class="project-card">
-          <a href="{{ project.href | relative_url }}" class="project-card__media" aria-label="{{ project.title }}">
-            <img src="{{ project.image | relative_url }}" alt="{{ project.title }} case image" width="1280" height="720" loading="lazy">
+    <div class="work-index__grid">
+      {% for project in site.data.projects limit:4 %}
+        <article class="work-tile work-tile--{{ project.tone }} reveal">
+          <a href="{{ project.href | relative_url }}">
+            <figure class="work-tile__media media-frame">
+              <img src="{{ project.image | relative_url }}" alt="{{ project.alt }}" width="1280" height="720" loading="lazy">
+            </figure>
+            <div class="work-tile__meta">
+              <span>{{ project.number }}</span>
+              <div>
+                <p><span data-i18n="{{ project.category_key }}">{{ project.category }}</span> / {{ project.year }}</p>
+                <h3 data-i18n="{{ project.title_key }}">{{ project.title }}</h3>
+                <small data-i18n="{{ project.description_key }}">{{ project.description }}</small>
+              </div>
+              <b data-i18n="common.view_case">View case</b>
+            </div>
           </a>
-          <div class="project-card__body">
-            <p>{{ project.eyebrow }}</p>
-            <h3>{{ project.title }}</h3>
-            <span>{{ project.text }}</span>
-          </div>
         </article>
       {% endfor %}
     </div>
   </div>
 </section>
 
-<section class="studio-section studio-section--web" aria-labelledby="web-design-title">
-  <div class="studio-shell studio-split">
-    <div>
-      <p class="studio-eyebrow" data-i18n="home.web_eyebrow">Digital Experience</p>
-      <h2 id="web-design-title" data-i18n="home.web_title">Web design that turns brand systems into clear commercial journeys.</h2>
-    </div>
-    <div class="studio-split__body">
-      <p data-i18n="home.web_text">From premium brand websites to DTC stores and Amazon storefronts, we design responsive pages with strong hierarchy, complete visual frames, and conversion-aware interaction.</p>
-      <a class="studio-button studio-button--dark" href="{{ '/case/#web-design' | relative_url }}" data-i18n="home.web_cta">Explore Web Design</a>
-    </div>
-  </div>
-</section>
-
-<section class="studio-section" aria-labelledby="capability-title">
+<section class="studio-section services-section" id="services" aria-labelledby="services-title">
   <div class="studio-shell">
-    <div class="studio-section__header">
-      <p class="studio-eyebrow" data-i18n="home.capabilities">Capabilities</p>
-      <h2 id="capability-title" data-i18n="home.capabilities_title">From identity to production, every output belongs to a system.</h2>
-    </div>
-    <div class="capability-grid">
-      {% for capability in page.capabilities %}
-        <div class="capability-item">
-          <span>0{{ forloop.index }}</span>
-          <h3>{{ capability }}</h3>
-        </div>
+    <header class="section-heading section-heading--split reveal">
+      <p class="studio-eyebrow" data-i18n="home.services">Capabilities</p>
+      <h2 id="services-title" data-i18n="home.services_title">One creative direction, across every brand touchpoint.</h2>
+    </header>
+    <div class="service-list">
+      {% for service in site.data.services %}
+        <article class="service-row reveal">
+          <span>{{ service.number }}</span>
+          <h3 data-i18n="{{ service.title_key }}">{{ service.title }}</h3>
+          <p data-i18n="{{ service.text_key }}">{{ service.text }}</p>
+        </article>
       {% endfor %}
     </div>
   </div>
 </section>
 
-<section class="studio-section studio-section--philosophy" aria-labelledby="philosophy-title">
-  <div class="studio-shell studio-split">
-    <div>
-      <p class="studio-eyebrow" data-i18n="home.philosophy">Philosophy</p>
-      <h2 id="philosophy-title" data-i18n="home.philosophy_title">Design judgment before decoration.</h2>
+<section class="feature-band feature-band--web" aria-labelledby="home-web-title">
+  <div class="studio-shell feature-band__grid">
+    <div class="feature-band__copy reveal">
+      <p class="studio-eyebrow" data-i18n="home.web_label">Web design</p>
+      <h2 id="home-web-title" data-i18n="home.web_title">Digital experiences with brand character and commercial clarity.</h2>
+      <p data-i18n="home.web_text">Brand sites, DTC journeys, and Amazon storefronts shaped as complete visual systems.</p>
+      <a class="studio-text-link" href="{{ '/case/#web-design' | relative_url }}" data-i18n="common.discover_web">Explore web design</a>
     </div>
-    <div class="studio-split__body">
-      <p data-i18n="home.philosophy_text_1">DTDT Studio builds visual systems that help products look considered, trustworthy, and ready for market.</p>
-      <p data-i18n="home.philosophy_text_2">Explore Forever means curiosity with discipline.</p>
+    <a class="feature-band__visual media-frame reveal" href="{{ '/case/#web-design' | relative_url }}" aria-label="Explore web design cases">
+      <img src="{{ '/assets/images/visual-web-brand.svg' | relative_url }}" alt="Premium website design system" width="1200" height="760" loading="lazy">
+    </a>
+  </div>
+</section>
+
+<section class="feature-band feature-band--ai" aria-labelledby="home-ai-title">
+  <div class="studio-shell feature-band__grid feature-band__grid--reverse">
+    <a class="feature-band__visual media-frame reveal" href="{{ '/ai/' | relative_url }}" aria-label="Explore the AI Creative Lab">
+      <img src="{{ '/assets/images/visual-ai-system.svg' | relative_url }}" alt="AI creative workflow and visual system" width="1200" height="760" loading="lazy">
+    </a>
+    <div class="feature-band__copy reveal">
+      <p class="studio-eyebrow" data-i18n="home.ai_label">AI Creative Lab</p>
+      <h2 id="home-ai-title" data-i18n="home.ai_title">New tools, directed by human judgment.</h2>
+      <p data-i18n="home.ai_text">We use AI for visual research, repeatable workflows, and faster production without diluting the brand.</p>
+      <a class="studio-text-link" href="{{ '/ai/' | relative_url }}" data-i18n="common.explore_lab">Explore the lab</a>
     </div>
   </div>
 </section>
 
-<section class="studio-final-cta" aria-labelledby="final-cta-title">
-  <div class="studio-shell">
-    <p class="studio-eyebrow" data-i18n="home.final_eyebrow">Start With A System</p>
-    <h2 id="final-cta-title" data-i18n="home.final_title">Build a sharper brand presence for the next launch.</h2>
-    <div class="studio-actions">
-      <a class="studio-button studio-button--dark" href="{{ '/connect/' | relative_url }}" data-i18n="nav.connect">Connect</a>
-      <a class="studio-button studio-button--light" href="{{ '/case/' | relative_url }}" data-i18n="home.view_work">View Work</a>
+<section class="studio-section studio-belief" aria-labelledby="home-about-title">
+  <div class="studio-shell studio-belief__grid reveal">
+    <p class="studio-eyebrow" data-i18n="home.about_label">Studio principle</p>
+    <h2 id="home-about-title" data-i18n="home.about_title">Explore forever. Edit with discipline.</h2>
+    <div>
+      <p data-i18n="home.about_text">DTDT connects strategic clarity with image-making craft. Every decision must strengthen recognition, trust, or action.</p>
+      <a class="studio-text-link" href="{{ '/about/' | relative_url }}" data-i18n="nav.about">About</a>
     </div>
   </div>
 </section>
