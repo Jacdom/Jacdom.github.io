@@ -20,7 +20,7 @@ image: /assets/images/case-rendering-1280-4.jpg
     <h2 class="sr-only" id="archive-title" data-i18n="work.archive">Work archive</h2>
     {% for project in site.data.projects %}
       <article class="archive-project reveal" id="{{ project.id }}">
-        <a href="{% if project.id == 'web-experience' %}#web-design{% else %}#{{ project.id }}{% endif %}">
+        <a href="{{ project.href | relative_url }}">
           <figure class="archive-project__media media-frame">
             <img src="{{ project.image | relative_url }}" alt="{{ project.alt }}" width="1280" height="720" loading="lazy">
           </figure>

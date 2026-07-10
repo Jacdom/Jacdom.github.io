@@ -23,7 +23,7 @@
   description_key: "projects.commerce_description"
   image: "/assets/images/case-e-commerce-1280-1.jpg"
   alt: "Consumer electronics ecommerce visual system"
-  href: "/case/#commerce-visual"
+  href: "/case/ecommerce/"
   tone: "white"
 
 - id: brand-identity
@@ -67,4 +67,3 @@
   alt: "Consumer product packaging design development"
   href: "/case/#packaging"
   tone: "black"
-

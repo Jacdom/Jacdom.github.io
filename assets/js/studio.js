@@ -211,13 +211,32 @@
         interval: parseInt(image.getAttribute("data-frame-interval"), 10) || 120
       };
 
+      var mobileSource = mobile && image.parentElement ? image.parentElement.querySelector("[data-frame-mobile-source]") : null;
+      if (mobile) {
+        var mobileBase = image.getAttribute("data-frame-base-mobile");
+        var mobilePrefix = image.getAttribute("data-frame-prefix-mobile");
+        var mobileExt = image.getAttribute("data-frame-ext-mobile");
+        var mobileStart = parseInt(image.getAttribute("data-frame-start-mobile"), 10);
+        var mobileCount = parseInt(image.getAttribute("data-frame-count-mobile"), 10);
+        var mobilePad = parseInt(image.getAttribute("data-frame-pad-mobile"), 10);
+        var mobileInterval = parseInt(image.getAttribute("data-frame-interval-mobile"), 10);
+
+        settings.base = mobileBase !== null ? mobileBase : settings.base;
+        settings.prefix = mobilePrefix !== null ? mobilePrefix : settings.prefix;
+        settings.ext = mobileExt !== null ? mobileExt : settings.ext;
+        settings.start = mobileStart || settings.start;
+        settings.count = mobileCount || settings.count;
+        settings.pad = mobilePad || settings.pad;
+        settings.interval = mobileInterval || settings.interval;
+      }
+
       if (!settings.base || settings.count < 2) {
         return;
       }
 
       var frameStep = mobile ? 2 : 1;
       var initialCount = mobile ? 8 : 12;
-      var playbackInterval = mobile ? Math.max(settings.interval, 170) : settings.interval;
+      var playbackInterval = mobile ? Math.max(settings.interval, 150) : settings.interval;
       var initialBatch = [];
       var frameNumber = settings.start;
       var previousTime = 0;
@@ -242,7 +261,12 @@
             if (frameNumber > settings.count) {
               frameNumber = settings.start;
             }
-            image.src = framePath(settings, frameNumber);
+            var nextFramePath = framePath(settings, frameNumber);
+            if (mobileSource) {
+              mobileSource.setAttribute("srcset", nextFramePath);
+            } else {
+              image.src = nextFramePath;
+            }
             previousTime = time;
           }
 

@@ -13,12 +13,19 @@
       <nav aria-label="Primary navigation">
         <ul class="site-navigation__links">
           {%- for link in site.data.nav.header -%}
+            {%- assign current_link = false -%}
+            {%- if page.url == link.url -%}
+              {%- assign current_link = true -%}
+            {%- endif -%}
+            {%- if link.url == '/case/' and page.url contains '/case/' -%}
+              {%- assign current_link = true -%}
+            {%- endif -%}
             {%- if link.url contains '://' -%}
               {%- assign url = link.url -%}
             {%- else -%}
               {%- assign url = link.url | relative_url -%}
             {%- endif -%}
-            <li><a href="{{ url }}"{% if page.url == link.url %} aria-current="page"{% endif %}{% if link.i18n_key %} data-i18n="{{ link.i18n_key }}"{% endif %}>{{ link.title }}</a></li>
+            <li><a href="{{ url }}"{% if current_link %} aria-current="page"{% endif %}{% if link.i18n_key %} data-i18n="{{ link.i18n_key }}"{% endif %}>{{ link.title }}</a></li>
           {%- endfor -%}
           <li><a class="site-navigation__contact" href="{{ '/connect/' | relative_url }}"{% if page.url == '/connect/' %} aria-current="page"{% endif %} data-i18n="nav.connect">Connect</a></li>
         </ul>

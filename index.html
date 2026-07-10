@@ -8,22 +8,32 @@ image: /assets/images/6/r0001.jpg
 
 <section class="home-hero" aria-labelledby="home-title">
   <div class="home-hero__visual" aria-hidden="true">
-    <img
-      src="{{ '/assets/images/6/r0001.jpg' | relative_url }}"
-      alt=""
-      width="3840"
-      height="2160"
-      loading="eager"
-      fetchpriority="high"
-      data-frame-animation
-      data-frame-base="{{ '/assets/images/6/' | relative_url }}"
-      data-frame-prefix="r"
-      data-frame-ext=".jpg"
-      data-frame-start="1"
-      data-frame-count="39"
-      data-frame-pad="4"
-      data-frame-interval="120"
-    >
+    <picture>
+      <source media="(max-width: 767px)" srcset="{{ '/assets/images/7/001.jpg' | relative_url }}" data-frame-mobile-source>
+      <img
+        src="{{ '/assets/images/6/r0001.jpg' | relative_url }}"
+        alt=""
+        width="3840"
+        height="2160"
+        loading="eager"
+        fetchpriority="high"
+        data-frame-animation
+        data-frame-base="{{ '/assets/images/6/' | relative_url }}"
+        data-frame-prefix="r"
+        data-frame-ext=".jpg"
+        data-frame-start="1"
+        data-frame-count="39"
+        data-frame-pad="4"
+        data-frame-interval="120"
+        data-frame-base-mobile="{{ '/assets/images/7/' | relative_url }}"
+        data-frame-prefix-mobile=""
+        data-frame-ext-mobile=".jpg"
+        data-frame-start-mobile="1"
+        data-frame-count-mobile="39"
+        data-frame-pad-mobile="3"
+        data-frame-interval-mobile="150"
+      >
+    </picture>
   </div>
   <div class="studio-shell home-hero__content">
     <p class="studio-eyebrow" data-i18n="home.eyebrow">DTDT Studio / China + Worldwide</p>
