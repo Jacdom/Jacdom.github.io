@@ -225,6 +225,10 @@ a {
   object-fit: contain;
 }
 
+.studio-hero__frame {
+  background: #fff;
+}
+
 .studio-section {
   padding: clamp(4rem, 9vw, 8rem) 0;
   border-top: 1px solid var(--studio-line);

@@ -38,7 +38,23 @@ capabilities:
       </div>
     </div>
     <div class="studio-hero__media" aria-label="Selected DTDT Studio visual work">
-      <img src="{{ '/assets/images/home-1920-1.jpg' | relative_url }}" alt="DTDT Studio brand and product design showcase" width="1920" height="1080" loading="eager" fetchpriority="high">
+      <img
+        class="studio-hero__frame"
+        src="{{ '/assets/images/6/r0001.jpg' | relative_url }}"
+        alt="DTDT Studio animated brand visual showcase"
+        width="1920"
+        height="1080"
+        loading="eager"
+        fetchpriority="high"
+        data-frame-animation
+        data-frame-base="{{ '/assets/images/6/' | relative_url }}"
+        data-frame-prefix="r"
+        data-frame-ext=".jpg"
+        data-frame-start="1"
+        data-frame-count="39"
+        data-frame-pad="4"
+        data-frame-interval="120"
+      >
     </div>
   </div>
 </section>

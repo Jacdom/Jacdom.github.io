@@ -27,33 +27,12 @@
       return saved;
     }
 
-    return "en";
-  }
-
-  function languageFromCountry(countryCode) {
-    var chineseMarkets = ["CN"];
-    var normalizedCountry = String(countryCode || "").toUpperCase();
-    return chineseMarkets.indexOf(normalizedCountry) !== -1 ? "zh" : "en";
-  }
-
-  function detectLanguageByIp() {
-    if (readSavedLanguage() || !window.fetch) {
-      return;
+    var browserLanguage = (navigator.language || navigator.userLanguage || "en").toLowerCase();
+    if (browserLanguage === "zh" || browserLanguage.indexOf("zh-cn") === 0) {
+      return "zh";
     }
 
-    fetch("https://ipapi.co/json/", { cache: "no-store" })
-      .then(function (response) {
-        if (!response.ok) {
-          throw new Error("IP language lookup failed");
-        }
-        return response.json();
-      })
-      .then(function (data) {
-        applyLanguage(languageFromCountry(data && data.country_code));
-      })
-      .catch(function () {
-        applyLanguage("en");
-      });
+    return "en";
   }
 
   function getTranslation(dictionary, key) {
@@ -87,7 +66,6 @@
   function setupLanguageSwitcher() {
     var language = resolveLanguage();
     applyLanguage(language);
-    detectLanguageByIp();
 
     document.querySelectorAll("[data-lang-option]").forEach(function (button) {
       button.addEventListener("click", function () {
@@ -99,6 +77,41 @@
         saveLanguage(nextLanguage);
         applyLanguage(nextLanguage);
       });
+    });
+  }
+
+  function framePath(settings, frameNumber) {
+    var paddedNumber = String(frameNumber).padStart(settings.pad, "0");
+    return settings.base + settings.prefix + paddedNumber + settings.ext;
+  }
+
+  function setupFrameAnimations() {
+    document.querySelectorAll("[data-frame-animation]").forEach(function (image) {
+      var settings = {
+        base: image.getAttribute("data-frame-base") || "",
+        prefix: image.getAttribute("data-frame-prefix") || "",
+        ext: image.getAttribute("data-frame-ext") || ".jpg",
+        start: parseInt(image.getAttribute("data-frame-start"), 10) || 1,
+        count: parseInt(image.getAttribute("data-frame-count"), 10) || 1,
+        pad: parseInt(image.getAttribute("data-frame-pad"), 10) || 4,
+        interval: parseInt(image.getAttribute("data-frame-interval"), 10) || 120
+      };
+
+      if (!settings.base || settings.count < 2) {
+        return;
+      }
+
+      var frameNumber = settings.start;
+      var preloadLimit = Math.min(settings.count, 8);
+      for (var index = 1; index <= preloadLimit; index += 1) {
+        var preloadImage = new Image();
+        preloadImage.src = framePath(settings, index);
+      }
+
+      window.setInterval(function () {
+        frameNumber = frameNumber >= settings.count ? settings.start : frameNumber + 1;
+        image.src = framePath(settings, frameNumber);
+      }, settings.interval);
     });
   }
 
@@ -130,5 +143,6 @@
   document.addEventListener("DOMContentLoaded", function () {
     setupLanguageSwitcher();
     setupWebCases();
+    setupFrameAnimations();
   });
 })();
