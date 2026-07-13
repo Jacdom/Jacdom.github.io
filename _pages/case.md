@@ -2,7 +2,7 @@
 layout: default
 page_id: work
 title: "Selected Work — DTDT Studio"
-description: "Selected ecommerce design, physical product design, 3D product visualization, AI, motion, brand, and web work by DTDT Studio."
+description: "Selected ecommerce design, 3D product visualization, AI, motion, brand, web, and physical product design work by DTDT Studio."
 permalink: /case/
 image: /assets/images/case-e-commerce-1280-1.jpg
 ---
@@ -10,20 +10,20 @@ image: /assets/images/case-e-commerce-1280-1.jpg
 <header class="editorial-hero editorial-hero--work">
   <div class="studio-shell">
     <p class="studio-eyebrow" data-i18n="work.eyebrow">Selected work / 2024-2026</p>
-    <h1 data-i18n="work.title">Commerce, products, and images made to perform.</h1>
-    <p class="editorial-hero__lead" data-i18n="work.lead">Led by ecommerce design, physical product design, and 3D product visualization.</p>
+    <h1 data-i18n="work.title">Commerce, images, and systems made to perform.</h1>
+    <p class="editorial-hero__lead" data-i18n="work.lead">Led by ecommerce design and 3D product visualization.</p>
   </div>
 </header>
 
 <nav class="work-categories" aria-label="Project categories">
   <div class="studio-shell work-categories__track">
     <a href="{{ '/case/ecommerce/' | relative_url }}"><span>01</span><b data-i18n="services.ecommerce_title">E-commerce Design</b></a>
-    <a href="{{ '/case/product-design/' | relative_url }}"><span>02</span><b data-i18n="services.product_design_title">Product Design</b></a>
-    <a href="{{ '/case/3d-visualization/' | relative_url }}"><span>03</span><b data-i18n="services.product_title">3D Rendering</b></a>
-    <a href="{{ '/ai/' | relative_url }}"><span>04</span><b data-i18n="services.ai_title">AI Creative</b></a>
-    <a href="#motion-design"><span>05</span><b data-i18n="services.motion_title">3D Animation &amp; Motion</b></a>
-    <a href="#brand-identity"><span>06</span><b data-i18n="services.brand_title">Brand Design</b></a>
-    <a href="#web-design"><span>07</span><b data-i18n="services.web_title">Web Design</b></a>
+    <a href="{{ '/case/3d-visualization/' | relative_url }}"><span>02</span><b data-i18n="services.product_title">3D Rendering</b></a>
+    <a href="{{ '/ai/' | relative_url }}"><span>03</span><b data-i18n="services.ai_title">AI Creative</b></a>
+    <a href="#motion-design"><span>04</span><b data-i18n="services.motion_title">3D Animation &amp; Motion</b></a>
+    <a href="#brand-identity"><span>05</span><b data-i18n="services.brand_title">Brand Design</b></a>
+    <a href="#web-design"><span>06</span><b data-i18n="services.web_title">Web Design</b></a>
+    <a href="{{ '/case/product-design/' | relative_url }}"><span>07</span><b data-i18n="services.product_design_title">Product Design</b></a>
   </div>
 </nav>
 

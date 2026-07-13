@@ -132,8 +132,8 @@ image: /assets/images/home-1920-1.jpg
   <div class="studio-shell">
     <header class="section-heading reveal"><p class="studio-eyebrow" data-i18n="ecommerce.related_label">Related work</p><h2 id="commerce-related-title" data-i18n="ecommerce.related_title">Build the product, then build its desire.</h2></header>
     <div class="related-projects__grid">
-      <a href="{{ '/case/product-design/' | relative_url }}" class="reveal"><img src="{{ '/assets/images/product-design/arc-dock-hero.svg' | relative_url }}" alt="ARC Dock product design case" width="1600" height="1100" loading="lazy"><span data-i18n="projects.product_title">ARC Dock</span></a>
       <a href="{{ '/case/3d-visualization/' | relative_url }}" class="reveal"><img src="{{ '/assets/images/case-rendering-1280-4.jpg' | relative_url }}" alt="3D product visualization case" width="1280" height="720" loading="lazy"><span data-i18n="projects.render_title">Product Worlds, Made Precise</span></a>
+      <a href="{{ '/case/product-design/' | relative_url }}" class="reveal"><img src="{{ '/assets/images/product-design/arc-dock-hero.svg' | relative_url }}" alt="ARC Dock product design case" width="1600" height="1100" loading="lazy"><span data-i18n="projects.product_title">ARC Dock</span></a>
     </div>
   </div>
 </section>

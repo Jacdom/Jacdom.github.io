@@ -204,6 +204,7 @@
   function preloadFrame(path) {
     return new Promise(function (resolve) {
       var frame = new Image();
+      frame.decoding = "async";
       frame.onload = resolve;
       frame.onerror = resolve;
       frame.src = path;
@@ -252,9 +253,9 @@
         return;
       }
 
-      var frameStep = mobile && !saveData ? 1 : 2;
-      var initialCount = mobile ? (saveData ? 3 : 4) : 6;
-      var playbackInterval = mobile ? Math.max(settings.interval, 150) : Math.max(settings.interval, 200);
+      var frameStep = saveData ? 2 : 1;
+      var initialCount = mobile ? (saveData ? 5 : 8) : (saveData ? 6 : 10);
+      var playbackInterval = Math.max(settings.interval, saveData ? 140 : (mobile ? 90 : 80));
       var initialBatch = [];
       var frameNumber = settings.start;
       var previousTime = 0;
@@ -268,7 +269,15 @@
         initialBatch.push(preloadFrame(framePath(settings, initialFrame)));
       }
 
+      var preloadRest = function () {
+        for (var rest = settings.start + (initialCount * frameStep); rest <= settings.count; rest += frameStep) {
+          preloadFrame(framePath(settings, rest));
+        }
+      };
+
       Promise.all(initialBatch).then(function () {
+        preloadRest();
+
         function animate(time) {
           if (!previousTime) {
             previousTime = time;
@@ -294,18 +303,6 @@
 
         animationId = window.requestAnimationFrame(animate);
       });
-
-      var preloadRest = function () {
-        for (var rest = settings.start + (initialCount * frameStep); rest <= settings.count; rest += frameStep) {
-          preloadFrame(framePath(settings, rest));
-        }
-      };
-
-      if ("requestIdleCallback" in window) {
-        window.requestIdleCallback(preloadRest, { timeout: 2500 });
-      } else {
-        window.setTimeout(preloadRest, 1200);
-      }
 
       window.addEventListener("pagehide", function () {
         if (animationId) {

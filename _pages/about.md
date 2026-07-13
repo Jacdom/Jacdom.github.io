@@ -2,15 +2,15 @@
 layout: default
 page_id: about
 title: "About — DTDT Studio"
-description: "DTDT Studio connects ecommerce design, physical product design, and 3D product visualization with AI, motion, brand, and web design."
+description: "DTDT Studio connects ecommerce design and 3D visualization with AI, motion, brand, web, and physical product design."
 permalink: /about/
 ---
 
 <header class="editorial-hero about-hero">
   <div class="studio-shell">
     <p class="studio-eyebrow" data-i18n="about.eyebrow">About DTDT</p>
-    <h1 data-i18n="about.title">A design studio for products, images, and commerce.</h1>
-    <p class="editorial-hero__lead" data-i18n="about.lead">We connect physical product design, ecommerce systems, and 3D visualization, supported by AI, motion, brand, and web.</p>
+    <h1 data-i18n="about.title">A design studio for commerce, images, and systems.</h1>
+    <p class="editorial-hero__lead" data-i18n="about.lead">We connect ecommerce and 3D visualization with AI, motion, brand, web, and physical product design.</p>
   </div>
 </header>
 
@@ -58,7 +58,7 @@ permalink: /about/
 <section class="closing-statement">
   <div class="studio-shell reveal">
     <p class="studio-eyebrow">Design Team Dream Team</p>
-    <h2 data-i18n="about.final_title">Make the product easier to understand, trust, and choose.</h2>
+    <h2 data-i18n="about.final_title">Make the offer easier to understand, trust, and choose.</h2>
     <a class="studio-button studio-button--light" href="{{ '/connect/' | relative_url }}" data-i18n="common.start_project">Start a project</a>
   </div>
 </section>

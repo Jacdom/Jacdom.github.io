@@ -14,24 +14,8 @@
   href: "/case/ecommerce/"
   tone: "white"
 
-- id: product-design
-  number: "02"
-  title: "ARC Dock"
-  title_key: "projects.product_title"
-  category: "Physical Product Design / Concept Study"
-  category_key: "projects.product_category"
-  year: "2026"
-  description: "A modular desktop dock shaped around charging, cable order, and one-hand use."
-  description_key: "projects.product_description"
-  image: "/assets/images/product-design/arc-dock-hero.svg"
-  image_width: 1600
-  image_height: 1100
-  alt: "ARC Dock physical product design concept"
-  href: "/case/product-design/"
-  tone: "product"
-
 - id: product-rendering
-  number: "03"
+  number: "02"
   title: "Product Worlds, Made Precise"
   title_key: "projects.render_title"
   category: "3D Rendering / Product Visualization"
@@ -47,7 +31,7 @@
   tone: "orange"
 
 - id: ai-creative
-  number: "04"
+  number: "03"
   title: "AI Creative Systems"
   title_key: "projects.ai_title"
   category: "AI Creative / Visual Research"
@@ -63,7 +47,7 @@
   tone: "purple"
 
 - id: motion-design
-  number: "05"
+  number: "04"
   title: "Motion Built From Form"
   title_key: "projects.motion_title"
   category: "3D Animation / Motion Design"
@@ -79,7 +63,7 @@
   tone: "gold"
 
 - id: brand-identity
-  number: "06"
+  number: "05"
   title: "Identity Built to Travel"
   title_key: "projects.identity_title"
   category: "Brand Design / Visual Identity"
@@ -95,7 +79,7 @@
   tone: "gold"
 
 - id: web-experience
-  number: "07"
+  number: "06"
   title: "Web Design Systems"
   title_key: "projects.web_title"
   category: "Web Design / Brand & Commerce"
@@ -111,7 +95,7 @@
   tone: "purple"
 
 - id: packaging
-  number: "08"
+  number: "07"
   title: "Packaging With Shelf Presence"
   title_key: "projects.packaging_title"
   category: "Packaging / Production"
@@ -125,3 +109,19 @@
   alt: "Consumer product packaging design development"
   href: "/case/#packaging"
   tone: "black"
+
+- id: product-design
+  number: "08"
+  title: "ARC Dock"
+  title_key: "projects.product_title"
+  category: "Physical Product Design / Concept Study"
+  category_key: "projects.product_category"
+  year: "2026"
+  description: "A modular desktop dock shaped around charging, cable order, and one-hand use."
+  description_key: "projects.product_description"
+  image: "/assets/images/product-design/arc-dock-hero.svg"
+  image_width: 1600
+  image_height: 1100
+  alt: "ARC Dock physical product design concept"
+  href: "/case/product-design/"
+  tone: "product"

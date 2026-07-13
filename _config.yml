@@ -13,7 +13,7 @@ bootswatch_theme: "united" # cerulean, spacelab, united
 # site settings, follows the order used in jekyll-seo-tag plugin
 lang: "en"
 title: "DTDT Studio"
-description: "Independent design studio specializing in ecommerce design, physical product design, and 3D product visualization."
+description: "Independent design studio specializing in ecommerce design and 3D product visualization, supported by AI, motion, brand, web, and product design."
 url: "https://jacdom.github.io"
 baseurl: "" # the subpath of your site, e.g. "/blog"
 author: "DTDT Studio"
@@ -175,4 +175,4 @@ defaults:
     values:
       # for SEO and social sharing
       image: assets/images/home-1920-6.jpg
-      image_alt: DTDT Studio ecommerce and product visualization work
+      image_alt: DTDT Studio ecommerce and 3D visualization work

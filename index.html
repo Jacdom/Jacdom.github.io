@@ -1,8 +1,8 @@
 ---
 layout: default
 page_id: home
-title: "DTDT Studio — Ecommerce, Product & 3D Design"
-description: "DTDT Studio specializes in ecommerce design, physical product design, and 3D product visualization, supported by AI, motion, brand, and web design."
+title: "DTDT Studio — Ecommerce, 3D & Creative Design"
+description: "DTDT Studio specializes in ecommerce design and 3D product visualization, supported by AI, motion, brand, web, and physical product design."
 image: /assets/images/6/r0001.jpg
 ---
 
@@ -17,6 +17,7 @@ image: /assets/images/6/r0001.jpg
         height="2160"
         loading="eager"
         fetchpriority="high"
+        decoding="async"
         data-frame-animation
         data-frame-base="{{ '/assets/images/6/' | relative_url }}"
         data-frame-prefix="r"
@@ -24,22 +25,22 @@ image: /assets/images/6/r0001.jpg
         data-frame-start="1"
         data-frame-count="39"
         data-frame-pad="4"
-        data-frame-interval="120"
+        data-frame-interval="80"
         data-frame-base-mobile="{{ '/assets/images/7/' | relative_url }}"
         data-frame-prefix-mobile=""
         data-frame-ext-mobile=".jpg"
         data-frame-start-mobile="1"
         data-frame-count-mobile="39"
         data-frame-pad-mobile="3"
-        data-frame-interval-mobile="150"
+        data-frame-interval-mobile="90"
       >
     </picture>
   </div>
   <div class="studio-shell home-hero__content">
     <p class="studio-eyebrow" data-i18n="home.eyebrow">DTDT Studio / China + Worldwide</p>
-    <h1 id="home-title" data-i18n="home.title">Design products. Build desire. Move commerce.</h1>
+    <h1 id="home-title" data-i18n="home.title">Build desire. Shape images. Move commerce.</h1>
     <div class="home-hero__footer">
-      <p data-i18n="home.lead">An independent studio for ecommerce design, physical product design, and 3D product visualization.</p>
+      <p data-i18n="home.lead">An independent studio for ecommerce and 3D product visualization, supported by AI, motion, brand, web, and product design.</p>
       <div class="studio-actions">
         <a class="studio-button studio-button--ink" href="{{ '/case/ecommerce/' | relative_url }}" data-i18n="home.hero_cta">Explore ecommerce</a>
         <a class="studio-button studio-button--ghost" href="{{ '/connect/' | relative_url }}" data-i18n="common.start_project">Start a project</a>
@@ -52,7 +53,7 @@ image: /assets/images/6/r0001.jpg
   <div class="studio-shell">
     <header class="section-heading reveal">
       <p class="studio-eyebrow" data-i18n="home.selected">Selected works</p>
-      <h2 id="selected-title" data-i18n="home.selected_title">Commerce first. Product-led. Built to perform.</h2>
+      <h2 id="selected-title" data-i18n="home.selected_title">Commerce first. Image-led. Built to perform.</h2>
     </header>
     <div class="work-index__grid">
       {% for project in site.data.projects limit:4 %}
@@ -80,18 +81,9 @@ image: /assets/images/6/r0001.jpg
   <a class="core-story__visual core-story__visual--wide reveal" href="{{ '/case/ecommerce/' | relative_url }}"><img src="{{ '/assets/images/home-1920-5.jpg' | relative_url }}" alt="Ecommerce design system for consumer electronics and pet products" width="1920" height="540" loading="lazy"></a>
 </section>
 
-<section class="core-story core-story--product" aria-labelledby="home-product-title">
-  <div class="studio-shell core-story__heading reveal">
-    <p class="studio-eyebrow" data-i18n="home.product_label">02 / Product Design</p>
-    <h2 id="home-product-title" data-i18n="home.product_title">Physical products shaped through use, form, structure, and CMF.</h2>
-    <div><p data-i18n="home.product_text">ARC Dock demonstrates how product definition, interaction, form evolution, material logic, structure, and final visual language belong to the same design decision.</p><a class="studio-text-link" href="{{ '/case/product-design/' | relative_url }}" data-i18n="home.product_cta">View product design case</a></div>
-  </div>
-  <a class="core-story__visual reveal" href="{{ '/case/product-design/' | relative_url }}"><img src="{{ '/assets/images/product-design/arc-dock-hero.svg' | relative_url }}" alt="ARC Dock physical product design concept" width="1600" height="1100" loading="lazy"></a>
-</section>
-
 <section class="core-story core-story--rendering" aria-labelledby="home-rendering-title">
   <div class="studio-shell core-story__heading reveal">
-    <p class="studio-eyebrow" data-i18n="home.rendering_label">03 / 3D Product Visualization</p>
+    <p class="studio-eyebrow" data-i18n="home.rendering_label">02 / 3D Product Visualization</p>
     <h2 id="home-rendering-title" data-i18n="home.rendering_title">Product truth, translated through material, light, and composition.</h2>
     <div><p data-i18n="home.rendering_text">From product understanding and modeling to look development, rendering, post-production, and campaign adaptation.</p><a class="studio-text-link" href="{{ '/case/3d-visualization/' | relative_url }}" data-i18n="home.rendering_cta">View 3D visualization</a></div>
   </div>
@@ -113,6 +105,6 @@ image: /assets/images/6/r0001.jpg
   <div class="studio-shell studio-belief__grid reveal">
     <p class="studio-eyebrow" data-i18n="home.about_label">Studio principle</p>
     <h2 id="home-about-title" data-i18n="home.about_title">Explore forever. Edit with discipline.</h2>
-    <div><p data-i18n="home.about_text">DTDT connects product understanding, strategic clarity, and image-making craft. Every decision must strengthen recognition, trust, or action.</p><a class="studio-text-link" href="{{ '/about/' | relative_url }}" data-i18n="nav.about">About</a></div>
+    <div><p data-i18n="home.about_text">DTDT connects commerce strategy, image-making craft, and disciplined systems. Every decision must strengthen recognition, trust, or action.</p><a class="studio-text-link" href="{{ '/about/' | relative_url }}" data-i18n="nav.about">About</a></div>
   </div>
 </section>

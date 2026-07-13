@@ -9,7 +9,7 @@ permalink: /price/
 <header class="price-hero">
   <div class="studio-shell price-hero__grid">
     <div><p class="studio-eyebrow" data-i18n="price.eyebrow">Price / Project scope</p><h1 data-i18n="price.title">Clear starting points. Scope shaped around the real work.</h1></div>
-    <p data-i18n="price.lead">Ecommerce systems and physical product design are quoted by project. Production services retain the published starting prices from the original DTDT pricing page.</p>
+    <p data-i18n="price.lead">Ecommerce, 3D visualization, and physical product design are quoted by project. Production services retain the published starting prices from the original DTDT pricing page.</p>
   </div>
 </header>
 
@@ -18,8 +18,8 @@ permalink: /price/
     <header class="section-heading section-heading--split reveal"><p class="studio-eyebrow" data-i18n="price.priority_label">Core project scopes</p><h2 id="price-priority-title" data-i18n="price.priority_title">Define the commercial problem before defining the deliverables.</h2></header>
     <div class="price-scope-list">
       <article class="reveal"><span>01</span><h3 data-i18n="services.ecommerce_title">E-commerce Design</h3><p data-i18n="price.scope_ecommerce">Quoted around platform, SKU count, content depth, rendering needs, and market adaptation.</p><b data-i18n="price.custom_scope">Custom scope</b></article>
-      <article class="reveal"><span>02</span><h3 data-i18n="services.product_design_title">Product Design</h3><p data-i18n="price.scope_product">Quoted around concept depth, form development, CMF, interaction, structure, and prototype requirements.</p><b data-i18n="price.custom_scope">Custom scope</b></article>
-      <article class="reveal"><span>03</span><h3 data-i18n="services.product_title">3D Rendering</h3><p data-i18n="price.scope_rendering">Quoted around model readiness, material complexity, scene count, resolution, and applications.</p><b data-i18n="price.custom_scope">Custom scope</b></article>
+      <article class="reveal"><span>02</span><h3 data-i18n="services.product_title">3D Rendering</h3><p data-i18n="price.scope_rendering">Quoted around model readiness, material complexity, scene count, resolution, and applications.</p><b data-i18n="price.custom_scope">Custom scope</b></article>
+      <article class="reveal"><span>03</span><h3 data-i18n="services.product_design_title">Product Design</h3><p data-i18n="price.scope_product">Quoted around concept depth, form development, CMF, interaction, structure, and prototype requirements.</p><b data-i18n="price.custom_scope">Custom scope</b></article>
     </div>
   </div>
 </section>
