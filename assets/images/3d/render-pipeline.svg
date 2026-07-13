@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" role="img" aria-labelledby="title desc">
+  <title id="title">3D product visualization pipeline</title>
+  <desc id="desc">A seven-stage process moves from product understanding through modeling, materials, lighting, composition, post-production, and campaign adaptation.</desc>
+  <rect width="1600" height="720" fill="#171717"/>
+  <g font-family="Arial, Helvetica, sans-serif"><text x="64" y="70" fill="#fff" font-size="18" font-weight="700">3D PRODUCT VISUALIZATION PIPELINE</text><text x="1376" y="70" fill="#888" font-size="14">01-07</text></g>
+  <line x1="64" y1="104" x2="1536" y2="104" stroke="#3b3b3b"/>
+  <path d="M140 330H1460" stroke="#4a4a4a" stroke-width="2"/>
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <g transform="translate(140 330)"><circle r="54" fill="#9f43d1"/><path d="M-18 12L0-22L18 12Z" fill="#fff"/><text y="105" fill="#fff" font-size="15" font-weight="700">UNDERSTAND</text><text y="132" fill="#888" font-size="12">Form / function / audience</text></g>
+    <g transform="translate(360 330)"><circle r="54" fill="#292929" stroke="#9f43d1" stroke-width="3"/><path d="M-20-16H20V20H-20Z" fill="none" stroke="#fff" stroke-width="3"/><text y="105" fill="#fff" font-size="15" font-weight="700">MODEL</text><text y="132" fill="#888" font-size="12">Proportion / topology</text></g>
+    <g transform="translate(580 330)"><circle r="54" fill="#292929" stroke="#f26b46" stroke-width="3"/><circle r="22" fill="#f26b46"/><text y="105" fill="#fff" font-size="15" font-weight="700">MATERIAL</text><text y="132" fill="#888" font-size="12">Surface / finish / detail</text></g>
+    <g transform="translate(800 330)"><circle r="54" fill="#292929" stroke="#ffa81c" stroke-width="3"/><path d="M0-27V27M-27 0H27M-19-19L19 19M19-19L-19 19" stroke="#ffa81c" stroke-width="4"/><text y="105" fill="#fff" font-size="15" font-weight="700">LIGHT</text><text y="132" fill="#888" font-size="12">Shape / mood / hierarchy</text></g>
+    <g transform="translate(1020 330)"><circle r="54" fill="#292929" stroke="#fff" stroke-width="3"/><path d="M-25-18H25V18H-25Z" fill="none" stroke="#fff" stroke-width="3"/><circle cx="13" cy="-6" r="8" fill="#9f43d1"/><text y="105" fill="#fff" font-size="15" font-weight="700">COMPOSE</text><text y="132" fill="#888" font-size="12">Camera / balance / story</text></g>
+    <g transform="translate(1240 330)"><circle r="54" fill="#292929" stroke="#f26b46" stroke-width="3"/><path d="M-24 16C-6-26 8 28 26-18" fill="none" stroke="#f26b46" stroke-width="4"/><text y="105" fill="#fff" font-size="15" font-weight="700">REFINE</text><text y="132" fill="#888" font-size="12">Render / post / QA</text></g>
+    <g transform="translate(1460 330)"><circle r="54" fill="#ffa81c"/><path d="M-24-18H24V18H-24Z" fill="#171717"/><text y="105" fill="#fff" font-size="15" font-weight="700">ADAPT</text><text y="132" fill="#888" font-size="12">Campaign / commerce / motion</text></g>
+  </g>
+  <g font-family="Arial" font-size="13" fill="#888"><text x="64" y="650">Each stage is reviewed against product truth, brand tone, and the final commercial context.</text></g>
+</svg>

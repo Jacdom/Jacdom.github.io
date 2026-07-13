@@ -20,11 +20,41 @@ image: /assets/images/home-1920-1.jpg
   </div>
 </header>
 
+<section class="case-overview" aria-labelledby="commerce-overview-title">
+  <div class="studio-shell">
+    <header class="section-heading section-heading--split reveal"><p class="studio-eyebrow" data-i18n="ecommerce.overview_label">Practice overview</p><h2 id="commerce-overview-title" data-i18n="ecommerce.overview_title">Commercial images organized around what the customer needs to decide.</h2></header>
+    <dl class="case-facts reveal">
+      <div><dt data-i18n="ecommerce.fact_focus">Core focus</dt><dd data-i18n="ecommerce.fact_focus_value">Ecommerce design / Product visual</dd></div>
+      <div><dt data-i18n="ecommerce.fact_platform">Platforms</dt><dd data-i18n="ecommerce.fact_platform_value">Amazon / DTC / eBay / Campaign</dd></div>
+      <div><dt data-i18n="ecommerce.fact_scope">Scope</dt><dd data-i18n="ecommerce.fact_scope_value">Main image / Secondary / A+ / Storefront</dd></div>
+      <div><dt data-i18n="ecommerce.fact_goal">Commercial goal</dt><dd data-i18n="ecommerce.fact_goal_value">Clarity, trust, differentiation, and action</dd></div>
+    </dl>
+  </div>
+</section>
+
 <section class="studio-section ecommerce-intro" aria-labelledby="ecommerce-context-title">
   <div class="studio-shell studio-belief__grid reveal">
     <p class="studio-eyebrow" data-i18n="ecommerce.context_label">Project context</p>
     <h2 id="ecommerce-context-title" data-i18n="ecommerce.context_title">One product language across multiple categories and platforms.</h2>
     <p data-i18n="ecommerce.context_text">The system combines clean product proof with clear selling points, helping consumer electronics, pet supplies, and home products remain easy to understand across Amazon, eBay, and independent commerce.</p>
+  </div>
+</section>
+
+<section class="commerce-logic" aria-labelledby="commerce-logic-title">
+  <div class="studio-shell">
+    <header class="section-heading section-heading--split reveal"><p class="studio-eyebrow" data-i18n="ecommerce.logic_label">Commerce logic</p><h2 id="commerce-logic-title" data-i18n="ecommerce.logic_title">A visual hierarchy that follows the buying decision.</h2></header>
+    <div class="commerce-logic__grid">
+      <article class="reveal"><span>01</span><h3 data-i18n="ecommerce.logic_1_title">Recognize</h3><p data-i18n="ecommerce.logic_1_text">Make category, product form, and core difference immediately clear.</p></article>
+      <article class="reveal"><span>02</span><h3 data-i18n="ecommerce.logic_2_title">Understand</h3><p data-i18n="ecommerce.logic_2_text">Translate features into visible customer value and usage relevance.</p></article>
+      <article class="reveal"><span>03</span><h3 data-i18n="ecommerce.logic_3_title">Believe</h3><p data-i18n="ecommerce.logic_3_text">Use detail, comparison, material, and scenario evidence to build trust.</p></article>
+      <article class="reveal"><span>04</span><h3 data-i18n="ecommerce.logic_4_title">Choose</h3><p data-i18n="ecommerce.logic_4_text">Clarify variants, compatibility, size, and the next action.</p></article>
+    </div>
+    <ol class="commerce-path reveal" aria-label="Ecommerce content path">
+      <li><span data-i18n="ecommerce.path_1">Main image / Recognition</span></li>
+      <li><span data-i18n="ecommerce.path_2">Secondary images / Proof</span></li>
+      <li><span data-i18n="ecommerce.path_3">A+ and Storefront / Brand depth</span></li>
+      <li><span data-i18n="ecommerce.path_4">Campaign / Traffic conversion</span></li>
+    </ol>
   </div>
 </section>
 
@@ -76,6 +106,34 @@ image: /assets/images/home-1920-1.jpg
       <h2 id="ecommerce-system-title" data-i18n="ecommerce.system_title">A repeatable structure for launches and category expansion.</h2>
       <p data-i18n="ecommerce.system_text">Rendering standards, selling-point hierarchy, scene direction, comparison logic, and platform-safe formats are treated as one production system.</p>
       <a class="studio-text-link" href="{{ '/connect/' | relative_url }}" data-i18n="common.start_project">Start a project</a>
+    </div>
+  </div>
+</section>
+
+<section class="commerce-deliverables" aria-labelledby="commerce-deliverables-title">
+  <div class="studio-shell">
+    <header class="section-heading section-heading--split reveal"><p class="studio-eyebrow" data-i18n="ecommerce.deliverables_label">Commerce system</p><h2 id="commerce-deliverables-title" data-i18n="ecommerce.deliverables_title">One product story, adapted to every commercial surface.</h2></header>
+    <div class="practice-index">
+      <div class="reveal"><span>01</span><h3 data-i18n="ecommerce.delivery_1_title">Main Image Strategy</h3><p data-i18n="ecommerce.delivery_1_text">Silhouette, scale, product truth, and category recognition.</p></div>
+      <div class="reveal"><span>02</span><h3 data-i18n="ecommerce.delivery_2_title">Secondary Image Logic</h3><p data-i18n="ecommerce.delivery_2_text">Benefits, detail, comparison, compatibility, and use scenarios.</p></div>
+      <div class="reveal"><span>03</span><h3 data-i18n="ecommerce.delivery_3_title">Amazon A+ Content</h3><p data-i18n="ecommerce.delivery_3_text">Long-form product understanding and brand reassurance.</p></div>
+      <div class="reveal"><span>04</span><h3 data-i18n="ecommerce.delivery_4_title">Amazon Storefront</h3><p data-i18n="ecommerce.delivery_4_text">Category navigation, featured products, campaign zones, and brand story.</p></div>
+      <div class="reveal"><span>05</span><h3 data-i18n="ecommerce.delivery_5_title">Product Launch &amp; Campaign</h3><p data-i18n="ecommerce.delivery_5_text">A visual source system for launch traffic and seasonal refreshes.</p></div>
+      <div class="reveal"><span>06</span><h3 data-i18n="ecommerce.delivery_6_title">Multi-market Adaptation</h3><p data-i18n="ecommerce.delivery_6_text">Flexible hierarchy for different language lengths, platforms, and markets.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="product-outcome commerce-outcome" aria-labelledby="commerce-outcome-title">
+  <div class="studio-shell product-editorial-grid reveal"><p class="studio-eyebrow" data-i18n="ecommerce.outcome_label">Outcome / Commercial value</p><h2 id="commerce-outcome-title" data-i18n="ecommerce.outcome_title">A reusable sales language, not a collection of isolated images.</h2><div><p data-i18n="ecommerce.outcome_text">The system connects product truth, customer questions, platform constraints, and brand recognition so future products and campaigns can expand without starting from zero.</p><p data-i18n="ecommerce.outcome_note">No conversion-rate or sales claims are made without verified project data.</p></div></div>
+</section>
+
+<section class="related-projects" aria-labelledby="commerce-related-title">
+  <div class="studio-shell">
+    <header class="section-heading reveal"><p class="studio-eyebrow" data-i18n="ecommerce.related_label">Related work</p><h2 id="commerce-related-title" data-i18n="ecommerce.related_title">Build the product, then build its desire.</h2></header>
+    <div class="related-projects__grid">
+      <a href="{{ '/case/product-design/' | relative_url }}" class="reveal"><img src="{{ '/assets/images/product-design/arc-dock-hero.svg' | relative_url }}" alt="ARC Dock product design case" width="1600" height="1100" loading="lazy"><span data-i18n="projects.product_title">ARC Dock</span></a>
+      <a href="{{ '/case/3d-visualization/' | relative_url }}" class="reveal"><img src="{{ '/assets/images/case-rendering-1280-4.jpg' | relative_url }}" alt="3D product visualization case" width="1280" height="720" loading="lazy"><span data-i18n="projects.render_title">Product Worlds, Made Precise</span></a>
     </div>
   </div>
 </section>

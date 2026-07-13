@@ -2,18 +2,30 @@
 layout: default
 page_id: work
 title: "Selected Work — DTDT Studio"
-description: "Selected brand design, product visualization, web design, ecommerce, packaging, 3D rendering, and motion work by DTDT Studio."
+description: "Selected ecommerce design, physical product design, 3D product visualization, AI, motion, brand, and web work by DTDT Studio."
 permalink: /case/
-image: /assets/images/case-rendering-1280-4.jpg
+image: /assets/images/case-e-commerce-1280-1.jpg
 ---
 
 <header class="editorial-hero editorial-hero--work">
   <div class="studio-shell">
     <p class="studio-eyebrow" data-i18n="work.eyebrow">Selected work / 2024-2026</p>
-    <h1 data-i18n="work.title">Systems, images, and experiences made to perform.</h1>
-    <p class="editorial-hero__lead" data-i18n="work.lead">A cross-section of brand, commerce, product, web, and motion practice.</p>
+    <h1 data-i18n="work.title">Commerce, products, and images made to perform.</h1>
+    <p class="editorial-hero__lead" data-i18n="work.lead">Led by ecommerce design, physical product design, and 3D product visualization.</p>
   </div>
 </header>
+
+<nav class="work-categories" aria-label="Project categories">
+  <div class="studio-shell work-categories__track">
+    <a href="{{ '/case/ecommerce/' | relative_url }}"><span>01</span><b data-i18n="services.ecommerce_title">E-commerce Design</b></a>
+    <a href="{{ '/case/product-design/' | relative_url }}"><span>02</span><b data-i18n="services.product_design_title">Product Design</b></a>
+    <a href="{{ '/case/3d-visualization/' | relative_url }}"><span>03</span><b data-i18n="services.product_title">3D Rendering</b></a>
+    <a href="{{ '/ai/' | relative_url }}"><span>04</span><b data-i18n="services.ai_title">AI Creative</b></a>
+    <a href="#motion-design"><span>05</span><b data-i18n="services.motion_title">3D Animation &amp; Motion</b></a>
+    <a href="#brand-identity"><span>06</span><b data-i18n="services.brand_title">Brand Design</b></a>
+    <a href="#web-design"><span>07</span><b data-i18n="services.web_title">Web Design</b></a>
+  </div>
+</nav>
 
 <section class="project-archive" aria-labelledby="archive-title">
   <div class="studio-shell">
@@ -22,7 +34,7 @@ image: /assets/images/case-rendering-1280-4.jpg
       <article class="archive-project reveal" id="{{ project.id }}">
         <a href="{{ project.href | relative_url }}">
           <figure class="archive-project__media media-frame">
-            <img src="{{ project.image | relative_url }}" alt="{{ project.alt }}" width="1280" height="720" loading="lazy">
+            <img src="{{ project.image | relative_url }}" alt="{{ project.alt }}" width="{{ project.image_width }}" height="{{ project.image_height }}" loading="lazy">
           </figure>
           <div class="archive-project__meta">
             <span>{{ project.number }}</span>
@@ -93,7 +105,7 @@ image: /assets/images/case-rendering-1280-4.jpg
   </div>
 </section>
 
-<section class="motion-feature" id="motion-design" aria-labelledby="motion-title">
+<section class="motion-feature" id="motion-showcase" aria-labelledby="motion-title">
   <div class="studio-shell">
     <header class="section-heading reveal">
       <p class="studio-eyebrow" data-i18n="work.legacy_label">Extended practice</p>

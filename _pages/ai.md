@@ -4,7 +4,7 @@ page_id: ai
 title: "AI Creative Lab — DTDT Studio"
 description: "Applied AI visual exploration, prompt research, assisted design, creative automation, and AI design systems by DTDT Studio."
 permalink: /ai/
-image: /assets/images/visual-ai-system.svg
+image: /assets/images/6/r0001.jpg
 ---
 
 <header class="editorial-hero ai-lab-hero">

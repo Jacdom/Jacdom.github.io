@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">ARC Dock concept and form evolution</title>
+  <desc id="desc">Three concept directions evolve from a vertical tower to a balanced bridge and finally a low horizontal dock.</desc>
+  <rect width="1600" height="900" fill="#fff"/>
+  <g font-family="Arial, Helvetica, sans-serif"><text x="64" y="72" fill="#171717" font-size="18" font-weight="700">FORM EVOLUTION</text><text x="1332" y="72" fill="#6f6f6a" font-size="14">CONCEPT / 01-03</text></g>
+  <line x1="64" y1="104" x2="1536" y2="104" stroke="#d9d9d4"/>
+  <g transform="translate(64 150)">
+    <rect width="456" height="650" fill="#f3f2ef"/>
+    <text x="28" y="42" font-family="Arial" font-size="13" font-weight="700" fill="#6f6f6a">01 / TOWER</text>
+    <g transform="translate(98 132)"><rect x="58" y="80" width="202" height="330" rx="94" fill="#c5c6c2"/><rect x="91" y="-10" width="136" height="332" rx="42" fill="#171717"/><circle cx="159" cy="355" r="60" fill="#9f43d1"/></g>
+    <text x="28" y="590" font-family="Arial" font-size="24" font-weight="700" fill="#171717">Compact footprint</text><text x="28" y="620" font-family="Arial" font-size="14" fill="#6f6f6a">Too visually dominant; limited cable access.</text>
+  </g>
+  <g transform="translate(572 150)">
+    <rect width="456" height="650" fill="#eee6f2"/>
+    <text x="28" y="42" font-family="Arial" font-size="13" font-weight="700" fill="#6f6f6a">02 / BRIDGE</text>
+    <g transform="translate(60 188)"><rect x="0" y="185" width="336" height="156" rx="76" fill="#171717"/><path d="M70 205L142 25H250L294 214Z" fill="#bfc0bc"/><rect x="156" y="0" width="116" height="235" rx="34" fill="#fff" transform="rotate(8 214 118)"/><circle cx="265" cy="260" r="52" fill="#f26b46"/></g>
+    <text x="28" y="590" font-family="Arial" font-size="24" font-weight="700" fill="#171717">Clear functional zones</text><text x="28" y="620" font-family="Arial" font-size="14" fill="#6f6f6a">Better hierarchy; rear volume still feels heavy.</text>
+  </g>
+  <g transform="translate(1080 150)">
+    <rect width="456" height="650" fill="#f8edd7"/>
+    <text x="28" y="42" font-family="Arial" font-size="13" font-weight="700" fill="#6f6f6a">03 / ARC</text>
+    <g transform="translate(44 208)"><rect x="0" y="166" width="368" height="148" rx="70" fill="#171717"/><path d="M88 194L170 20H284L319 196Z" fill="#bfc0bc"/><rect x="190" y="2" width="112" height="220" rx="32" fill="#fff" transform="rotate(8 246 112)"/><circle cx="294" cy="235" r="49" fill="#ffa81c" stroke="#9f43d1" stroke-width="14"/></g>
+    <text x="28" y="590" font-family="Arial" font-size="24" font-weight="700" fill="#171717">Low, calm, and adaptable</text><text x="28" y="620" font-family="Arial" font-size="14" fill="#6f6f6a">Selected: stable base, open access, clear gesture.</text>
+  </g>
+</svg>

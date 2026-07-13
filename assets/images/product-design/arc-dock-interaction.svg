@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">ARC Dock interaction sequence</title>
+  <desc id="desc">A three-step sequence shows docking a phone, lifting the charging puck, and routing a cable through the base.</desc>
+  <rect width="1600" height="900" fill="#171717"/>
+  <g font-family="Arial, Helvetica, sans-serif"><text x="64" y="72" fill="#fff" font-size="18" font-weight="700">FUNCTION &amp; INTERACTION</text><text x="1305" y="72" fill="#8e8e8e" font-size="14">THREE DAILY GESTURES</text></g>
+  <line x1="64" y1="104" x2="1536" y2="104" stroke="#3c3c3c"/>
+  <g transform="translate(64 150)" font-family="Arial, Helvetica, sans-serif">
+    <rect width="456" height="650" fill="#242424" stroke="#3c3c3c"/>
+    <text x="28" y="42" fill="#ffa81c" font-size="13" font-weight="700">01 / DOCK</text>
+    <path d="M228 104V210" stroke="#ffa81c" stroke-width="6"/><path d="M210 190L228 212L246 190" fill="none" stroke="#ffa81c" stroke-width="6"/>
+    <g transform="translate(50 250)"><rect x="0" y="190" width="356" height="138" rx="66" fill="#0f0f0f"/><path d="M104 210L178 48H274L310 212Z" fill="#aaa"/><rect x="192" y="15" width="104" height="218" rx="30" fill="#f7f7f5" transform="rotate(8 244 124)"/></g>
+    <text x="28" y="586" fill="#fff" font-size="25" font-weight="700">One-hand placement</text><text x="28" y="619" fill="#aaa" font-size="14">An open cradle makes alignment visually obvious.</text>
+  </g>
+  <g transform="translate(572 150)" font-family="Arial, Helvetica, sans-serif">
+    <rect width="456" height="650" fill="#242424" stroke="#3c3c3c"/>
+    <text x="28" y="42" fill="#f26b46" font-size="13" font-weight="700">02 / LIFT</text>
+    <path d="M228 350V205" stroke="#f26b46" stroke-width="6"/><path d="M210 226L228 203L246 226" fill="none" stroke="#f26b46" stroke-width="6"/>
+    <g transform="translate(50 330)"><rect x="0" y="110" width="356" height="138" rx="66" fill="#0f0f0f"/><circle cx="278" cy="179" r="62" fill="#ffa81c" stroke="#9f43d1" stroke-width="14"/></g>
+    <circle cx="328" cy="220" r="70" fill="#ffa81c" stroke="#9f43d1" stroke-width="17"/>
+    <text x="28" y="586" fill="#fff" font-size="25" font-weight="700">Removable power puck</text><text x="28" y="619" fill="#aaa" font-size="14">The charging element moves from desk to hand.</text>
+  </g>
+  <g transform="translate(1080 150)" font-family="Arial, Helvetica, sans-serif">
+    <rect width="456" height="650" fill="#242424" stroke="#3c3c3c"/>
+    <text x="28" y="42" fill="#9f43d1" font-size="13" font-weight="700">03 / ROUTE</text>
+    <g transform="translate(50 260)"><rect x="0" y="180" width="356" height="138" rx="66" fill="#0f0f0f"/><path d="M42 250C108 178 187 329 322 224" fill="none" stroke="#9f43d1" stroke-width="9" stroke-linecap="round"/><circle cx="42" cy="250" r="12" fill="#ffa81c"/><circle cx="322" cy="224" r="12" fill="#f26b46"/></g>
+    <path d="M117 330C188 274 274 276 346 326" fill="none" stroke="#9f43d1" stroke-width="6" stroke-dasharray="12 12"/>
+    <text x="28" y="586" fill="#fff" font-size="25" font-weight="700">Visible cable path</text><text x="28" y="619" fill="#aaa" font-size="14">Front-to-rear routing avoids hidden setup friction.</text>
+  </g>
+</svg>

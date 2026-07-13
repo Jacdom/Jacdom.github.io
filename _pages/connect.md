@@ -2,7 +2,7 @@
 layout: default
 page_id: connect
 title: "Connect — DTDT Studio"
-description: "Start a brand, product visualization, motion, AI creative, or web design project with DTDT Studio."
+description: "Start an ecommerce, physical product design, 3D visualization, AI creative, motion, brand, or web project with DTDT Studio."
 permalink: /connect/
 ---
 
@@ -11,7 +11,7 @@ permalink: /connect/
     <div class="contact-hero__copy">
       <p class="studio-eyebrow" data-i18n="contact.eyebrow">Start a project</p>
       <h1 id="contact-title" data-i18n="contact.title">Tell us what needs to move.</h1>
-      <p data-i18n="contact.lead">Brand launches, visual systems, product imagery, web experiences, and creative workflows.</p>
+      <p data-i18n="contact.lead">Ecommerce systems, physical products, 3D imagery, AI workflows, motion, brand, and web.</p>
     </div>
     <figure class="contact-qr reveal">
       <img src="{{ '/assets/images/Jacdom-512.jpg' | relative_url }}" alt="Jacdom WeChat QR code" width="512" height="512">

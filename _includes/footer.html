@@ -10,12 +10,15 @@
 
     <div class="site-footer__meta">
       <a class="site-footer__brand" href="{{ '/' | relative_url }}">DTDT Studio</a>
-      <p>Design Team Dream Team.<br>Explore Forever.</p>
+      <p><span data-i18n="footer.name">Design Team Dream Team.</span><br><span data-i18n="footer.motto">Explore Forever.</span></p>
       <nav aria-label="Footer navigation">
+        <a href="{{ '/case/ecommerce/' | relative_url }}" data-i18n="services.ecommerce_title">E-commerce Design</a>
+        <a href="{{ '/case/product-design/' | relative_url }}" data-i18n="services.product_design_title">Product Design</a>
+        <a href="{{ '/case/3d-visualization/' | relative_url }}" data-i18n="services.product_title">3D Rendering</a>
         <a href="{{ '/case/' | relative_url }}" data-i18n="nav.work">Work</a>
         <a href="{{ '/ai/' | relative_url }}" data-i18n="nav.ai">AI Lab</a>
         <a href="{{ '/about/' | relative_url }}" data-i18n="nav.about">About</a>
-        <a href="{{ '/price/' | relative_url }}">Pricing</a>
+        <a href="{{ '/price/' | relative_url }}" data-i18n="nav.price">Price</a>
         <a href="{{ '/sitemap.xml' | relative_url }}">Sitemap</a>
       </nav>
       <p class="site-footer__copyright">&copy; {{ "now" | date: "%Y" }} DTDT Studio</p>

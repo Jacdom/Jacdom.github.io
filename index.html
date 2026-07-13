@@ -1,15 +1,15 @@
 ---
 layout: default
 page_id: home
-title: "DTDT Studio — Brand, Product & Digital Design"
-description: "DTDT Studio creates brand systems, product visualization, motion, AI creative, web design, and digital experiences."
+title: "DTDT Studio — Ecommerce, Product & 3D Design"
+description: "DTDT Studio specializes in ecommerce design, physical product design, and 3D product visualization, supported by AI, motion, brand, and web design."
 image: /assets/images/6/r0001.jpg
 ---
 
 <section class="home-hero" aria-labelledby="home-title">
   <div class="home-hero__visual" aria-hidden="true">
     <picture>
-      <source media="(max-width: 767px)" srcset="{{ '/assets/images/7/001.jpg' | relative_url }}" data-frame-mobile-source>
+      <source media="(max-width: 767px)" srcset="{{ '/assets/images/7/001.jpg' | relative_url }}" width="750" height="1000" data-frame-mobile-source>
       <img
         src="{{ '/assets/images/6/r0001.jpg' | relative_url }}"
         alt=""
@@ -37,11 +37,11 @@ image: /assets/images/6/r0001.jpg
   </div>
   <div class="studio-shell home-hero__content">
     <p class="studio-eyebrow" data-i18n="home.eyebrow">DTDT Studio / China + Worldwide</p>
-    <h1 id="home-title" data-i18n="home.title">Design makes value visible.</h1>
+    <h1 id="home-title" data-i18n="home.title">Design products. Build desire. Move commerce.</h1>
     <div class="home-hero__footer">
-      <p data-i18n="home.lead">Brand, product, motion, and digital experiences for ambitious commerce.</p>
+      <p data-i18n="home.lead">An independent studio for ecommerce design, physical product design, and 3D product visualization.</p>
       <div class="studio-actions">
-        <a class="studio-button studio-button--ink" href="{{ '/case/' | relative_url }}" data-i18n="common.view_work">View work</a>
+        <a class="studio-button studio-button--ink" href="{{ '/case/ecommerce/' | relative_url }}" data-i18n="home.hero_cta">Explore ecommerce</a>
         <a class="studio-button studio-button--ghost" href="{{ '/connect/' | relative_url }}" data-i18n="common.start_project">Start a project</a>
       </div>
     </div>
@@ -52,23 +52,16 @@ image: /assets/images/6/r0001.jpg
   <div class="studio-shell">
     <header class="section-heading reveal">
       <p class="studio-eyebrow" data-i18n="home.selected">Selected works</p>
-      <h2 id="selected-title" data-i18n="home.selected_title">Ideas built to work in the real world.</h2>
+      <h2 id="selected-title" data-i18n="home.selected_title">Commerce first. Product-led. Built to perform.</h2>
     </header>
-
     <div class="work-index__grid">
       {% for project in site.data.projects limit:4 %}
-        <article class="work-tile work-tile--{{ project.tone }} reveal">
+        <article class="work-tile work-tile--{{ project.tone }} work-tile--{{ project.id }}{% if forloop.index <= 2 %} work-tile--priority{% endif %} reveal">
           <a href="{{ project.href | relative_url }}">
-            <figure class="work-tile__media media-frame">
-              <img src="{{ project.image | relative_url }}" alt="{{ project.alt }}" width="1280" height="720" loading="lazy">
-            </figure>
+            <figure class="work-tile__media media-frame"><img src="{{ project.image | relative_url }}" alt="{{ project.alt }}" width="{{ project.image_width }}" height="{{ project.image_height }}" loading="lazy"></figure>
             <div class="work-tile__meta">
               <span>{{ project.number }}</span>
-              <div>
-                <p><span data-i18n="{{ project.category_key }}">{{ project.category }}</span> / {{ project.year }}</p>
-                <h3 data-i18n="{{ project.title_key }}">{{ project.title }}</h3>
-                <small data-i18n="{{ project.description_key }}">{{ project.description }}</small>
-              </div>
+              <div><p><span data-i18n="{{ project.category_key }}">{{ project.category }}</span> / {{ project.year }}</p><h3 data-i18n="{{ project.title_key }}">{{ project.title }}</h3><small data-i18n="{{ project.description_key }}">{{ project.description }}</small></div>
               <b data-i18n="common.view_case">View case</b>
             </div>
           </a>
@@ -78,49 +71,41 @@ image: /assets/images/6/r0001.jpg
   </div>
 </section>
 
+<section class="core-story core-story--commerce" aria-labelledby="home-commerce-title">
+  <div class="studio-shell core-story__heading reveal">
+    <p class="studio-eyebrow" data-i18n="home.commerce_label">01 / Ecommerce Design</p>
+    <h2 id="home-commerce-title" data-i18n="home.commerce_title">Images and journeys designed around the buying decision.</h2>
+    <div><p data-i18n="home.commerce_text">Product proof, selling-point hierarchy, Amazon content, DTC structure, campaign visuals, and multi-market adaptation work as one commercial system.</p><a class="studio-text-link" href="{{ '/case/ecommerce/' | relative_url }}" data-i18n="home.commerce_cta">View ecommerce case</a></div>
+  </div>
+  <a class="core-story__visual core-story__visual--wide reveal" href="{{ '/case/ecommerce/' | relative_url }}"><img src="{{ '/assets/images/home-1920-5.jpg' | relative_url }}" alt="Ecommerce design system for consumer electronics and pet products" width="1920" height="540" loading="lazy"></a>
+</section>
+
+<section class="core-story core-story--product" aria-labelledby="home-product-title">
+  <div class="studio-shell core-story__heading reveal">
+    <p class="studio-eyebrow" data-i18n="home.product_label">02 / Product Design</p>
+    <h2 id="home-product-title" data-i18n="home.product_title">Physical products shaped through use, form, structure, and CMF.</h2>
+    <div><p data-i18n="home.product_text">ARC Dock demonstrates how product definition, interaction, form evolution, material logic, structure, and final visual language belong to the same design decision.</p><a class="studio-text-link" href="{{ '/case/product-design/' | relative_url }}" data-i18n="home.product_cta">View product design case</a></div>
+  </div>
+  <a class="core-story__visual reveal" href="{{ '/case/product-design/' | relative_url }}"><img src="{{ '/assets/images/product-design/arc-dock-hero.svg' | relative_url }}" alt="ARC Dock physical product design concept" width="1600" height="1100" loading="lazy"></a>
+</section>
+
+<section class="core-story core-story--rendering" aria-labelledby="home-rendering-title">
+  <div class="studio-shell core-story__heading reveal">
+    <p class="studio-eyebrow" data-i18n="home.rendering_label">03 / 3D Product Visualization</p>
+    <h2 id="home-rendering-title" data-i18n="home.rendering_title">Product truth, translated through material, light, and composition.</h2>
+    <div><p data-i18n="home.rendering_text">From product understanding and modeling to look development, rendering, post-production, and campaign adaptation.</p><a class="studio-text-link" href="{{ '/case/3d-visualization/' | relative_url }}" data-i18n="home.rendering_cta">View 3D visualization</a></div>
+  </div>
+  <a class="core-story__visual reveal" href="{{ '/case/3d-visualization/' | relative_url }}"><img src="{{ '/assets/images/case-rendering-1280-4.jpg' | relative_url }}" alt="3D product visualization process and final renders" width="1280" height="720" loading="lazy"></a>
+</section>
+
 <section class="studio-section services-section" id="services" aria-labelledby="services-title">
   <div class="studio-shell">
-    <header class="section-heading section-heading--split reveal">
-      <p class="studio-eyebrow" data-i18n="home.services">Capabilities</p>
-      <h2 id="services-title" data-i18n="home.services_title">One creative direction, across every brand touchpoint.</h2>
-    </header>
+    <header class="section-heading section-heading--split reveal"><p class="studio-eyebrow" data-i18n="home.services">Capabilities</p><h2 id="services-title" data-i18n="home.services_title">Seven capabilities. One product-to-market system.</h2></header>
     <div class="service-list">
       {% for service in site.data.services %}
-        <article class="service-row reveal">
-          <span>{{ service.number }}</span>
-          <h3 data-i18n="{{ service.title_key }}">{{ service.title }}</h3>
-          <p data-i18n="{{ service.text_key }}">{{ service.text }}</p>
-        </article>
+        <article class="service-row reveal"><span>{{ service.number }}</span><h3 data-i18n="{{ service.title_key }}">{{ service.title }}</h3><p data-i18n="{{ service.text_key }}">{{ service.text }}</p></article>
       {% endfor %}
     </div>
-  </div>
-</section>
-
-<section class="feature-band feature-band--ai" aria-labelledby="home-ai-title">
-  <div class="studio-shell feature-band__grid feature-band__grid--reverse">
-    <a class="feature-band__visual media-frame reveal" href="{{ '/ai/' | relative_url }}" aria-label="Explore the AI Creative Lab">
-      <img src="{{ '/assets/images/visual-ai-system.svg' | relative_url }}" alt="AI creative workflow and visual system" width="1200" height="760" loading="lazy">
-    </a>
-    <div class="feature-band__copy reveal">
-      <p class="studio-eyebrow" data-i18n="home.ai_label">AI Creative Lab</p>
-      <h2 id="home-ai-title" data-i18n="home.ai_title">New tools, directed by human judgment.</h2>
-      <p data-i18n="home.ai_text">We use AI for visual research, repeatable workflows, and faster production without diluting the brand.</p>
-      <a class="studio-text-link" href="{{ '/ai/' | relative_url }}" data-i18n="common.explore_lab">Explore the lab</a>
-    </div>
-  </div>
-</section>
-
-<section class="feature-band feature-band--web" aria-labelledby="home-web-title">
-  <div class="studio-shell feature-band__grid">
-    <div class="feature-band__copy reveal">
-      <p class="studio-eyebrow" data-i18n="home.web_label">Web design</p>
-      <h2 id="home-web-title" data-i18n="home.web_title">Digital experiences with brand character and commercial clarity.</h2>
-      <p data-i18n="home.web_text">Brand sites, DTC journeys, and Amazon storefronts shaped as complete visual systems.</p>
-      <a class="studio-text-link" href="{{ '/case/#web-design' | relative_url }}" data-i18n="common.discover_web">Explore web design</a>
-    </div>
-    <a class="feature-band__visual media-frame reveal" href="{{ '/case/#web-design' | relative_url }}" aria-label="Explore web design cases">
-      <img src="{{ '/assets/images/visual-web-brand.svg' | relative_url }}" alt="Premium website design system" width="1200" height="760" loading="lazy">
-    </a>
   </div>
 </section>
 
@@ -128,9 +113,6 @@ image: /assets/images/6/r0001.jpg
   <div class="studio-shell studio-belief__grid reveal">
     <p class="studio-eyebrow" data-i18n="home.about_label">Studio principle</p>
     <h2 id="home-about-title" data-i18n="home.about_title">Explore forever. Edit with discipline.</h2>
-    <div>
-      <p data-i18n="home.about_text">DTDT connects strategic clarity with image-making craft. Every decision must strengthen recognition, trust, or action.</p>
-      <a class="studio-text-link" href="{{ '/about/' | relative_url }}" data-i18n="nav.about">About</a>
-    </div>
+    <div><p data-i18n="home.about_text">DTDT connects product understanding, strategic clarity, and image-making craft. Every decision must strengthen recognition, trust, or action.</p><a class="studio-text-link" href="{{ '/about/' | relative_url }}" data-i18n="nav.about">About</a></div>
   </div>
 </section>

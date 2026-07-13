@@ -29,7 +29,7 @@
     }
 
     var browserLanguage = (navigator.language || navigator.userLanguage || "en").toLowerCase();
-    return browserLanguage === "zh" || browserLanguage.indexOf("zh-cn") === 0 ? "zh" : "en";
+    return browserLanguage.indexOf("zh") === 0 ? "zh" : "en";
   }
 
   function getTranslation(dictionary, key) {
@@ -70,6 +70,7 @@
 
   function setupLanguageSwitcher() {
     applyLanguage(resolveLanguage());
+    document.documentElement.classList.remove("i18n-pending");
 
     document.querySelectorAll("[data-lang-option]").forEach(function (button) {
       button.addEventListener("click", function () {
@@ -165,6 +166,11 @@
         setMenu(false, false);
       }
     });
+
+    window.addEventListener("orientationchange", function () {
+      setMenu(false, false);
+      toggle.blur();
+    });
   }
 
   function setupReveal() {
@@ -208,7 +214,7 @@
     var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var mobile = window.matchMedia && window.matchMedia("(max-width: 767px)").matches;
     var saveData = navigator.connection && navigator.connection.saveData;
-    if (reduceMotion || saveData) {
+    if (reduceMotion) {
       return;
     }
 
@@ -246,9 +252,9 @@
         return;
       }
 
-      var frameStep = mobile ? 2 : 1;
-      var initialCount = mobile ? 8 : 12;
-      var playbackInterval = mobile ? Math.max(settings.interval, 150) : settings.interval;
+      var frameStep = mobile && !saveData ? 1 : 2;
+      var initialCount = mobile ? (saveData ? 3 : 4) : 6;
+      var playbackInterval = mobile ? Math.max(settings.interval, 150) : Math.max(settings.interval, 200);
       var initialBatch = [];
       var frameNumber = settings.start;
       var previousTime = 0;
@@ -276,6 +282,7 @@
             var nextFramePath = framePath(settings, frameNumber);
             if (mobileSource) {
               mobileSource.setAttribute("srcset", nextFramePath);
+              image.setAttribute("src", nextFramePath);
             } else {
               image.src = nextFramePath;
             }

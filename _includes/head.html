@@ -12,6 +12,20 @@
     {% include head/favicon.html %}
     {% include head/styles.html %}
     {% include analytics.html %}
-    <script>document.documentElement.classList.add('js');</script>
+    <script>
+      (function () {
+        var root = document.documentElement;
+        root.classList.add("js", "i18n-pending");
+        try {
+          var saved = window.localStorage && window.localStorage.getItem("studio-language");
+          var browser = (navigator.language || navigator.userLanguage || "en").toLowerCase();
+          var language = saved === "zh" || saved === "en" ? saved : (browser.indexOf("zh") === 0 ? "zh" : "en");
+          root.lang = language === "zh" ? "zh-CN" : "en";
+        } catch (error) {
+          root.lang = "en";
+        }
+        window.setTimeout(function () { root.classList.remove("i18n-pending"); }, 1500);
+      })();
+    </script>
 
 </head>

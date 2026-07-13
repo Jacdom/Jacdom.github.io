@@ -8,12 +8,30 @@
   description: "Product proof, campaign imagery, and sales modules designed to move together."
   description_key: "projects.commerce_description"
   image: "/assets/images/case-e-commerce-1280-1.jpg"
+  image_width: 1280
+  image_height: 720
   alt: "Consumer electronics ecommerce visual system"
   href: "/case/ecommerce/"
   tone: "white"
 
-- id: product-rendering
+- id: product-design
   number: "02"
+  title: "ARC Dock"
+  title_key: "projects.product_title"
+  category: "Physical Product Design / Concept Study"
+  category_key: "projects.product_category"
+  year: "2026"
+  description: "A modular desktop dock shaped around charging, cable order, and one-hand use."
+  description_key: "projects.product_description"
+  image: "/assets/images/product-design/arc-dock-hero.svg"
+  image_width: 1600
+  image_height: 1100
+  alt: "ARC Dock physical product design concept"
+  href: "/case/product-design/"
+  tone: "product"
+
+- id: product-rendering
+  number: "03"
   title: "Product Worlds, Made Precise"
   title_key: "projects.render_title"
   category: "3D Rendering / Product Visualization"
@@ -22,12 +40,14 @@
   description: "Material, light, form, and context translated into product imagery with commercial purpose."
   description_key: "projects.render_description"
   image: "/assets/images/case-rendering-1280-4.jpg"
+  image_width: 1280
+  image_height: 720
   alt: "Architectural and product 3D rendering studies"
-  href: "/case/#product-rendering"
+  href: "/case/3d-visualization/"
   tone: "orange"
 
 - id: ai-creative
-  number: "03"
+  number: "04"
   title: "AI Creative Systems"
   title_key: "projects.ai_title"
   category: "AI Creative / Visual Research"
@@ -36,12 +56,14 @@
   description: "Visual exploration, prompt research, and production workflows directed as one creative system."
   description_key: "projects.ai_description"
   image: "/assets/images/visual-ai-system.svg"
+  image_width: 1200
+  image_height: 760
   alt: "AI creative workflow and visual system"
   href: "/ai/"
   tone: "purple"
 
 - id: motion-design
-  number: "04"
+  number: "05"
   title: "Motion Built From Form"
   title_key: "projects.motion_title"
   category: "3D Animation / Motion Design"
@@ -50,12 +72,14 @@
   description: "Product form, material, and rhythm translated into concise motion stories."
   description_key: "projects.motion_description"
   image: "/assets/images/6/r0001.jpg"
+  image_width: 3840
+  image_height: 2160
   alt: "DTDT Studio 3D motion design frame"
-  href: "/case/#motion-design"
+  href: "/case/#motion-showcase"
   tone: "gold"
 
 - id: brand-identity
-  number: "05"
+  number: "06"
   title: "Identity Built to Travel"
   title_key: "projects.identity_title"
   category: "Brand Design / Visual Identity"
@@ -64,26 +88,30 @@
   description: "Identity rules that stay recognizable from a mark to a complete commercial environment."
   description_key: "projects.identity_description"
   image: "/assets/images/case-VI-1280-3.jpg"
+  image_width: 1280
+  image_height: 720
   alt: "Brand identity guideline and logo portfolio"
   href: "/case/#brand-identity"
   tone: "gold"
 
 - id: web-experience
-  number: "06"
-  title: "Digital Experience Systems"
+  number: "07"
+  title: "Web Design Systems"
   title_key: "projects.web_title"
-  category: "Web Design / Digital Experience"
+  category: "Web Design / Brand & Commerce"
   category_key: "projects.web_category"
   year: "2025"
   description: "Premium brand, DTC, and storefront journeys built as one coherent visual system."
   description_key: "projects.web_description"
   image: "/assets/images/visual-web-brand.svg"
+  image_width: 1200
+  image_height: 760
   alt: "Premium brand website interface system"
   href: "/case/#web-design"
   tone: "purple"
 
 - id: packaging
-  number: "07"
+  number: "08"
   title: "Packaging With Shelf Presence"
   title_key: "projects.packaging_title"
   category: "Packaging / Production"
@@ -92,6 +120,8 @@
   description: "Structural graphics, hierarchy, and production-ready systems for products in the real world."
   description_key: "projects.packaging_description"
   image: "/assets/images/case-Package-1280-2.jpg"
+  image_width: 1280
+  image_height: 720
   alt: "Consumer product packaging design development"
   href: "/case/#packaging"
   tone: "black"
