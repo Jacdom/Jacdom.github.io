@@ -11,7 +11,12 @@ image: /assets/images/case-rendering-1280-4.jpg
   <div class="studio-shell visualization-hero__copy">
     <p class="studio-eyebrow" data-i18n="rendering.eyebrow">3D Product Visualization / Selected Practice</p>
     <h1 data-i18n="rendering.title">Product truth, shaped through light.</h1>
-    <p data-i18n="rendering.lead">A visualization practice connecting product understanding, precise form, believable material, and campaign-ready image direction.</p>
+    <div class="visualization-hero__intro">
+      <p data-i18n="rendering.lead">A visualization practice connecting product understanding, precise form, believable material, and campaign-ready image direction.</p>
+      <a class="studio-button studio-button--light" href="https://rcndq32ob7yd.feishu.cn/file/S28DbzuM2o4bkmxM5IAcsxqRnQe" target="_blank" rel="noopener noreferrer">
+        <span data-i18n="rendering.portfolio_cta">View detailed 3D portfolio</span><i aria-hidden="true">&#8599;</i>
+      </a>
+    </div>
   </div>
   <figure class="visualization-hero__media reveal"><img src="{{ '/assets/images/case-rendering-1280-4.jpg' | relative_url }}" alt="3D product visualization from wireframe and material study to final environment" width="1280" height="720" loading="eager"></figure>
 </header>

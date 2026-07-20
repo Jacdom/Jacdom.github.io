@@ -1,0 +1,70 @@
+work:
+  - label: "Home"
+    i18n_key: "nav.home"
+    url: "/"
+  - label: "Work"
+    i18n_key: "nav.work"
+
+ecommerce:
+  - label: "Home"
+    i18n_key: "nav.home"
+    url: "/"
+  - label: "Work"
+    i18n_key: "nav.work"
+    url: "/case/"
+  - label: "Ecommerce Design"
+    i18n_key: "services.ecommerce_title"
+
+3d-visualization:
+  - label: "Home"
+    i18n_key: "nav.home"
+    url: "/"
+  - label: "Work"
+    i18n_key: "nav.work"
+    url: "/case/"
+  - label: "3D Product Visualization"
+    i18n_key: "services.product_title"
+
+product-design:
+  - label: "Home"
+    i18n_key: "nav.home"
+    url: "/"
+  - label: "Work"
+    i18n_key: "nav.work"
+    url: "/case/"
+  - label: "Product Design"
+    i18n_key: "services.product_design_title"
+
+ai:
+  - label: "Home"
+    i18n_key: "nav.home"
+    url: "/"
+  - label: "AI Lab"
+    i18n_key: "nav.ai"
+
+price:
+  - label: "Home"
+    i18n_key: "nav.home"
+    url: "/"
+  - label: "Price"
+    i18n_key: "nav.price"
+
+about:
+  - label: "Home"
+    i18n_key: "nav.home"
+    url: "/"
+  - label: "About"
+    i18n_key: "nav.about"
+
+connect:
+  - label: "Home"
+    i18n_key: "nav.home"
+    url: "/"
+  - label: "Connect"
+    i18n_key: "nav.connect"
+
+not-found:
+  - label: "Home"
+    i18n_key: "nav.home"
+    url: "/"
+  - label: "404"
