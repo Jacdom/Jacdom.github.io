@@ -10,17 +10,24 @@
         href="{{ '/feed.xml' | relative_url }}">
 
     {% include head/favicon.html %}
+    {% if page.page_id == 'home' %}
+    <link rel="preload" as="image" href="{{ '/assets/images/6/r0001.jpg' | relative_url }}" media="(min-width: 768px)" fetchpriority="high">
+    <link rel="preload" as="image" href="{{ '/assets/images/7/001.jpg' | relative_url }}" media="(max-width: 767px)" fetchpriority="high">
+    {% endif %}
     {% include head/styles.html %}
     {% include analytics.html %}
     <script>
       (function () {
         var root = document.documentElement;
-        root.classList.add("js", "i18n-pending");
+        root.classList.add("js");
         try {
           var saved = window.localStorage && window.localStorage.getItem("studio-language");
           var browser = (navigator.language || navigator.userLanguage || "en").toLowerCase();
           var language = saved === "zh" || saved === "en" ? saved : (browser.indexOf("zh") === 0 ? "zh" : "en");
           root.lang = language === "zh" ? "zh-CN" : "en";
+          if (language === "zh") {
+            root.classList.add("i18n-pending");
+          }
         } catch (error) {
           root.lang = "en";
         }

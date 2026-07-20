@@ -17,7 +17,8 @@ image: /assets/images/6/r0001.jpg
         height="2160"
         loading="eager"
         fetchpriority="high"
-        decoding="async"
+        decoding="sync"
+        class="is-frame-active"
         data-frame-animation
         data-frame-base="{{ '/assets/images/6/' | relative_url }}"
         data-frame-prefix="r"
@@ -35,6 +36,7 @@ image: /assets/images/6/r0001.jpg
         data-frame-interval-mobile="90"
       >
     </picture>
+    <img class="home-hero__frame-buffer" alt="" aria-hidden="true" decoding="async" data-frame-buffer>
   </div>
   <div class="studio-shell home-hero__content">
     <p class="studio-eyebrow" data-i18n="home.eyebrow">DTDT Studio / China + Worldwide</p>

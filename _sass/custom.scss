@@ -104,15 +104,6 @@ button:focus:not(:focus-visible) {
   min-width: 0;
 }
 
-.js .page-content {
-  animation: page-enter 420ms var(--ease-out) both;
-}
-
-@keyframes page-enter {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
 .studio-shell {
   width: calc(100% - (var(--gutter) * 2));
   max-width: var(--shell);
@@ -584,13 +575,14 @@ button:focus:not(:focus-visible) {
   height: calc(100svh - 118px);
   max-height: 980px;
   overflow: hidden;
-  background: var(--color-surface);
+  background: var(--color-gold);
   color: var(--color-ink);
 }
 
 .home-hero__visual {
   position: absolute;
   inset: 0;
+  background: var(--color-gold);
 }
 
 .home-hero__visual picture {
@@ -605,6 +597,26 @@ button:focus:not(:focus-visible) {
   height: 100%;
   object-fit: contain;
   object-position: center;
+}
+
+.home-hero__visual [data-frame-animation],
+.home-hero__frame-buffer {
+  position: absolute;
+  inset: 0;
+  will-change: opacity;
+}
+
+.home-hero__visual [data-frame-animation] {
+  opacity: 1;
+}
+
+.home-hero__frame-buffer,
+.home-hero__visual.has-frame-buffer img {
+  opacity: 0;
+}
+
+.home-hero__visual.has-frame-buffer img.is-frame-active {
+  opacity: 1;
 }
 
 @media (min-width: 992px) {

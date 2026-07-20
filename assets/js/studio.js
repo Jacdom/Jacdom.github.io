@@ -211,6 +211,26 @@
     });
   }
 
+  function decodeFrame(image) {
+    if (typeof image.decode === "function") {
+      return image.decode();
+    }
+
+    return new Promise(function (resolve, reject) {
+      if (image.complete) {
+        if (image.naturalWidth > 0) {
+          resolve();
+        } else {
+          reject(new Error("Frame failed to load"));
+        }
+        return;
+      }
+
+      image.addEventListener("load", resolve, { once: true });
+      image.addEventListener("error", reject, { once: true });
+    });
+  }
+
   function setupFrameAnimations() {
     var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var mobile = window.matchMedia && window.matchMedia("(max-width: 767px)").matches;
@@ -260,6 +280,69 @@
       var frameNumber = settings.start;
       var previousTime = 0;
       var animationId;
+      var visual = image.closest ? image.closest(".home-hero__visual") : null;
+      var bufferImage = visual ? visual.querySelector("[data-frame-buffer]") : null;
+      var activeImage = image;
+      var standbyImage = bufferImage;
+      var preparedFrame = null;
+      var isPreparing = false;
+      var stopped = false;
+
+      if (!bufferImage) {
+        return;
+      }
+
+      visual.classList.add("has-frame-buffer");
+      image.classList.add("is-frame-active");
+      bufferImage.classList.remove("is-frame-active");
+
+      function nextFrameNumber(currentFrame) {
+        var nextFrame = currentFrame + frameStep;
+        return nextFrame > settings.count ? settings.start : nextFrame;
+      }
+
+      function setFrameSource(target, path) {
+        if (mobileSource && target === image) {
+          mobileSource.setAttribute("srcset", path);
+        }
+        target.setAttribute("src", path);
+      }
+
+      function prepareFrame(nextFrame) {
+        if (stopped || isPreparing || preparedFrame) {
+          return;
+        }
+
+        isPreparing = true;
+        var target = standbyImage;
+        setFrameSource(target, framePath(settings, nextFrame));
+
+        decodeFrame(target).then(function () {
+          if (!stopped && target === standbyImage) {
+            preparedFrame = { image: target, number: nextFrame };
+          }
+          isPreparing = false;
+        }).catch(function () {
+          isPreparing = false;
+          if (!stopped) {
+            prepareFrame(nextFrameNumber(nextFrame));
+          }
+        });
+      }
+
+      function showPreparedFrame(time) {
+        var previousImage = activeImage;
+        var nextImage = preparedFrame.image;
+
+        nextImage.classList.add("is-frame-active");
+        previousImage.classList.remove("is-frame-active");
+        activeImage = nextImage;
+        standbyImage = previousImage;
+        frameNumber = preparedFrame.number;
+        preparedFrame = null;
+        previousTime = time;
+        prepareFrame(nextFrameNumber(frameNumber));
+      }
 
       for (var index = 0; index < initialCount; index += 1) {
         var initialFrame = settings.start + (index * frameStep);
@@ -276,26 +359,20 @@
       };
 
       Promise.all(initialBatch).then(function () {
+        if (stopped) {
+          return;
+        }
+
         preloadRest();
+        prepareFrame(nextFrameNumber(frameNumber));
 
         function animate(time) {
           if (!previousTime) {
             previousTime = time;
           }
 
-          if (document.visibilityState === "visible" && time - previousTime >= playbackInterval) {
-            frameNumber += frameStep;
-            if (frameNumber > settings.count) {
-              frameNumber = settings.start;
-            }
-            var nextFramePath = framePath(settings, frameNumber);
-            if (mobileSource) {
-              mobileSource.setAttribute("srcset", nextFramePath);
-              image.setAttribute("src", nextFramePath);
-            } else {
-              image.src = nextFramePath;
-            }
-            previousTime = time;
+          if (document.visibilityState === "visible" && preparedFrame && time - previousTime >= playbackInterval) {
+            showPreparedFrame(time);
           }
 
           animationId = window.requestAnimationFrame(animate);
@@ -305,6 +382,7 @@
       });
 
       window.addEventListener("pagehide", function () {
+        stopped = true;
         if (animationId) {
           window.cancelAnimationFrame(animationId);
         }
