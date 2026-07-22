@@ -12,15 +12,45 @@
             {%- if page.url == link.url -%}
               {%- assign current_link = true -%}
             {%- endif -%}
-            {%- if link.url == '/case/' and page.url contains '/case/' -%}
-              {%- assign current_link = true -%}
+            {%- if link.children -%}
+              {%- for child in link.children -%}
+                {%- if page.url == child.url -%}
+                  {%- assign current_link = true -%}
+                {%- endif -%}
+                {%- if child.url == '/case/' and page.url contains '/case/' -%}
+                  {%- assign current_link = true -%}
+                {%- endif -%}
+              {%- endfor -%}
             {%- endif -%}
             {%- if link.url contains '://' -%}
               {%- assign url = link.url -%}
             {%- else -%}
               {%- assign url = link.url | relative_url -%}
             {%- endif -%}
-            <li><a href="{{ url }}"{% if current_link %} aria-current="page"{% endif %}{% if link.i18n_key %} data-i18n="{{ link.i18n_key }}"{% endif %}>{{ link.title }}</a></li>
+            <li class="site-navigation__item{% if link.children %} site-navigation__item--has-submenu{% endif %}{% if current_link %} is-current{% endif %}"{% if link.children %} data-submenu{% endif %}>
+              <div class="site-navigation__primary">
+                <a href="{{ url }}"{% if page.url == link.url %} aria-current="page"{% endif %}{% if link.i18n_key %} data-i18n="{{ link.i18n_key }}"{% endif %}>{{ link.title }}</a>
+                {%- if link.children -%}
+                  <button class="site-submenu-toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="submenu-{{ forloop.index }}" data-submenu-toggle>
+                    <span class="sr-only" data-i18n="nav.explore_menu">Explore menu</span><i aria-hidden="true"></i>
+                  </button>
+                {%- endif -%}
+              </div>
+              {%- if link.children -%}
+                <ul class="site-submenu" id="submenu-{{ forloop.index }}">
+                  {%- for child in link.children -%}
+                    {%- assign child_current = false -%}
+                    {%- if page.url == child.url -%}
+                      {%- assign child_current = true -%}
+                    {%- endif -%}
+                    {%- if child.url == '/case/' and page.url contains '/case/' -%}
+                      {%- assign child_current = true -%}
+                    {%- endif -%}
+                    <li><a href="{{ child.url | relative_url }}"{% if child_current %} aria-current="page"{% endif %}{% if child.i18n_key %} data-i18n="{{ child.i18n_key }}"{% endif %}>{{ child.title }}</a></li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+            </li>
           {%- endfor -%}
           <li><a class="site-navigation__contact" href="{{ '/connect/' | relative_url }}"{% if page.url == '/connect/' %} aria-current="page"{% endif %} data-i18n="nav.connect">Connect</a></li>
         </ul>
