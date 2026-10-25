@@ -1539,7 +1539,7 @@ button:focus:not(:focus-visible) {
 .amazon-pricing__cta { display: flex; width: fit-content; min-height: 58px; margin-top: 30px; padding: 0 24px; align-items: center; justify-content: space-between; gap: 34px; background: var(--color-primary); color: #fff; font-size: 15px; font-weight: 650; text-decoration: none; transition: background .2s, transform .2s; }
 .amazon-pricing__cta:hover { transform: translateY(-2px); background: #8430b5; color: #fff; text-decoration: none; }
 .amazon-pricing__note { max-width: 720px; margin: 18px 0 0; color: var(--color-muted); font-size: 12px; line-height: 1.65; }
-.amazon-pricing__cta:focus-visible,.amazon-detail-back:focus-visible,.amazon-tier-overview a:focus-visible,.amazon-plan summary:focus-visible { outline: 3px solid var(--color-gold); outline-offset: 4px; }
+.amazon-pricing__cta:focus-visible,.amazon-detail-back:focus-visible,.amazon-tier-overview a:focus-visible { outline: 3px solid var(--color-gold); outline-offset: 4px; }
 .amazon-detail-hero { padding-block: 78px 92px; background: var(--color-purple-soft); }
 .amazon-detail-back { display: inline-block; margin-bottom: 54px; color: var(--color-primary); font-size: 14px; font-weight: 650; text-decoration: none; }
 .amazon-detail-hero h1 { max-width: 920px; margin: 18px 0 22px; color: var(--color-ink); font-size: clamp(48px, 7vw, 82px); font-weight: 680; letter-spacing: -.055em; line-height: .98; }
@@ -1557,17 +1557,14 @@ button:focus:not(:focus-visible) {
 .amazon-plan-list { border-top: 1px solid var(--color-line-dark); }
 .amazon-plan { border-bottom: 1px solid var(--color-line); background: var(--color-surface); scroll-margin-top: 100px; }
 .amazon-plan--featured { background: #fcf9fd; }
-.amazon-plan summary { display: grid; grid-template-columns: 48px minmax(180px, .75fr) minmax(120px, .5fr) minmax(220px, 1fr) 34px; min-height: 90px; padding: 16px 22px; align-items: center; gap: 16px; cursor: pointer; list-style: none; }
-.amazon-plan summary::-webkit-details-marker { display: none; }
-.amazon-plan summary::marker { content: ""; }
+.amazon-plan__header { display: grid; grid-template-columns: 44px minmax(180px, .7fr) minmax(150px, .45fr) minmax(220px, 1fr); min-height: 96px; padding: 18px 24px; align-items: center; gap: 18px; border-bottom: 1px solid var(--color-line); }
+.amazon-plan--featured .amazon-plan__header { box-shadow: inset 3px 0 0 var(--color-primary); }
+.amazon-plan__header .amazon-plan__name { font-size: 20px; }
+.amazon-plan__header > strong { color: var(--color-primary); font-size: 32px; font-weight: 760; letter-spacing: -.045em; white-space: nowrap; }
 .amazon-plan__index { color: var(--color-primary); font-size: 12px; font-weight: 750; }
 .amazon-plan__name { color: var(--color-ink); font-size: 18px; font-weight: 700; }
 .amazon-plan__name small { display: block; margin-top: 3px; color: var(--color-muted); font-size: 11px; font-weight: 500; }
-.amazon-plan summary > strong { color: var(--color-primary); font-size: 25px; font-weight: 750; letter-spacing: -.04em; white-space: nowrap; }
 .amazon-plan__audience { color: var(--color-muted); font-size: 13px; line-height: 1.5; }
-.amazon-plan__toggle { display: grid; width: 30px; height: 30px; place-items: center; border: 1px solid var(--color-line); border-radius: 50%; color: var(--color-primary); font-size: 20px; line-height: 1; }
-.amazon-plan[open] .amazon-plan__toggle { background: var(--color-primary); color: #fff; font-size: 0; }
-.amazon-plan[open] .amazon-plan__toggle::after { content: "−"; font-size: 20px; }
 .amazon-plan__content { padding: 0 26px 30px 86px; }
 .amazon-plan__fit { margin: 0 0 24px; color: var(--color-ink); font-size: 14px; font-weight: 650; }
 .amazon-spec-groups { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
@@ -1583,6 +1580,26 @@ button:focus:not(:focus-visible) {
 .plan-status--yes { color: #23694f; }
 .plan-status--no { color: #686862; }
 .amazon-detail-note { margin: 24px 0 0; color: var(--color-muted); font-size: 13px; line-height: 1.6; }
+.amazon-addons,
+.amazon-terms { padding-top: 82px; }
+.amazon-addons .section-heading,
+.amazon-terms .section-heading { margin-bottom: 30px; }
+.amazon-rate-table-wrap { overflow: hidden; border-top: 1px solid var(--color-line-dark); border-left: 1px solid var(--color-line); background: var(--color-surface); }
+.amazon-rate-table { width: 100%; border-collapse: collapse; }
+.amazon-rate-table th,.amazon-rate-table td { padding: 18px 22px; border-right: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); color: var(--color-text); font-size: 14px; line-height: 1.55; text-align: left; vertical-align: top; }
+.amazon-rate-table thead th { background: var(--color-ink); color: #fff; font-size: 12px; font-weight: 700; }
+.amazon-rate-table thead th:first-child { width: 22%; }
+.amazon-rate-table thead th:nth-child(2) { width: 48%; }
+.amazon-rate-table thead th:last-child { width: 30%; }
+.amazon-rate-table tbody th { color: var(--color-ink); font-weight: 700; }
+.amazon-rate-table tbody td:last-child { color: var(--color-primary); font-weight: 700; }
+.amazon-terms-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; }
+.amazon-terms-group { min-width: 0; border-top: 2px solid var(--color-line-dark); }
+.amazon-terms-group h3 { margin: 16px 0 10px; color: var(--color-primary); font-size: 13px; font-weight: 750; }
+.amazon-terms-group dl { margin: 0; }
+.amazon-terms-group dl > div { padding: 13px 0; border-top: 1px solid var(--color-line); }
+.amazon-terms-group dt { margin: 0 0 5px; color: var(--color-ink); font-size: 13px; font-weight: 700; }
+.amazon-terms-group dd { margin: 0; color: var(--color-muted); font-size: 12px; line-height: 1.65; overflow-wrap: anywhere; }
 
 .not-found {
   display: flex;
@@ -3131,7 +3148,7 @@ button:focus:not(:focus-visible) {
   .price-hero__grid { grid-template-columns: 1fr; gap: 30px; }
   .price-scope-list article { grid-template-columns: 50px .65fr 1fr; }
   .price-scope-list b { grid-column: 2; }
-  .amazon-plan summary { grid-template-columns: 36px minmax(150px, .8fr) minmax(105px, .5fr) minmax(140px, 1fr) 30px; gap: 12px; }
+  .amazon-plan__header { grid-template-columns: 36px minmax(150px, .8fr) minmax(130px, .5fr) minmax(140px, 1fr); gap: 12px; }
   .amazon-spec-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .amazon-plan__content { padding-left: 72px; }
 }
@@ -3225,16 +3242,28 @@ button:focus:not(:focus-visible) {
   .amazon-detail-section { padding-block: 68px 82px; }
   .amazon-tier-overview { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-bottom: 28px; }
   .amazon-tier-overview a { min-height: 128px; padding: 14px 12px; }
-  .amazon-plan summary { grid-template-columns: 30px minmax(0, 1fr) auto; min-height: 82px; padding: 14px 12px; gap: 8px 10px; }
+  .amazon-plan__header { grid-template-columns: 28px minmax(0, 1fr) auto; min-height: 82px; padding: 14px 14px; gap: 8px 10px; }
   .amazon-plan__index { grid-row: 1 / 3; }
-  .amazon-plan__name { font-size: 16px; }
-  .amazon-plan summary > strong { font-size: 20px; }
-  .amazon-plan__audience { grid-column: 2; font-size: 12px; }
-  .amazon-plan__toggle { grid-column: 3; grid-row: 2; width: 26px; height: 26px; }
-  .amazon-plan__content { padding: 0 16px 22px; }
+  .amazon-plan__header .amazon-plan__name { font-size: 16px; }
+  .amazon-plan__header > strong { font-size: 22px; }
+  .amazon-plan__audience { grid-column: 2 / -1; font-size: 12px; }
+  .amazon-plan__content { padding: 18px 16px 22px; }
   .amazon-spec-groups { grid-template-columns: 1fr; gap: 22px; }
   .amazon-spec-groups dl > div { grid-template-columns: minmax(108px, .8fr) minmax(0, 1fr); }
   .amazon-spec-groups dt,.amazon-spec-groups dd { font-size: 13px; }
+  .amazon-addons,.amazon-terms { padding-top: 62px; }
+  .amazon-rate-table-wrap { overflow: visible; border: 0; background: transparent; }
+  .amazon-rate-table,.amazon-rate-table tbody { display: block; width: 100%; }
+  .amazon-rate-table thead { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; clip-path: inset(50%); }
+  .amazon-rate-table tbody { display: grid; gap: 12px; }
+  .amazon-rate-table tr { display: grid; grid-template-columns: 1fr; border: 1px solid var(--color-line); background: var(--color-surface); }
+  .amazon-rate-table th,.amazon-rate-table td { display: block; padding: 12px 16px; border: 0; }
+  .amazon-rate-table tbody th { padding-bottom: 7px; background: var(--color-purple-soft); }
+  .amazon-rate-table tbody td { padding-top: 7px; padding-bottom: 7px; }
+  .amazon-rate-table tbody td::before { display: block; margin-bottom: 3px; color: var(--color-muted); font-size: 10px; font-weight: 700; }
+  .amazon-rate-table tbody td:nth-child(2)::before { content: "计费规则"; }
+  .amazon-rate-table tbody td:nth-child(3)::before { content: "报价（人民币）"; }
+  .amazon-terms-grid { grid-template-columns: 1fr; gap: 26px; }
   .not-found__grid { grid-template-columns: 1fr; gap: 48px; }
   .not-found__code { font-size: 112px; }
   .not-found h1 { font-size: 42px; }
