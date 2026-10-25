@@ -12,6 +12,9 @@
             {%- if page.url == link.url -%}
               {%- assign current_link = true -%}
             {%- endif -%}
+            {%- if page.page_id == 'price' and link.url == '/price/' -%}
+              {%- assign current_link = true -%}
+            {%- endif -%}
             {%- if link.children -%}
               {%- for child in link.children -%}
                 {%- if page.url == child.url -%}

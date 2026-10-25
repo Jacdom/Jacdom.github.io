@@ -1,47 +1,98 @@
 ---
 layout: default
 page_id: price
+lang: zh
 title: "亚马逊图片设计套餐与报价 — DTDT Studio"
-description: "查看亚马逊主图、副图与 A+ 图片设计五档套餐、交付内容与制作周期。"
+description: "查看亚马逊图片设计五档套餐的价格、交付范围、制作周期与修改规则。"
 permalink: /price/amazon-image-design/
 ---
 
 <header class="amazon-detail-hero">
   <div class="studio-shell">
-    <a class="amazon-detail-back" href="{{ '/price/' | relative_url }}">← 返回价格总览</a>
-    <p class="studio-eyebrow">DTDT Studio / Amazon Image Design</p>
-    <h1>亚马逊图片设计<br>套餐与报价</h1>
-    <p>按单个 ASIN 计价，包含主图、副图与 A+ 内容。根据产品阶段、视觉目标与品牌需求，选择适合的设计深度。</p>
+    <a class="amazon-detail-back" href="{{ '/price/#amazon-pricing' | relative_url }}">← 返回套餐报价</a>
+    <p class="studio-eyebrow">DTDT Studio / 亚马逊图片设计</p>
+    <h1>五档套餐，<br>匹配不同上架阶段。</h1>
+    <p>所有套餐按单个 ASIN 计价。先快速浏览价格与定位，再展开套餐查看完整交付内容、制作周期和修改规则。</p>
   </div>
 </header>
 
-<section class="amazon-detail-section">
+<section class="amazon-detail-section" aria-labelledby="amazon-detail-title">
   <div class="studio-shell">
-    <header class="section-heading section-heading--split reveal"><p class="studio-eyebrow">五档套餐 / 一目了然</p><h2>从快速上架，到完整品牌视觉。</h2></header>
-    <div class="amazon-detail-table-wrap reveal" role="region" aria-label="亚马逊图片设计套餐对比，可横向滚动" tabindex="0">
-      <table class="amazon-detail-table">
-        <thead><tr><th scope="col">项目</th><th scope="col">入门版<br><small>Starter</small></th><th scope="col">基础版<br><small>Essential</small></th><th scope="col" class="is-featured">专业版<br><small>Professional</small></th><th scope="col">高级版<br><small>Premium</small></th><th scope="col">旗舰版<br><small>Signature</small></th></tr></thead>
-        <tbody>
-          <tr><th scope="row">报价（人民币）</th><td>999元</td><td>2499元</td><td class="is-featured">5280元</td><td>11800元</td><td>25800元</td></tr>
-          <tr><th scope="row">适用客户</th><td>需要快速上架的卖家，铺货，要求能用</td><td>有基础要求的新晋卖家</td><td class="is-featured">注重视觉竞争力与产品转化表现的卖家</td><td>需要差异化创意与高品质视觉的卖家</td><td>注重品牌形象、差异化与长期发展的卖家</td></tr>
-          <tr><th scope="row">计价单位</th><td>单个 ASIN</td><td>单个 ASIN</td><td class="is-featured">单个 ASIN</td><td>单个 ASIN</td><td>单个 ASIN</td></tr>
-          <tr><th scope="row">主图设计</th><td>1 张</td><td>1 张</td><td class="is-featured">1 张</td><td>1 张</td><td>3 张</td></tr>
-          <tr><th scope="row">副图设计</th><td>6 张</td><td>6 张</td><td class="is-featured">6 张</td><td>6 张</td><td>8 张</td></tr>
-          <tr><th scope="row">A+</th><td>基础 A+（6 张）</td><td>基础 A+（6 张）</td><td class="is-featured">高级 A+（6 张 PC 版 + 6 张移动版）</td><td>高级 A+（6 张 PC 版 + 6 张移动版）</td><td>高级 A+（8 张 PC 版 + 8 张移动版）</td></tr>
-          <tr><th scope="row">设计定位</th><td>基础视觉整理</td><td>基础视觉整理</td><td class="is-featured">基础视觉整理</td><td>创意策划与高品质视觉</td><td>创意策划与高品质视觉</td></tr>
-          <tr><th scope="row">卖点策划</th><td>客户提供卖点，基础整理</td><td>客户提供卖点，基础整理</td><td class="is-featured">客户提供卖点，基础整理</td><td>卖点梳理与信息层级规划</td><td>卖点策略与内容结构规划</td></tr>
-          <tr><th scope="row">产品表现</th><td>客户提供成品素材</td><td>基础抠图与合成</td><td class="is-featured">精细合成与光影优化</td><td>高品质场景合成与产品渲染</td><td>复杂场景、精细渲染与定制视觉</td></tr>
-          <tr><th scope="row">品牌视觉统一</th><td>基础排版统一</td><td>基础排版统一</td><td class="is-featured">基础色调与排版统一</td><td>基础色调与排版统一</td><td>字体、配色、图标及整套视觉统一</td></tr>
-          <tr><th scope="row">产品 3D 渲染</th><td>不含</td><td>不含</td><td class="is-featured">包含</td><td>包含</td><td>包含</td></tr>
-          <tr><th scope="row">产品 3D 模型优化</th><td>包含</td><td>不含</td><td class="is-featured">不含</td><td>不含</td><td>包含</td></tr>
-          <tr><th scope="row">专业复审</th><td>不含</td><td>不含</td><td class="is-featured">不含</td><td>包含</td><td>包含</td></tr>
-          <tr><th scope="row">交付周期</th><td>2–3 个工作日</td><td>3–5 个工作日</td><td class="is-featured">8–10 个工作日</td><td>8–12 个工作日</td><td>12–15 个工作日</td></tr>
-          <tr><th scope="row">修改轮数</th><td>不含</td><td>1 轮文案集中修改</td><td class="is-featured">1 轮文案集中修改</td><td>1 轮集中修改</td><td>2 轮集中修改</td></tr>
-        </tbody>
-      </table>
+    <header class="section-heading section-heading--split reveal">
+      <p class="studio-eyebrow">套餐总览 / 按需展开</p>
+      <div><h2 id="amazon-detail-title">从基础上架，到品牌视觉。</h2><p class="amazon-detail-intro">选择任一套餐，展开查看完整服务范围。五档套餐的所有项目均列于下方。</p></div>
+    </header>
+
+    <nav class="amazon-tier-overview reveal" aria-label="套餐价格总览">
+      <a href="#plan-starter"><span>Starter / 入门版</span><strong>¥999</strong><small>快速上架</small></a>
+      <a href="#plan-essential"><span>Essential / 基础版</span><strong>¥2,499</strong><small>基础视觉整理</small></a>
+      <a class="is-featured" href="#plan-professional"><span>Professional / 专业版</span><strong>¥5,280</strong><small>视觉竞争力</small></a>
+      <a href="#plan-premium"><span>Premium / 高级版</span><strong>¥11,800</strong><small>创意与品质</small></a>
+      <a href="#plan-signature"><span>Signature / 旗舰版</span><strong>¥25,800</strong><small>品牌视觉系统</small></a>
+    </nav>
+
+    <div class="amazon-plan-list">
+      <details class="amazon-plan reveal" id="plan-starter">
+        <summary><span class="amazon-plan__index">01</span><span class="amazon-plan__name">入门版 <small>Starter</small></span><strong>¥999</strong><span class="amazon-plan__audience">快速上架 / 基础可用</span><span class="amazon-plan__toggle" aria-hidden="true">+</span></summary>
+        <div class="amazon-plan__content">
+          <p class="amazon-plan__fit">需要快速上架的卖家，铺货，要求能用</p>
+          <div class="amazon-spec-groups">
+            <section><h3>基础规格</h3><dl><div><dt>计价单位</dt><dd>单个 ASIN</dd></div><div><dt>主图设计</dt><dd>1 张</dd></div><div><dt>副图设计</dt><dd>6 张</dd></div><div><dt>A+</dt><dd>基础 A+，6 张</dd></div><div><dt>交付周期</dt><dd>2–3 个工作日</dd></div><div><dt>修改轮数</dt><dd>不含</dd></div></dl></section>
+            <section><h3>创意与产品表现</h3><dl><div><dt>设计定位</dt><dd>基础视觉整理</dd></div><div><dt>卖点策划</dt><dd>客户提供卖点，基础整理</dd></div><div><dt>产品表现</dt><dd>客户提供成品素材</dd></div></dl></section>
+            <section><h3>品牌与专业支持</h3><dl><div><dt>品牌视觉统一</dt><dd>基础排版统一</dd></div><div><dt>产品 3D 渲染</dt><dd><span class="plan-status plan-status--no"><span aria-hidden="true">−</span> 不含</span></dd></div><div><dt>产品 3D 模型优化</dt><dd><span class="plan-status plan-status--no"><span aria-hidden="true">−</span> 不含</span></dd></div><div><dt>专业复审</dt><dd><span class="plan-status plan-status--no"><span aria-hidden="true">−</span> 不含</span></dd></div></dl></section>
+          </div>
+        </div>
+      </details>
+
+      <details class="amazon-plan reveal" id="plan-essential">
+        <summary><span class="amazon-plan__index">02</span><span class="amazon-plan__name">基础版 <small>Essential</small></span><strong>¥2,499</strong><span class="amazon-plan__audience">基础视觉整理</span><span class="amazon-plan__toggle" aria-hidden="true">+</span></summary>
+        <div class="amazon-plan__content">
+          <p class="amazon-plan__fit">有基础要求的新晋卖家</p>
+          <div class="amazon-spec-groups">
+            <section><h3>基础规格</h3><dl><div><dt>计价单位</dt><dd>单个 ASIN</dd></div><div><dt>主图设计</dt><dd>1 张</dd></div><div><dt>副图设计</dt><dd>6 张</dd></div><div><dt>A+</dt><dd>基础 A+，6 张</dd></div><div><dt>交付周期</dt><dd>3–5 个工作日</dd></div><div><dt>修改轮数</dt><dd>1 轮文案集中修改</dd></div></dl></section>
+            <section><h3>创意与产品表现</h3><dl><div><dt>设计定位</dt><dd>基础视觉整理</dd></div><div><dt>卖点策划</dt><dd>客户提供卖点，基础整理</dd></div><div><dt>产品表现</dt><dd>基础抠图与合成</dd></div></dl></section>
+            <section><h3>品牌与专业支持</h3><dl><div><dt>品牌视觉统一</dt><dd>基础排版统一</dd></div><div><dt>产品 3D 渲染</dt><dd><span class="plan-status plan-status--no"><span aria-hidden="true">−</span> 不含</span></dd></div><div><dt>产品 3D 模型优化</dt><dd><span class="plan-status plan-status--no"><span aria-hidden="true">−</span> 不含</span></dd></div><div><dt>专业复审</dt><dd><span class="plan-status plan-status--no"><span aria-hidden="true">−</span> 不含</span></dd></div></dl></section>
+          </div>
+        </div>
+      </details>
+
+      <details class="amazon-plan amazon-plan--featured reveal" id="plan-professional">
+        <summary><span class="amazon-plan__index">03</span><span class="amazon-plan__name">专业版 <small>Professional</small></span><strong>¥5,280</strong><span class="amazon-plan__audience">视觉竞争力与转化表现</span><span class="amazon-plan__toggle" aria-hidden="true">+</span></summary>
+        <div class="amazon-plan__content">
+          <p class="amazon-plan__fit">注重视觉竞争力与产品转化表现的卖家</p>
+          <div class="amazon-spec-groups">
+            <section><h3>基础规格</h3><dl><div><dt>计价单位</dt><dd>单个 ASIN</dd></div><div><dt>主图设计</dt><dd>1 张</dd></div><div><dt>副图设计</dt><dd>6 张</dd></div><div><dt>A+</dt><dd>高级 A+，6 张 PC 版 + 6 张移动版</dd></div><div><dt>交付周期</dt><dd>8–10 个工作日</dd></div><div><dt>修改轮数</dt><dd>1 轮文案集中修改</dd></div></dl></section>
+            <section><h3>创意与产品表现</h3><dl><div><dt>设计定位</dt><dd>专业视觉整理</dd></div><div><dt>卖点策划</dt><dd>客户提供卖点，基础整理</dd></div><div><dt>产品表现</dt><dd>精细合成与光影优化</dd></div></section>
+            <section><h3>品牌与专业支持</h3><dl><div><dt>品牌视觉统一</dt><dd>基础色调与排版统一</dd></div><div><dt>产品 3D 渲染</dt><dd><span class="plan-status plan-status--yes"><span aria-hidden="true">✓</span> 包含</span></dd></div><div><dt>产品 3D 模型优化</dt><dd><span class="plan-status plan-status--no"><span aria-hidden="true">−</span> 不含</span></dd></div><div><dt>专业复审</dt><dd><span class="plan-status plan-status--no"><span aria-hidden="true">−</span> 不含</span></dd></div></dl></section>
+          </div>
+        </div>
+      </details>
+
+      <details class="amazon-plan reveal" id="plan-premium">
+        <summary><span class="amazon-plan__index">04</span><span class="amazon-plan__name">高级版 <small>Premium</small></span><strong>¥11,800</strong><span class="amazon-plan__audience">差异化创意 / 高品质视觉</span><span class="amazon-plan__toggle" aria-hidden="true">+</span></summary>
+        <div class="amazon-plan__content">
+          <p class="amazon-plan__fit">需要差异化创意与高品质视觉的卖家</p>
+          <div class="amazon-spec-groups">
+            <section><h3>基础规格</h3><dl><div><dt>计价单位</dt><dd>单个 ASIN</dd></div><div><dt>主图设计</dt><dd>1 张</dd></div><div><dt>副图设计</dt><dd>6 张</dd></div><div><dt>A+</dt><dd>高级 A+，6 张 PC 版 + 6 张移动版</dd></div><div><dt>交付周期</dt><dd>8–12 个工作日</dd></div><div><dt>修改轮数</dt><dd>1 轮集中修改</dd></div></dl></section>
+            <section><h3>创意与产品表现</h3><dl><div><dt>设计定位</dt><dd>创意策划与高品质视觉</dd></div><div><dt>卖点策划</dt><dd>卖点梳理与信息层级规划</dd></div><div><dt>产品表现</dt><dd>高品质场景合成与产品渲染</dd></div></section>
+            <section><h3>品牌与专业支持</h3><dl><div><dt>品牌视觉统一</dt><dd>基础色调与排版统一</dd></div><div><dt>产品 3D 渲染</dt><dd><span class="plan-status plan-status--yes"><span aria-hidden="true">✓</span> 包含</span></dd></div><div><dt>产品 3D 模型优化</dt><dd><span class="plan-status plan-status--no"><span aria-hidden="true">−</span> 不含</span></dd></div><div><dt>专业复审</dt><dd><span class="plan-status plan-status--yes"><span aria-hidden="true">✓</span> 包含</span></dd></div></dl></section>
+        </div>
+      </details>
+
+      <details class="amazon-plan reveal" id="plan-signature">
+        <summary><span class="amazon-plan__index">05</span><span class="amazon-plan__name">旗舰版 <small>Signature</small></span><strong>¥25,800</strong><span class="amazon-plan__audience">品牌形象 / 长期发展</span><span class="amazon-plan__toggle" aria-hidden="true">+</span></summary>
+        <div class="amazon-plan__content">
+          <p class="amazon-plan__fit">注重品牌形象、差异化与长期发展的卖家</p>
+          <div class="amazon-spec-groups">
+            <section><h3>基础规格</h3><dl><div><dt>计价单位</dt><dd>单个 ASIN</dd></div><div><dt>主图设计</dt><dd>3 张</dd></div><div><dt>副图设计</dt><dd>8 张</dd></div><div><dt>A+</dt><dd>高级 A+，8 张 PC 版 + 8 张移动版</dd></div><div><dt>交付周期</dt><dd>12–15 个工作日</dd></div><div><dt>修改轮数</dt><dd>2 轮集中修改</dd></div></dl></section>
+            <section><h3>创意与产品表现</h3><dl><div><dt>设计定位</dt><dd>创意策划与高品质视觉</dd></div><div><dt>卖点策划</dt><dd>卖点策略与内容结构规划</dd></div><div><dt>产品表现</dt><dd>复杂场景、精细渲染与定制视觉</dd></div></section>
+            <section><h3>品牌与专业支持</h3><dl><div><dt>品牌视觉统一</dt><dd>字体、配色、图标及整套视觉统一</dd></div><div><dt>产品 3D 渲染</dt><dd><span class="plan-status plan-status--yes"><span aria-hidden="true">✓</span> 包含</span></dd></div><div><dt>产品 3D 模型优化</dt><dd><span class="plan-status plan-status--yes"><span aria-hidden="true">✓</span> 包含</span></dd></div><div><dt>专业复审</dt><dd><span class="plan-status plan-status--yes"><span aria-hidden="true">✓</span> 包含</span></dd></div></dl></section>
+          </div>
+        </div>
+      </details>
     </div>
-    <p class="amazon-detail-hint"><span aria-hidden="true">↔</span> 手机端可左右滑动查看全部套餐</p>
-    <p class="amazon-detail-note">以上套餐按单个 ASIN 计价。周期为工作日，具体排期从资料齐备并确认需求后开始计算。</p>
-    <a class="amazon-pricing__cta" href="{{ '/connect/' | relative_url }}"><span>讨论你的产品与套餐</span><span aria-hidden="true">↗</span></a>
+
+    <p class="amazon-detail-note">套餐价格按单个 ASIN 计价。交付周期为工作日；修改轮数与范围按对应套餐执行。</p>
+    <a class="amazon-pricing__cta" href="{{ '/connect/' | relative_url }}"><span>带上产品信息，咨询适合的套餐</span><span aria-hidden="true">→</span></a>
   </div>
 </section>

@@ -1,24 +1,23 @@
 ---
 layout: default
 page_id: price
-title: "Price & Project Scope — DTDT Studio"
-description: "DTDT Studio pricing starting points for 3D rendering, page design, animation, identity, modeling, photography, and retouching, plus custom project scoping."
+title: "Amazon Image Design Pricing — DTDT Studio"
+description: "Amazon main image, gallery, and A+ design packages with clear deliverables, pricing, timelines, and revision rounds."
 permalink: /price/
 ---
 
 <header class="price-hero">
   <div class="studio-shell price-hero__grid">
-    <div><p class="studio-eyebrow" data-i18n="price.eyebrow">Price / Project scope</p><h1 data-i18n="price.title">Clear starting points. Scope shaped around the real work.</h1></div>
-    <p data-i18n="price.lead">Clear packages for Amazon product images, with custom scopes for ecommerce, 3D visualization, and product design.</p>
+    <div><p class="studio-eyebrow" data-i18n="price.eyebrow">Amazon image design / Pricing</p><h1 data-i18n="price.title">Amazon image design</h1></div>
+    <div class="price-hero__copy"><p data-i18n="price.lead">Main image, gallery images, and A+ content, designed as one coherent product story.</p><a class="price-hero__jump" href="#amazon-pricing"><span data-i18n="price.jump">Explore packages</span><span aria-hidden="true">↓</span></a></div>
   </div>
 </header>
 
-<section class="amazon-pricing" aria-labelledby="amazon-pricing-title">
+<section class="amazon-pricing" id="amazon-pricing" aria-labelledby="amazon-pricing-title">
   <div class="studio-shell">
     <header class="section-heading section-heading--split reveal">
       <p class="studio-eyebrow" data-i18n="price.amazon_label">Amazon image design</p>
-      <h2 id="amazon-pricing-title" data-i18n="price.amazon_title">Amazon images, designed to make every product count.</h2>
-      <p class="amazon-pricing__intro" data-i18n="price.amazon_intro">Main image, gallery images, and a complete A+ content set, tailored to your product and market.</p>
+      <div><h2 id="amazon-pricing-title" data-i18n="price.amazon_title">Main image, gallery, and A+—one product story.</h2><p class="amazon-pricing__intro" data-i18n="price.amazon_intro">Three clear directions for Amazon main images, gallery images, and a complete A+ content set.</p></div>
     </header>
     <div class="amazon-price-cards">
       <article class="amazon-price-card reveal">
@@ -37,7 +36,8 @@ permalink: /price/
         <p class="amazon-price-card__promise" data-i18n="price.premium_desc">差异化创意与高品质视觉</p>
       </article>
     </div>
-    <a class="amazon-pricing__cta" href="{{ '/price/amazon-image-design/' | relative_url }}"><span data-i18n="price.details_cta">查看完整套餐与交付明细</span><span aria-hidden="true">↗</span></a>
+    <a class="amazon-pricing__cta" href="{{ '/price/amazon-image-design/' | relative_url }}"><span data-i18n="price.details_cta">查看完整套餐与服务明细</span><span aria-hidden="true">→</span></a>
+    <p class="amazon-pricing__note" data-i18n="price.pricing_note">套餐按单个 ASIN 计价。咨询时可附 ASIN、目标市场、产品卖点、现有素材与期望排期，便于讨论合适的服务范围。</p>
   </div>
 </section>
 
