@@ -62,7 +62,7 @@ permalink: /price/amazon-image-design/
           <p class="amazon-plan__fit">注重视觉竞争力与产品转化表现的卖家</p>
           <div class="amazon-spec-groups">
             <section><h3>基础规格</h3><dl><div><dt>计价单位</dt><dd>单个产品款式及约定交付范围</dd></div><div><dt>主图设计</dt><dd>1 张</dd></div><div><dt>副图设计</dt><dd>6 张</dd></div><div><dt>A+</dt><dd>高级 A+，6 张 PC 版 + 6 张移动版</dd></div><div><dt>交付周期</dt><dd>8–10 个工作日</dd></div><div><dt>修改轮数</dt><dd>1 轮文案集中修改</dd></div></dl></section>
-            <section><h3>创意与产品表现</h3><dl><div><dt>设计定位</dt><dd>专业视觉整理</dd></div><div><dt>卖点策划</dt><dd>客户提供卖点，基础整理</dd></div><div><dt>产品表现</dt><dd>精细合成与光影优化</dd></div></section>
+            <section><h3>创意与产品表现</h3><dl><div><dt>设计定位</dt><dd>专业视觉整理</dd></div><div><dt>卖点策划</dt><dd>客户提供卖点，基础整理</dd></div><div><dt>产品表现</dt><dd>精细合成与光影优化</dd></div></dl></section>
             <section><h3>品牌与专业支持</h3><dl><div><dt>品牌视觉统一</dt><dd>基础色调与排版统一</dd></div><div><dt>产品 3D 渲染</dt><dd><span class="plan-status plan-status--yes"><span aria-hidden="true">✓</span> 包含</span></dd></div><div><dt>产品 3D 模型优化</dt><dd><span class="plan-status plan-status--no"><span aria-hidden="true">−</span> 不含</span></dd></div><div><dt>专业复审</dt><dd><span class="plan-status plan-status--no"><span aria-hidden="true">−</span> 不含</span></dd></div></dl></section>
           </div>
         </div>
