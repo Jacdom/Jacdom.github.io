@@ -3277,6 +3277,7 @@ button:focus:not(:focus-visible) {
   .product-outcome h2,
   .product-visual-section__header h2 { font-size: 32px; }
   .amazon-tier-overview { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .amazon-detail-hero h1 { max-width: 100%; font-size: 38px; line-height: 1.08; }
 }
 
 @media (max-width: 1199.98px) {
