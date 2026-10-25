@@ -9,9 +9,37 @@ permalink: /price/
 <header class="price-hero">
   <div class="studio-shell price-hero__grid">
     <div><p class="studio-eyebrow" data-i18n="price.eyebrow">Price / Project scope</p><h1 data-i18n="price.title">Clear starting points. Scope shaped around the real work.</h1></div>
-    <p data-i18n="price.lead">Ecommerce, 3D visualization, and physical product design are quoted by project. Production services retain the published starting prices from the original DTDT pricing page.</p>
+    <p data-i18n="price.lead">Clear packages for Amazon product images, with custom scopes for ecommerce, 3D visualization, and product design.</p>
   </div>
 </header>
+
+<section class="amazon-pricing" aria-labelledby="amazon-pricing-title">
+  <div class="studio-shell">
+    <header class="section-heading section-heading--split reveal">
+      <p class="studio-eyebrow" data-i18n="price.amazon_label">Amazon image design</p>
+      <h2 id="amazon-pricing-title" data-i18n="price.amazon_title">Amazon images, designed to make every product count.</h2>
+      <p class="amazon-pricing__intro" data-i18n="price.amazon_intro">Main image, gallery images, and a complete A+ content set, tailored to your product and market.</p>
+    </header>
+    <div class="amazon-price-cards">
+      <article class="amazon-price-card reveal">
+        <p class="amazon-price-card__tier">Essential</p><p class="amazon-price-card__name" data-i18n="price.essential">基础版</p>
+        <p class="amazon-price-card__amount"><span data-i18n="price.currency">¥</span>2,499</p>
+        <p class="amazon-price-card__promise" data-i18n="price.essential_desc">满足基础要求</p>
+      </article>
+      <article class="amazon-price-card amazon-price-card--featured reveal">
+        <p class="amazon-price-card__tier">Professional</p><p class="amazon-price-card__name" data-i18n="price.professional">专业版</p>
+        <p class="amazon-price-card__amount"><span data-i18n="price.currency">¥</span>5,280</p>
+        <p class="amazon-price-card__promise" data-i18n="price.professional_desc">注重视觉竞争力与产品转化表现</p>
+      </article>
+      <article class="amazon-price-card reveal">
+        <p class="amazon-price-card__tier">Premium</p><p class="amazon-price-card__name" data-i18n="price.premium">高级版</p>
+        <p class="amazon-price-card__amount"><span data-i18n="price.currency">¥</span>11,800</p>
+        <p class="amazon-price-card__promise" data-i18n="price.premium_desc">差异化创意与高品质视觉</p>
+      </article>
+    </div>
+    <a class="amazon-pricing__cta" href="{{ '/price/amazon-image-design/' | relative_url }}"><span data-i18n="price.details_cta">查看完整套餐与交付明细</span><span aria-hidden="true">↗</span></a>
+  </div>
+</section>
 
 <section class="price-priority" aria-labelledby="price-priority-title">
   <div class="studio-shell">
@@ -26,7 +54,7 @@ permalink: /price/
 
 <section class="price-baseline" aria-labelledby="price-baseline-title">
   <div class="studio-shell">
-    <header class="section-heading section-heading--split reveal"><p class="studio-eyebrow" data-i18n="price.baseline_label">Published starting prices</p><h2 id="price-baseline-title" data-i18n="price.baseline_title">Execution baselines retained from the original Price page.</h2></header>
+    <header class="section-heading section-heading--split reveal"><p class="studio-eyebrow" data-i18n="price.baseline_label">Other services</p><h2 id="price-baseline-title" data-i18n="price.baseline_title">Starting prices for additional studio services.</h2></header>
     <div class="price-table reveal" role="table" aria-label="Service pricing starting points">
       <div class="price-table__head" role="row"><span role="columnheader" data-i18n="price.column_service">Service</span><span role="columnheader" data-i18n="price.column_basic">Basic from</span><span role="columnheader" data-i18n="price.column_custom">Custom from</span></div>
       {% for item in site.data.pricing %}

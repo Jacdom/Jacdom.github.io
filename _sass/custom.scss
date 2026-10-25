@@ -1522,6 +1522,40 @@ button:focus:not(:focus-visible) {
 .price-table__row small { display: none; }
 .price-baseline__note { max-width: 720px; margin: 28px 0 0; color: var(--color-muted); font-size: 12px; line-height: 1.65; }
 
+.amazon-pricing { padding-block: 112px; background: var(--color-surface); }
+.amazon-pricing .section-heading { margin-bottom: 42px; }
+.amazon-pricing .section-heading h2 { max-width: 850px; }
+.amazon-pricing__intro { max-width: 600px; margin: 14px 0 0; color: var(--color-muted); font-size: 16px; line-height: 1.65; }
+.amazon-price-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: stretch; }
+.amazon-price-card { min-height: 258px; padding: 30px; border: 1px solid var(--color-line); background: var(--color-background); }
+.amazon-price-card--featured { border: 2px solid var(--color-primary); background: var(--color-purple-soft); box-shadow: 0 14px 40px rgba(159,67,209,.12); }
+.amazon-price-card__tier { margin: 0 0 8px; color: var(--color-primary); font-size: 12px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+.amazon-price-card__name { margin: 0; color: var(--color-ink); font-size: 20px; font-weight: 650; }
+.amazon-price-card__amount { margin: 26px 0 12px; color: var(--color-ink); font-size: clamp(36px, 4vw, 54px); font-weight: 720; letter-spacing: -.05em; line-height: 1; }
+.amazon-price-card__amount span { margin-right: 3px; color: var(--color-secondary); font-size: .52em; vertical-align: .16em; }
+.amazon-price-card__promise { max-width: 280px; margin: 0; color: var(--color-muted); font-size: 14px; line-height: 1.55; }
+.amazon-pricing__cta { display: flex; width: fit-content; min-height: 58px; margin-top: 30px; padding: 0 24px; align-items: center; justify-content: space-between; gap: 34px; background: var(--color-primary); color: #fff; font-size: 15px; font-weight: 650; text-decoration: none; transition: background .2s, transform .2s; }
+.amazon-pricing__cta:hover { transform: translateY(-2px); background: #8430b5; color: #fff; text-decoration: none; }
+.amazon-pricing__cta:focus-visible,.amazon-detail-back:focus-visible { outline: 3px solid var(--color-gold); outline-offset: 4px; }
+.amazon-detail-hero { padding-block: 78px 92px; background: var(--color-purple-soft); }
+.amazon-detail-back { display: inline-block; margin-bottom: 54px; color: var(--color-primary); font-size: 14px; font-weight: 650; text-decoration: none; }
+.amazon-detail-hero h1 { max-width: 920px; margin: 18px 0 22px; color: var(--color-ink); font-size: clamp(48px, 7vw, 82px); font-weight: 680; letter-spacing: -.055em; line-height: .98; }
+.amazon-detail-hero .studio-shell > p:last-child { max-width: 680px; margin: 0; color: var(--color-muted); font-size: 17px; line-height: 1.7; }
+.amazon-detail-section { padding-block: 96px 120px; background: var(--color-background); }
+.amazon-detail-section .section-heading { margin-bottom: 42px; }
+.amazon-detail-table-wrap { overflow-x: auto; border: 1px solid var(--color-line); background: var(--color-surface); -webkit-overflow-scrolling: touch; }
+.amazon-detail-table { width: 100%; min-width: 1120px; border-collapse: collapse; table-layout: fixed; }
+.amazon-detail-table th,.amazon-detail-table td { width: 16%; padding: 16px 14px; border-right: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); color: var(--color-text); font-size: 13px; line-height: 1.55; text-align: center; vertical-align: middle; overflow-wrap: anywhere; }
+.amazon-detail-table th:first-child { width: 15%; }
+.amazon-detail-table thead th { position: sticky; top: 0; background: var(--color-ink); color: #fff; font-size: 15px; font-weight: 700; }
+.amazon-detail-table thead th small { color: rgba(255,255,255,.72); font-size: 11px; font-weight: 500; }
+.amazon-detail-table tbody th { background: #f0efed; color: var(--color-ink); font-weight: 650; text-align: left; }
+.amazon-detail-table tbody tr:first-child td { color: var(--color-primary); font-size: 18px; font-weight: 750; }
+.amazon-detail-table .is-featured { background: #f4eafa; }
+.amazon-detail-table thead .is-featured { background: var(--color-primary); color: #fff; }
+.amazon-detail-hint { display: none; margin: 12px 0 0; color: var(--color-primary); font-size: 12px; font-weight: 600; }
+.amazon-detail-note { margin: 24px 0 0; color: var(--color-muted); font-size: 13px; line-height: 1.6; }
+
 .not-found {
   display: flex;
   min-height: calc(100svh - var(--header-height));
@@ -3137,7 +3171,8 @@ button:focus:not(:focus-visible) {
   .price-hero__grid > p { font-size: 15px; }
   .price-priority,
   .price-baseline,
-  .price-process { padding-block: 78px; }
+  .price-process,
+  .amazon-pricing { padding-block: 78px; }
   .price-scope-list article { grid-template-columns: 38px 1fr; gap: 14px; padding-block: 20px; }
   .price-scope-list article > p,
   .price-scope-list article > b { grid-column: 2; }
@@ -3146,6 +3181,20 @@ button:focus:not(:focus-visible) {
   .price-table__row { grid-template-columns: 1fr 1fr; }
   .price-table__row strong { grid-column: 1 / -1; background: var(--color-gold-soft); }
   .price-table__row small { display: block; margin-bottom: 5px; color: var(--color-muted); font-size: 9px; text-transform: uppercase; }
+  .amazon-pricing .section-heading { margin-bottom: 30px; }
+  .amazon-pricing__intro { font-size: 14px; }
+  .amazon-price-cards { grid-template-columns: 1fr; gap: 12px; }
+  .amazon-price-card { min-height: auto; padding: 23px; }
+  .amazon-price-card__amount { margin: 18px 0 9px; font-size: 42px; }
+  .amazon-pricing__cta { width: 100%; min-height: 58px; }
+  .amazon-detail-hero { padding-block: 44px 64px; }
+  .amazon-detail-back { margin-bottom: 38px; }
+  .amazon-detail-hero h1 { font-size: 48px; }
+  .amazon-detail-hero .studio-shell > p:last-child { font-size: 15px; }
+  .amazon-detail-section { padding-block: 68px 82px; }
+  .amazon-detail-table { min-width: 960px; }
+  .amazon-detail-table th,.amazon-detail-table td { padding: 12px 10px; font-size: 12px; }
+  .amazon-detail-hint { display: block; }
   .not-found__grid { grid-template-columns: 1fr; gap: 48px; }
   .not-found__code { font-size: 112px; }
   .not-found h1 { font-size: 42px; }
