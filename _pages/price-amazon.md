@@ -77,6 +77,7 @@ permalink: /price/amazon-image-design/
             <section><h3>创意与产品表现</h3><dl><div><dt>设计定位</dt><dd>创意策划与高品质视觉</dd></div><div><dt>卖点策划</dt><dd>卖点梳理与信息层级规划</dd></div><div><dt>产品表现</dt><dd>高品质场景合成与产品渲染</dd></div></dl></section>
             <section><h3>品牌与专业支持</h3><dl><div><dt>品牌视觉统一</dt><dd>基础色调与排版统一</dd></div><div><dt>产品 3D 渲染</dt><dd><span class="plan-status plan-status--yes"><span aria-hidden="true">✓</span> 包含</span></dd></div><div><dt>产品 3D 模型优化</dt><dd><span class="plan-status plan-status--no"><span aria-hidden="true">−</span> 不含</span></dd></div><div><dt>专业复审</dt><dd><span class="plan-status plan-status--yes"><span aria-hidden="true">✓</span> 包含</span></dd></div></dl></section>
         </div>
+        </div>
       </article>
 
       <article class="amazon-plan reveal" id="plan-signature">
